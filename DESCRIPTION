@@ -1,0 +1,10 @@
+Package: unhcrverse
+Type: Package
+Title: UNHCR package universe
+Version: 0.1.0
+Author: Community
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Install in one line most reliable versions of core UNHCR packages.
+License: MIT
+Encoding: UTF-8
+LazyData: true

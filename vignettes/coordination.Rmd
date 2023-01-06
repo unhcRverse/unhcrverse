@@ -1,0 +1,109 @@
+---
+title: "coordination"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{coordination}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Roles and responsibilities
+
+ This is heavily adapted version of the Benevolent dictator governance model by Ross Gardler and Gabriel Hanganu licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+### Users
+
+Each project sustainability is linked to the presence of a community of __users__ and __contributors__, a team of __core developers__, and a __project lead__.
+
+Typical users are Information Management Officer, Data Analyst, Consultant or Economist working within UNHCR Operations. They are the most important members of the community; without these users, this project would have no purpose. Users are encouraged to participate in the life of the project and the community as much as possible. User contributions help ensure that the project is satisfying users' needs. Common user activities include (but are not limited to):
+
+- evangelizing about the project
+- asking and answering on community forums
+- providing moral support (a 'thank you' goes a long way)
+
+Users who continue to engage with the project and its community will often find themselves becoming more and more involved. Such users may then go on to become contributors, as described above.
+
+### Contributors
+
+Contributors interact with the project on GitHub by filing new issues, improving existing issues, or submitting pull requests. Anyone can become a contributor: there is no expectation of commitment to the project, no required set of skills, and no selection process. The only obligation is to follow the [code of conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+
+Specific advice for contributing to any of the the project can be found in the CONTRIBUTING.md within each projects repository.
+
+### Core developers
+
+Core developers are collectively responsible for day-to-day development of the different packages, including responding to issues and reviewing pull requests. They have the ability to make changes to project code, and receive credit when others cite the package.
+
+While core developers can modify code directly, this ability is rarely used. Instead, changes are proposed as pull requests, and are only merged after they have been reviewed by at least one other core developer. Changes to the API (especially breaking changes) must also be approved by the project lead. 
+
+Core developers are recruited from contributors. An invitation to join the core team can be extended to anyone who has made a major contribution, either through a small number of large changes, or a consistent pattern of smaller contributions. Any existing core developer can propose a contributor be invited to the core team by emailing the project lead. The project lead will the confirm the invitation with the other core developers.
+
+
+### Project Maintainers
+
+The project maintainer is a unique role for each project and is responsible for:
+
+* Initially submitting the project for publication on `unhcRverse` as github issue in this current repository
+* Setting, and clearly communication the strategic objectives of the project, as well as sufficient documentation.
+* Mediating any conflicts among the core developers.
+* Ensuring that the project survives in the long term.
+* submit pull request to the forked version of the project on `unhcRverse`
+
+Each _stable project_ maintainer receive de facto a github admin access role on the forked version of his repository on `unhcRverse`.
+
+The list of current stable projects maintainers currently include:
+
+ * [Cedric Vidonne](https://github.com/vidonne/) works in Geneva HQ to support data visualisation and story telling  
+ 
+ * [Ahmadou Dickoa](https://github.com/dickoa) works in the Data Team of the regional bureau of UNHCR for West Africa 
+ 
+ * [Hisham Galal](https://github.com/galalH/) works in the Data Team of the regional bureau of UNHCR for the Americas  
+ 
+ * [Edouard Legoupil](https://github.com/edouard-Legoupil) works in the Data Team of the regional bureau of UNHCR for the Americas
+
+
+### unhcRverse Community lead
+
+
+The  Community  lead is responsible for:
+
+ * Updating this current page, initially forking the selected submitted repo and setting up admin access on them and generating a biyearly newsletter for the UNHCR R community
+ 
+ * Presenting and promoting the `unhcRverse` in all conference, meetings and discussions for instance within the "R Stuff" internal Microsoft team channel and in the broader inter agency [Humanitarian-user-group](https://join.skype.com/qYBKC5q3wKp4) Skype group.
+
+ * Facilitating project peer reviews in line with good practices from [R-OpenSci](https://devguide.ropensci.org/index.html) and through project related  GitHub issues discussion of pull request within `unhcRverse`. This include the maintenance of the `unhcRverse` Github admin team.
+
+ * Organizing quarterly meeting (and ideally a yearly presential conference) with all core developers in order to agree on the project to be included/classified in the organisation repository according to different life cycle phase: Experimental, Stable or Deprecated
+ 
+ * Ensuring that each of the stable package within `unhcRverse` has a maintainer currently working for the organisation.
+
+ * Stimulating discussion on development roadmap within each project and potentially help channeling third-party code review and development support.
+ 
+ * Advocating for funding in order to support potential third-party code review on the projects and presential developer conference organisation.
+
+Currently this role is held by [Geraldine Henningsen](https://github.com/geraldine28) from UNHCR Global Data Service, Statistics and Data Services. 
+
+
+### Decision-making process
+
+This organisation account on github is managed jointly by the `unhcRverse` Community lead and the different Stable Project Maintainers. 
+
+This community makes decisions according to a consensus model where suggestions are considered and discussed between the community lead, project maintainer and core developers, typically in GitHub issues. 
+
+Where consensus cannot be reached, the community lead's word is final. If the community questions a decision, the project lead may review it and either uphold or reverse it.
+
+
+
+# Code of Conduct
+
+All `unhcRverse` projects are released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to any of those projects, users are agreeing to abide by its terms.
+
+
+

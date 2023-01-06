@@ -1,0 +1,214 @@
+---
+title: "Package Ecosystem"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+### 'Stable-enough' packages within `unhcRverse`
+
+The list of mature projects includes set of packages to ease the production of statistical evidence and data stories. Even if not installable throught the main CRAN repository, those **Packages** are expected to follow the standards outlined in the [CRAN policies](https://cran.r-project.org/web/packages/policies.html). However as those packages heavily relies on the benevolent time of the maintainer and in the absence of systematic third-party code review, each those package might not be fully CRAN-Check compliant... 
+
+* [unhcrdown](https://github.com/unhcRverse/unhcrdown): UNHCR templates for R Markdown
+* [unhcrthemes](https://github.com/unhcRverse/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes
+* [unhcrdatapackage](https://github.com/unhcRverse/unhcrdatapackage): Use UNHCR Open data
+* [ridl](https://github.com/unhcRverse/ridl): API to connect to internal data source
+* [robotoolbox](https://github.com/unhcRverse/hcrdata): API to connect to Kobo Data Collection Server
+* [rhdx](https://github.com/unhcRverse/hcrdata): API to connect to Humanitarian Data Exchange
+* [popdata](https://github.com/unhcRverse/opdata): API to connect to the system for official statistic curation
+* [HighFrequencyChecks](https://github.com/unhcRverse/HighFrequencyChecks/): Perform High Frequency Check
+* [koboloadeR](https://github.com/unhcRverse/koboloadeR/): Process data crunching for survey dataset
+
+You can install them all with the following:
+
+```{r unhcrverse, eval = FALSE, include=TRUE}
+## unhcrdown
+remotes::install_github("unhcRverse/unhcrdown")
+## unhcrthemes
+remotes::install_github("unhcRverse/unhcrthemes")
+## unhcrdatapackage
+remotes::install_github('unhcRverse/unhcrdatapackage')
+## popdata
+remotes::install_github('unhcRverse/popdata')
+## ridl
+remotes::install_github('unhcRverse/ridl')
+## robotoolbox
+remotes::install_github('unhcRverse/robotoolbox')
+## rhdx
+remotes::install_github('unhcRverse/rhdx')
+## HighFrequencyChecks
+remotes::install_github('unhcRverse/HighFrequencyChecks')
+## koboloadeR
+remotes::install_github('unhcRverse/koboloadeR')
+```
+
+
+
+
+### Deprecated projects
+
+Any stable project where there is no maintainer working with UNHCR will be placed as deprecated.
+
+
+
+```{r}
+
+
+# <!--  
+# 
+#   rec1 [label = 'Data \n Extraction & \n Shaping']
+# * [popdata](https://github.com/unhcRverse/opdata): API to connect to the system for official statistic curation
+# * [ridl](https://github.com/unhcRverse/ridl): API to connect to internal data source
+# * [robotoolbox](https://github.com/unhcRverse/hcrdata): API to connect to Kobo Data Collection Server
+# * [rhdx](https://github.com/unhcRverse/hcrdata): API to connect to Humanitarian Data Exchange
+# 
+#   rec2 [label = 'Data \n Quality \n Check']
+# * [HighFrequencyChecks](https://github.com/unhcRverse/HighFrequencyChecks/): Perform High Frequency Check
+# 
+#   rec3 [label =  'Data Exploration /\n  Chart Library']
+# * [unhcrdatapackage](https://github.com/unhcRverse/unhcrdatapackage): Use UNHCR Open data
+# * [koboloadeR](https://github.com/unhcRverse/kobocruncher/): Process data crunching for survey dataset
+# 
+#   rec4 [label = 'Branding: \n Report Template &\n  Chart Style']
+# * [unhcrdown](https://github.com/unhcRverse/unhcrdown): UNHCR templates for R Markdown
+# * [unhcrthemes](https://github.com/unhcRverse/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes
+# -->
+
+#  graph [layout = dot, rankdir = TB]
+# label= "Comic Sans MS"
+
+  # layout = neato
+
+# 'transparent'
+unhcrverse <- DiagrammeR::grViz("digraph {
+  bgcolor = transparent
+  compound=true;
+  graph [layout = dot, 
+         rankdir = TB,
+         fontsize= 46, 
+        color = transparent,
+        fontname='Lato',
+        fontcolor='#FAEB00']
+  node [shape = hexagon, 
+        fixedsize = true,
+        width = 2.5,
+        height = 2.5,
+        color = '#FAEB00',
+        penwidth = 4,
+        fontsize=17, 
+        fontname='Lato',
+        fontcolor='#ffffff']  
+        
+  edge [color = '#fffff',
+        penwidth = 3]  
+        
+  subgraph cluster_unhcrverse {
+         label = 'unhcRverse Stable-enough packages: Categories & Dependencies'
+    
+  
+      rec1 [label = 'Data \n Extraction & \n Shaping']
+      subgraph cluster_1 {
+            label = ' '  
+            rec1 -> rec5
+            rec1 -> rec6
+            rec1 -> rec7
+            rec1 -> rec8   ;
+            color='#ffffff'; }
+    
+      rec2 [label = 'Data \n Quality \n Check']
+      subgraph cluster_2 {
+            label = ' '
+            rec2 -> rec9 
+            rec2 -> rec99  ;
+            color='#ffffff';  }
+      
+      rec3 [label =  'Data Exploration /\n  Chart Library']
+      subgraph cluster_3 {
+            label = ' ';
+            rec3 -> rec10;
+            rec3 -> rec11;
+            rec3 -> rec112 ;
+            rec3 -> rec113 ;
+            color='#ffffff'; }
+      
+      rec4 [label = 'Branding: \n Report Template &\n  Chart Style']
+      subgraph cluster_4 {
+            label = ' ';
+            rec4 -> rec12;
+            rec4 -> rec13  ;
+            color='#ffffff'; }
+
+  }   
+  
+  
+  rec5 [label = 'popdata:\n pull from \n popdata.unhcr.org']
+  rec6 [label = 'ridl:\n pull/push from \n ridl.unhcr.org']
+  rec7 [label = 'robotoolbox:\n pull from \n kobo.unhcr.org']
+  rec8 [label = 'rhdx:\n pull from \n data.humdata.org']
+  
+  
+  rec9 [label = 'High\n FrequencyChecks:\n Data collection quality']
+  rec99 [label = 'Statistical\n Quality\n Assurance:\n SQAF']
+  
+  
+  rec10 [label = 'unhcrdatapackage:\n Population Statistics']
+  rec11 [label = 'iati:\n UNHCR activities &\n Budget']
+  rec112 [label = 'kobocruncher:\n Automatic \n data exploration \n for surveys']
+  rec113 [label = 'progresAnalysis:\n Registration analysis']
+  
+  rec12 [label = 'unhcrdown:\n Report template']
+  rec13 [label = 'unhcrthemes:\n Ggplot theme']
+  
+  
+   rec5  -> rec99
+   
+   rec7  -> rec9
+   rec9  -> rec6
+   
+   rec6  -> rec113
+   
+   
+   rec12  -> rec112
+   rec13  -> rec112
+   
+   
+   rec12  -> rec113
+   rec13  -> rec113
+   
+   rec12  -> rec11
+   rec13  -> rec11
+   
+   rec12  -> rec10
+   rec13  -> rec10
+  
+  }",
+  height = 550)
+
+#3require(magrittr)
+#require(DiagrammeR)
+#require(DiagrammeRsvg)
+#require(xml2)
+
+unhcrverse |>
+  DiagrammeRsvg::export_svg() |>
+  xml2::read_xml() |>
+  xml2::write_xml("unhcrverse.svg")
+
+
+unhcrverse |>
+  DiagrammeRsvg::export_svg() |>
+  charToRaw() |>
+  rsvg::rsvg_png("unhcrverse.png")
+
+```

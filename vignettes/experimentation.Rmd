@@ -1,0 +1,73 @@
+---
+title: "Experimentation"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Experimentation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+### Experimental projects, i.e. Training material, presentation or highlighted analysis
+
+Any project can be suggested to be included in the `unhcRverse` though a issue posted in this current repository.  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will be forked into `unhcRverse` within a months.
+
+Having a project forked as experimental within `unhcRverse` is for the project maintainer:
+
+ * A recognition of the project and an way to showcase the work done in order to inspire colleagues.
+
+ * An opportunity to request and benefit from peer review from all R-users within UNHCR and potentially third-party support.
+
+ * An opportunity to be identified as an R-champions and of having a "word to say" in the governance of the `unhcRverse`
+ 
+Below is an initial listing of repository to potentially include as __experimental__:
+
+Packages dedicated to survey management
+
+ * https://github.com/unhcr-americas/usastats
+ * https://github.com/PopulationStatistics/Eurostats
+ * https://github.com/unhcr-americas/IatiTidy
+ * https://github.com/unhcr-americas/iati
+
+Packages dedicated to Statistical Quality Control
+
+ * https://github.com/PopulationStatistics/StatisticalQualityAssurance
+ * https://github.com/PopulationStatistics/StatisticsCore
+
+Packages dedicated to survey management
+
+ * https://github.com/unhcr-americas/surveyDesigner
+
+Repository to train staff on existing tools
+
+ * https://github.com/vidonne/unhcRstyle_workshop
+ * https://github.com/dickoa/panafrican-dima-r-training 
+ * https://github.com/unhcr-americas/reproducibility
+ * https://github.com/unhcr-americas/SurveyAnalysisTutorial
+ * https://github.com/unhcr-mena/analytic-hierarchy-process
+ * https://github.com/unhcr-americas/vulnerability-scoring
+ 
+
+Repository with reproducible data analysis & data story telling examples
+
+ * https://github.com/UNHCR-WEB/R-usergroup
+ * https://github.com/unhcr-americas/ageingonthemove
+ * https://github.com/unhcr-americas/riadis
+ * https://github.com/unhcr-americas/proGres-analysis
+ * https://github.com/unhcr-americas/Americas-Protection-Monitoring_2020
+ * https://github.com/unhcr-americas/VenSit_PM_2020
+ * https://github.com/unhcr-mauritania/model
+ * https://github.com/unhcr-americas/Area_Based_Approach
+ * https://github.com/unhcr-americas/RegionalTrends
+ * https://github.com/unhcr-americas/LAPOP-SMA
+ * https://github.com/unhcr-mena/focus-analysis
+ * https://github.com/unhcr-americas/weekly-report

@@ -1,0 +1,25 @@
+---
+title: "Coding Style"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Coding Style}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Founding principles of good analysis
+ 
+
+Reproducibility guarantees that we have done what we are claiming to have done, and that others can easily replicate our work.
+
+Auditability means that we know why we chose our analysis, and who is responsible for each part of it - including assurance.
+
+Assurance improves the average quality and includes the communication of that quality to users.

@@ -1,0 +1,21 @@
+url: ~
+template:
+  package: unhcrtemplate
+  bootstrap: 5
+
+navbar:
+  title: unhcrverse
+  left:
+  - text: Core Ecosystem
+    href: articles/ecosystem.html
+  - text: Experimental Project
+    href: articles/experimentation.html
+  - text: Coding Style
+    href: articles/codingstyle.html
+  - text: Coordination
+    href: articles/coordination.html
+  - text: News
+    href: news/index.html
+  - text: Reference
+    href: reference/index.html     
+    
