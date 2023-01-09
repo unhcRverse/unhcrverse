@@ -1,9 +1,9 @@
 ---
-title: "coordination"
+title: "Coordination"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{coordination}
+  %\VignetteIndexEntry{Coordination}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -15,9 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Roles and responsibilities
-
- This is heavily adapted version of the Benevolent dictator governance model by Ross Gardler and Gabriel Hanganu licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+Because its de facto open source community nature, the content below got heavily inspired by the [Benevolent dictator governance model](http://oss-watch.ac.uk/resources/benevolentdictatorgovernancemodel) 
 
 ### Users
 
@@ -64,6 +62,8 @@ The list of current stable projects maintainers currently include:
  
  * [Ahmadou Dickoa](https://github.com/dickoa) works in the Data Team of the regional bureau of UNHCR for West Africa 
  
+ * [Matheus Soldi Hardt](https://github.com/matheus-hardt) works in the Data Team of the regional bureau of UNHCR for the Americas 
+ 
  * [Hisham Galal](https://github.com/galalH/) works in the Data Team of the regional bureau of UNHCR for the Americas  
  
  * [Edouard Legoupil](https://github.com/edouard-Legoupil) works in the Data Team of the regional bureau of UNHCR for the Americas
@@ -88,7 +88,6 @@ The  Community  lead is responsible for:
  
  * Advocating for funding in order to support potential third-party code review on the projects and presential developer conference organisation.
 
-Currently this role is held by [Geraldine Henningsen](https://github.com/geraldine28) from UNHCR Global Data Service, Statistics and Data Services. 
 
 
 ### Decision-making process

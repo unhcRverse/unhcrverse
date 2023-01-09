@@ -15,11 +15,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+ 
 
-
-### Experimental projects, i.e. Training material, presentation or highlighted analysis
-
-Any project can be suggested to be included in the `unhcRverse` though a issue posted in this current repository.  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will be forked into `unhcRverse` within a months.
+Any project, i.e. Training material, presentation or highlighted analysis, can be suggested to be included in the `unhcRverse` though a issue posted in this current repository.  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will be forked into `unhcRverse` within a months.
 
 Having a project forked as experimental within `unhcRverse` is for the project maintainer:
 
@@ -31,23 +29,23 @@ Having a project forked as experimental within `unhcRverse` is for the project m
  
 Below is an initial listing of repository to potentially include as __experimental__:
 
-Packages dedicated to survey management
+##  Data Scrapping
 
  * https://github.com/unhcr-americas/usastats
  * https://github.com/PopulationStatistics/Eurostats
  * https://github.com/unhcr-americas/IatiTidy
  * https://github.com/unhcr-americas/iati
 
-Packages dedicated to Statistical Quality Control
+##  Statistical Quality Control
 
  * https://github.com/PopulationStatistics/StatisticalQualityAssurance
  * https://github.com/PopulationStatistics/StatisticsCore
 
-Packages dedicated to survey management
+## Survey management
 
  * https://github.com/unhcr-americas/surveyDesigner
 
-Repository to train staff on existing tools
+## R Training
 
  * https://github.com/vidonne/unhcRstyle_workshop
  * https://github.com/dickoa/panafrican-dima-r-training 
@@ -57,7 +55,7 @@ Repository to train staff on existing tools
  * https://github.com/unhcr-americas/vulnerability-scoring
  
 
-Repository with reproducible data analysis & data story telling examples
+## Reproducible data analysis & data story telling examples
 
  * https://github.com/UNHCR-WEB/R-usergroup
  * https://github.com/unhcr-americas/ageingonthemove

@@ -123,13 +123,54 @@ done (for example when you have code and data for a publication). If you
 are thinking about making a software package for public use there are a
 few things you should consider first:</p>
 <ul>
-<li>Is your idea new or is there already a package out there that does
-something similar?</li>
-<li>If there is does your package improve on it in some way? For example
-is it easier to use or does it have better performance?</li>
-<li>If a similar package exists could you help improve it rather than
-making a new one? Most package developers are open to collaboration and
-you may be able to achieve more by working together.</li>
+<li><p>Is your idea new or is there already a package out there that
+does something similar? If you have an idea, <a href="https://github.com/unhcRverse/unhcRverse/issues" class="external-link">raise an issue to
+start the discussion asap</a>!</p></li>
+<li><p>If there is does your package improve on it in some way? For
+example is it easier to use or does it have better performance? Maybe
+check the existing packages and see if you can improve first the
+existing solution before starting a new one from scratch. UNHCR package
+developers are open to collaboration and you may be able to achieve more
+by working together.</p></li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="how-to-develop-packages">How to develop packages?<a class="anchor" aria-label="anchor" href="#how-to-develop-packages"></a>
+</h2>
+<blockquote>
+<p>We <strong>DO STRONGLY RECOMMEND</strong> to use <a href="https://thinkr-open.github.io/fusen/index.html" class="external-link">fusen package</a>
+to develop packages as it facilitates a lot peer review and enforces a
+series of good practices (example, unit testing..)</p>
+</blockquote>
+<p>In addition, there are plenty of resources available to learn how to
+develop packages. See a list below:</p>
+<ul>
+<li>Writing an R package from scratch (Hilary Parker) <a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/" class="external-link uri">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a>
+</li>
+<li>Writing an R package from scratch (Updated) (Thomas Westlake) <a href="https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/" class="external-link uri">https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/</a>
+</li>
+<li>usethis workflow for package development (Emil Hvitfeldt) <a href="https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/" class="external-link uri">https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/</a>
+</li>
+<li>R package primer (Karl Broman) <a href="https://kbroman.org/pkg_primer/" class="external-link uri">https://kbroman.org/pkg_primer/</a>
+</li>
+<li>R Package Development Pictorial (Matthew J Denny) <a href="http://www.mjdenny.com/R_Package_Pictorial.html" class="external-link uri">http://www.mjdenny.com/R_Package_Pictorial.html</a>
+</li>
+<li>Building R Packages with Devtools (Jiddu Alexander) <a href="http://www.jiddualexander.com/blog/r-package-building/" class="external-link uri">http://www.jiddualexander.com/blog/r-package-building/</a>
+</li>
+<li>Developing R packages (Jeff Leek) <a href="https://github.com/jtleek/rpackages" class="external-link uri">https://github.com/jtleek/rpackages</a>
+</li>
+<li>R Package Tutorial (Colautti Lab) <a href="https://colauttilab.github.io/RCrashCourse/Package_tutorial.html" class="external-link uri">https://colauttilab.github.io/RCrashCourse/Package_tutorial.html</a>
+</li>
+<li>Instructions for creating your own R package (MIT) <a href="http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf" class="external-link uri">http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf</a>
+</li>
+<li>How to Create and Distribute an R Package (Shian Su) <a href="https://medium.com/@shiansu/how-to-create-and-distribute-an-r-package-a296217435dc" class="external-link uri">https://medium.com/@shiansu/how-to-create-and-distribute-an-r-package-a296217435dc</a>
+</li>
+<li>R Forwards Package Workshop (Chicago, February 23, 2019) <a href="https://github.com/forwards/workshops/tree/master/Chicago2019" class="external-link uri">https://github.com/forwards/workshops/tree/master/Chicago2019</a>
+</li>
+<li>Write your own R package (UBC STAT 545) <a href="http://stat545.com/packages00_index.html" class="external-link uri">http://stat545.com/packages00_index.html</a>
+</li>
+<li>R package workshop <a href="https://combine-australia.github.io/r-pkg-dev/" class="external-link uri">https://combine-australia.github.io/r-pkg-dev/</a>
+</li>
 </ul>
 </div>
 <div class="section level2">
@@ -140,11 +181,15 @@ production of statistical evidence and data stories. Even if not
 installable throught the main CRAN repository, those
 <strong>Packages</strong> are expected to follow the standards outlined
 in the <a href="https://cran.r-project.org/web/packages/policies.html" class="external-link">CRAN
-policies</a>. However as those packages heavily relies on the benevolent
-time of the maintainer and in the absence of systematic third-party code
-review, each those package might not be fully CRAN-Check compliant…</p>
+policies</a>.</p>
+<blockquote>
+<p>However as those packages heavily relies on the benevolent time of
+the maintainers and, while wiating for for systematic third-party code
+review process set up, each those package might not be (yet!) fully
+CRAN-Check compliant…</p>
+</blockquote>
 <p><a href="https://github.com/unhcRverse/unhcRverse" class="external-link">unhcrverse</a> includes packages related to</p>
-<ul>
+<ol style="list-style-type: decimal">
 <li><p><strong>Design and branding</strong> such as <a href="https://github.com/vidonne/unhcrdown" class="external-link">unhcrdown</a>: UNHCR
 templates for R Markdown, <a href="https://github.com/vidonne/unhcrthemes" class="external-link">unhcrthemes</a>: UNHCR
 branded theme for ggplot2 and data visualization colour
@@ -159,166 +204,26 @@ to connect to the system for official statistic curation</p></li>
 Perform High Frequency Check or <a href="https://github.com/edouard-legoupil/kobocruncher" class="external-link">kobocruncher</a>:
 Process data crunching for survey dataset or <a href="https://github.com/edouard-legoupil/XlsFormPrettyPrint" class="external-link">XlsFormPrettyPrint</a>:
 to work with multiple xlsform</p></li>
-</ul>
+</ol>
 <p>You can install them all with the following:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"pak"</span><span class="op">)</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="http://pak.r-lib.org/reference/pkg_install.html" class="external-link">pkg_install</a></span><span class="op">(</span><span class="st">"unhcRverse/unhcRverse"</span><span class="op">)</span></span>
 <span><span class="fu">unhcrverse</span><span class="fu">::</span><span class="fu"><a href="../reference/unhcrverse.html">unhcrverse</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div class="section level3">
-<h3 id="deprecated-projects">Deprecated projects<a class="anchor" aria-label="anchor" href="#deprecated-projects"></a>
-</h3>
-<p>Any stable project where there is no maintainer working with UNHCR
-will be placed as deprecated.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
-<span></span>
-<span><span class="co"># &lt;!--  </span></span>
-<span><span class="co"># </span></span>
-<span><span class="co">#   rec1 [label = 'Data \n Extraction &amp; \n Shaping']</span></span>
-<span><span class="co"># * [popdata](https://github.com/unhcRverse/opdata): API to connect to the system for official statistic curation</span></span>
-<span><span class="co"># * [ridl](https://github.com/unhcRverse/ridl): API to connect to internal data source</span></span>
-<span><span class="co"># * [robotoolbox](https://github.com/unhcRverse/hcrdata): API to connect to Kobo Data Collection Server</span></span>
-<span><span class="co"># * [rhdx](https://github.com/unhcRverse/hcrdata): API to connect to Humanitarian Data Exchange</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co">#   rec2 [label = 'Data \n Quality \n Check']</span></span>
-<span><span class="co"># * [HighFrequencyChecks](https://github.com/unhcRverse/HighFrequencyChecks/): Perform High Frequency Check</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co">#   rec3 [label =  'Data Exploration /\n  Chart Library']</span></span>
-<span><span class="co"># * [unhcrdatapackage](https://github.com/unhcRverse/unhcrdatapackage): Use UNHCR Open data</span></span>
-<span><span class="co"># * [koboloadeR](https://github.com/unhcRverse/kobocruncher/): Process data crunching for survey dataset</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co">#   rec4 [label = 'Branding: \n Report Template &amp;\n  Chart Style']</span></span>
-<span><span class="co"># * [unhcrdown](https://github.com/unhcRverse/unhcrdown): UNHCR templates for R Markdown</span></span>
-<span><span class="co"># * [unhcrthemes](https://github.com/unhcRverse/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes</span></span>
-<span><span class="co"># --&gt;</span></span>
-<span></span>
-<span><span class="co">#  graph [layout = dot, rankdir = TB]</span></span>
-<span><span class="co"># label= "Comic Sans MS"</span></span>
-<span></span>
-<span>  <span class="co"># layout = neato</span></span>
-<span></span>
-<span><span class="co"># 'transparent'</span></span>
-<span><span class="va">unhcrverse</span> <span class="op">&lt;-</span> <span class="fu">DiagrammeR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DiagrammeR/man/grViz.html" class="external-link">grViz</a></span><span class="op">(</span><span class="st">"digraph {</span></span>
-<span><span class="st">  bgcolor = transparent</span></span>
-<span><span class="st">  compound=true;</span></span>
-<span><span class="st">  graph [layout = dot, </span></span>
-<span><span class="st">         rankdir = TB,</span></span>
-<span><span class="st">         fontsize= 46, </span></span>
-<span><span class="st">        color = transparent,</span></span>
-<span><span class="st">        fontname='Lato',</span></span>
-<span><span class="st">        fontcolor='#FAEB00']</span></span>
-<span><span class="st">  node [shape = hexagon, </span></span>
-<span><span class="st">        fixedsize = true,</span></span>
-<span><span class="st">        width = 2.5,</span></span>
-<span><span class="st">        height = 2.5,</span></span>
-<span><span class="st">        color = '#FAEB00',</span></span>
-<span><span class="st">        penwidth = 4,</span></span>
-<span><span class="st">        fontsize=17, </span></span>
-<span><span class="st">        fontname='Lato',</span></span>
-<span><span class="st">        fontcolor='#ffffff']  </span></span>
-<span><span class="st">        </span></span>
-<span><span class="st">  edge [color = '#fffff',</span></span>
-<span><span class="st">        penwidth = 3]  </span></span>
-<span><span class="st">        </span></span>
-<span><span class="st">  subgraph cluster_unhcrverse {</span></span>
-<span><span class="st">         label = 'unhcRverse Stable-enough packages: Categories &amp; Dependencies'</span></span>
-<span><span class="st">    </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">      rec1 [label = 'Data \n Extraction &amp; \n Shaping']</span></span>
-<span><span class="st">      subgraph cluster_1 {</span></span>
-<span><span class="st">            label = ' '  </span></span>
-<span><span class="st">            rec1 -&gt; rec5</span></span>
-<span><span class="st">            rec1 -&gt; rec6</span></span>
-<span><span class="st">            rec1 -&gt; rec7</span></span>
-<span><span class="st">            rec1 -&gt; rec8   ;</span></span>
-<span><span class="st">            color='#ffffff'; }</span></span>
-<span><span class="st">    </span></span>
-<span><span class="st">      rec2 [label = 'Data \n Quality \n Check']</span></span>
-<span><span class="st">      subgraph cluster_2 {</span></span>
-<span><span class="st">            label = ' '</span></span>
-<span><span class="st">            rec2 -&gt; rec9 </span></span>
-<span><span class="st">            rec2 -&gt; rec99  ;</span></span>
-<span><span class="st">            color='#ffffff';  }</span></span>
-<span><span class="st">      </span></span>
-<span><span class="st">      rec3 [label =  'Data Exploration /\n  Chart Library']</span></span>
-<span><span class="st">      subgraph cluster_3 {</span></span>
-<span><span class="st">            label = ' ';</span></span>
-<span><span class="st">            rec3 -&gt; rec10;</span></span>
-<span><span class="st">            rec3 -&gt; rec11;</span></span>
-<span><span class="st">            rec3 -&gt; rec112 ;</span></span>
-<span><span class="st">            rec3 -&gt; rec113 ;</span></span>
-<span><span class="st">            color='#ffffff'; }</span></span>
-<span><span class="st">      </span></span>
-<span><span class="st">      rec4 [label = 'Branding: \n Report Template &amp;\n  Chart Style']</span></span>
-<span><span class="st">      subgraph cluster_4 {</span></span>
-<span><span class="st">            label = ' ';</span></span>
-<span><span class="st">            rec4 -&gt; rec12;</span></span>
-<span><span class="st">            rec4 -&gt; rec13  ;</span></span>
-<span><span class="st">            color='#ffffff'; }</span></span>
-<span><span class="st"></span></span>
-<span><span class="st">  }   </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  rec5 [label = 'popdata:\n pull from \n popdata.unhcr.org']</span></span>
-<span><span class="st">  rec6 [label = 'ridl:\n pull/push from \n ridl.unhcr.org']</span></span>
-<span><span class="st">  rec7 [label = 'robotoolbox:\n pull from \n kobo.unhcr.org']</span></span>
-<span><span class="st">  rec8 [label = 'rhdx:\n pull from \n data.humdata.org']</span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  rec9 [label = 'High\n FrequencyChecks:\n Data collection quality']</span></span>
-<span><span class="st">  rec99 [label = 'Statistical\n Quality\n Assurance:\n SQAF']</span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  rec10 [label = 'unhcrdatapackage:\n Population Statistics']</span></span>
-<span><span class="st">  rec11 [label = 'iati:\n UNHCR activities &amp;\n Budget']</span></span>
-<span><span class="st">  rec112 [label = 'kobocruncher:\n Automatic \n data exploration \n for surveys']</span></span>
-<span><span class="st">  rec113 [label = 'progresAnalysis:\n Registration analysis']</span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  rec12 [label = 'unhcrdown:\n Report template']</span></span>
-<span><span class="st">  rec13 [label = 'unhcrthemes:\n Ggplot theme']</span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">   rec5  -&gt; rec99</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec7  -&gt; rec9</span></span>
-<span><span class="st">   rec9  -&gt; rec6</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec6  -&gt; rec113</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec12  -&gt; rec112</span></span>
-<span><span class="st">   rec13  -&gt; rec112</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec12  -&gt; rec113</span></span>
-<span><span class="st">   rec13  -&gt; rec113</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec12  -&gt; rec11</span></span>
-<span><span class="st">   rec13  -&gt; rec11</span></span>
-<span><span class="st">   </span></span>
-<span><span class="st">   rec12  -&gt; rec10</span></span>
-<span><span class="st">   rec13  -&gt; rec10</span></span>
-<span><span class="st">  </span></span>
-<span><span class="st">  }"</span>,</span>
-<span>  height <span class="op">=</span> <span class="fl">550</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#3require(magrittr)</span></span>
-<span><span class="co">#require(DiagrammeR)</span></span>
-<span><span class="co">#require(DiagrammeRsvg)</span></span>
-<span><span class="co">#require(xml2)</span></span>
-<span></span>
-<span><span class="co"># unhcrverse |&gt;</span></span>
-<span><span class="co">#   DiagrammeRsvg::export_svg() |&gt;</span></span>
-<span><span class="co">#   xml2::read_xml() |&gt;</span></span>
-<span><span class="co">#   xml2::write_xml("unhcrverse.svg")</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># unhcrverse |&gt;</span></span>
-<span><span class="co">#   DiagrammeRsvg::export_svg() |&gt;</span></span>
-<span><span class="co">#   charToRaw() |&gt;</span></span>
-<span><span class="co">#   rsvg::rsvg_png("unhcrverse.png")</span></span></code></pre></div>
 </div>
+<div class="section level2">
+<h2 id="deprecated-projects">Deprecated projects<a class="anchor" aria-label="anchor" href="#deprecated-projects"></a>
+</h2>
+<p>Any stable project where there is no maintainer working with UNHCR,
+or when the scope got filled by other better packages will be placed in
+the list of deprecated packages.</p>
+<p>For instance:</p>
+<ul>
+<li><p><a href="https://unhcr.github.io/koboloadeR/docs/" class="external-link">koboloader</a>
+got deprecated by <a href="https://github.com/edouard-legoupil/kobocruncher" class="external-link">kobocruncher</a></p></li>
+<li><p><a href="https://unhcr-web.github.io/unhcRstyle/docs/" class="external-link">unhcrstyle</a> got
+deprecated by <a href="https://github.com/vidonne/unhcrdown" class="external-link">unhcrdown</a> and <a href="https://github.com/vidonne/unhcrthemes" class="external-link">unhcrthemes</a></p></li>
+</ul>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
