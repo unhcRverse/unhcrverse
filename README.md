@@ -1,4 +1,4 @@
-# `{unhcrverse}` - **Data Analysis: From common challenges to a "solution community"**
+# `{unhcrverse}` - **Data Analysis: From common challenges to a "solution community"**!
 
 *`{unhcrverse}`* is an organisation account on Github  to promote the usage of R data language. It allows to coordinate dissemination and reviews of templates, packages and projects.
 
@@ -10,7 +10,7 @@
 > *Having a project within __`{unhcrverse}`__ is not only a recognition and an opportunity to showcase the work but also a way to request and benefit from peer review from all R-users within UNHCR.*
 
 ### Packages that are *Stable-enough*
-The list of mature projects includes [set of packages](articles/ecosysten.html) to ease the production of statistical evidence and data stories. Those **Packages** should aim to reach over time the standards outlined in the [CRAN policies](https://cran.r-project.org/web/packages/policies.html).
+The list of mature projects includes [set of packages](articles/ecosystem.html) to ease the production of statistical evidence and data stories. Those **Packages** should aim to reach over time the standards outlined in the [CRAN policies](https://cran.r-project.org/web/packages/policies.html).
 
 ```{r}
 install.packages("pak")
@@ -52,7 +52,7 @@ The Community coordinator is responsible for presenting and promoting the **`{un
 The coordinator also organizes meetings with all maintainer in order to agree on the project to be included/classified in the organisation repository. Last function is around advocating for funding in order to support potential third-party code review on the projects and presential developer conference organisation.
 
 ### supporting **strategic decision making**
-This organisation account on github is managed jointly by the different Project Maintainers.
+This organisation account on github is managed jointly by the different Project Maintainers and follows some [coordination principles](articles/coordination.html).
 
 As for [tidyVerse](https://www.tidyverse.org/), `{unhcrverse}` community makes decisions according to a consensus model where suggestions are considered and discussed between the community coordinator, project maintainers and core developers, typically in GitHub issues.
 

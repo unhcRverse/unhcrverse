@@ -27,7 +27,7 @@ Packages can take various forms during their life cycle. For more details have a
 
 Packages are the best way to distribute code and documentation, and as we are about to find out they are very simple to make. Even if you never intend to share your package it is useful to have a place to store your commonly used functions. You may have heard the advice:
 
-> that if you find yourself reusing code then you should turn it into a function so that you don’t have to keep rewriting it (along with other benefits). 
+> If you find yourself reusing code then you should wait anymore to turn it into a function so that you don’t have to keep rewriting it (_along with other benefits..._). 
 
 The same applies to functions. If you have some functions you reuse in different projects then it probably makes sense to put those in a package. It’s a bit more effort now but it will save you a lot of time in the long run.
 
