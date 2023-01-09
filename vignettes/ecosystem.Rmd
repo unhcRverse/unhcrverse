@@ -3,7 +3,7 @@ title: "Package Ecosystem"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Package Ecosystem}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,41 +16,50 @@ knitr::opts_chunk$set(
 ```
 
 
-### 'Stable-enough' packages within `unhcRverse`
+## What is a package?
+
+An R package is a collection of functions that are bundled together in a way that lets them be easily shared. Usually these functions are designed to work together to complete a specific task such as analysing a particular kind of data. You are probably familiar with many packages already, for example ggplot2 or dplyr.
+
+Packages can take various forms during their life cycle. For more details have a look at the “What is a package?” section of Hadley Wickham’s “R packages” book (http://r-pkgs.had.co.nz/package.html#package)
+
+
+## Why write a package?
+
+Packages are the best way to distribute code and documentation, and as we are about to find out they are very simple to make. Even if you never intend to share your package it is useful to have a place to store your commonly used functions. You may have heard the advice:
+
+> that if you find yourself reusing code then you should turn it into a function so that you don’t have to keep rewriting it (along with other benefits). 
+
+The same applies to functions. If you have some functions you reuse in different projects then it probably makes sense to put those in a package. It’s a bit more effort now but it will save you a lot of time in the long run.
+
+Of course often you will want to share your package, either to let other people use your functions or just so people can see what you have done (for example when you have code and data for a publication). If you are thinking about making a software package for public use there are a few things you should consider first:
+
+ *  Is your idea new or is there already a package out there that does something similar?
+ *  If there is does your package improve on it in some way? For example is it easier to use or does it have better performance?
+ *  If a similar package exists could you help improve it rather than making a new one? Most package developers are open to collaboration and you may be able to achieve more by working together.
+
+
+## 'Stable-enough' packages within `{unhcrverse}`
 
 The list of mature projects includes set of packages to ease the production of statistical evidence and data stories. Even if not installable throught the main CRAN repository, those **Packages** are expected to follow the standards outlined in the [CRAN policies](https://cran.r-project.org/web/packages/policies.html). However as those packages heavily relies on the benevolent time of the maintainer and in the absence of systematic third-party code review, each those package might not be fully CRAN-Check compliant... 
 
-* [unhcrdown](https://github.com/unhcRverse/unhcrdown): UNHCR templates for R Markdown
-* [unhcrthemes](https://github.com/unhcRverse/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes
-* [unhcrdatapackage](https://github.com/unhcRverse/unhcrdatapackage): Use UNHCR Open data
-* [ridl](https://github.com/unhcRverse/ridl): API to connect to internal data source
-* [robotoolbox](https://github.com/unhcRverse/hcrdata): API to connect to Kobo Data Collection Server
-* [rhdx](https://github.com/unhcRverse/hcrdata): API to connect to Humanitarian Data Exchange
-* [popdata](https://github.com/unhcRverse/opdata): API to connect to the system for official statistic curation
-* [HighFrequencyChecks](https://github.com/unhcRverse/HighFrequencyChecks/): Perform High Frequency Check
-* [koboloadeR](https://github.com/unhcRverse/koboloadeR/): Process data crunching for survey dataset
+`{unhcrverse}` includes packages related to 
+
+
+ 
+ * __Design and branding__ such as [unhcrdown](https://github.com/vidonne/unhcrdown): UNHCR templates for R Markdown,   [unhcrthemes](https://github.com/vidonne/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes, 
+ 
+ 
+* __Data Access__ such as [unhcrdatapackage](https://github.com/edouard-legoupil/unhcrdatapackage): Use UNHCR Open data, [ridl](https://github.com/dickoa/ridl): API to connect to internal data source, [robotoolbox](https://github.com/dickoa/obotoolbox): API to connect to Kobo Data Collection Server, [rhdx](https://github.com/dickoa/hcrdata): API to connect to Humanitarian Data Exchange and [popdata](https://github.com/PopulationStatistics/popdata): API to connect to the system for official statistic curation
+
+
+* __Survey Data Processing__ such as [HighFrequencyChecks](https://github.com/edouard-legoupil/HighFrequencyChecks/): Perform High Frequency Check or  [kobocruncher](https://github.com/edouard-legoupil/kobocruncher): Process data crunching for survey dataset or [XlsFormPrettyPrint](https://github.com/edouard-legoupil/XlsFormPrettyPrint): to work with multiple xlsform
 
 You can install them all with the following:
 
 ```{r unhcrverse, eval = FALSE, include=TRUE}
-## unhcrdown
-remotes::install_github("unhcRverse/unhcrdown")
-## unhcrthemes
-remotes::install_github("unhcRverse/unhcrthemes")
-## unhcrdatapackage
-remotes::install_github('unhcRverse/unhcrdatapackage')
-## popdata
-remotes::install_github('unhcRverse/popdata')
-## ridl
-remotes::install_github('unhcRverse/ridl')
-## robotoolbox
-remotes::install_github('unhcRverse/robotoolbox')
-## rhdx
-remotes::install_github('unhcRverse/rhdx')
-## HighFrequencyChecks
-remotes::install_github('unhcRverse/HighFrequencyChecks')
-## koboloadeR
-remotes::install_github('unhcRverse/koboloadeR')
+install.packages("pak")
+pak::pkg_install("unhcRverse/unhcRverse")
+unhcrverse::unhcrverse()
 ```
 
 
@@ -200,15 +209,15 @@ unhcrverse <- DiagrammeR::grViz("digraph {
 #require(DiagrammeRsvg)
 #require(xml2)
 
-unhcrverse |>
-  DiagrammeRsvg::export_svg() |>
-  xml2::read_xml() |>
-  xml2::write_xml("unhcrverse.svg")
-
-
-unhcrverse |>
-  DiagrammeRsvg::export_svg() |>
-  charToRaw() |>
-  rsvg::rsvg_png("unhcrverse.png")
+# unhcrverse |>
+#   DiagrammeRsvg::export_svg() |>
+#   xml2::read_xml() |>
+#   xml2::write_xml("unhcrverse.svg")
+# 
+# 
+# unhcrverse |>
+#   DiagrammeRsvg::export_svg() |>
+#   charToRaw() |>
+#   rsvg::rsvg_png("unhcrverse.png")
 
 ```

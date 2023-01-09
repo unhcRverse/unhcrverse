@@ -4,6 +4,12 @@
     <loc>/404.html</loc>
   </url>
   <url>
+    <loc>/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>/articles/codingstyle.html</loc>
   </url>
   <url>
@@ -13,13 +19,13 @@
     <loc>/articles/ecosystem.html</loc>
   </url>
   <url>
-    <loc>/articles/ecosysteme.html</loc>
-  </url>
-  <url>
     <loc>/articles/experimentation.html</loc>
   </url>
   <url>
     <loc>/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>/articles/unhcrverse-functions.html</loc>
   </url>
   <url>
     <loc>/authors.html</loc>
@@ -31,9 +37,15 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/hello.html</loc>
+    <loc>/reference/check_github.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/unhcrverse.html</loc>
+  </url>
+  <url>
+    <loc>/reference/update_github.html</loc>
   </url>
 </urlset>

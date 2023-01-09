@@ -1,0 +1,331 @@
+---
+title: "unhcrverse"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r development, include=FALSE}
+library(testthat)
+```
+
+```{r development-load}
+# Load already included functions if relevant
+pkgload::load_all(export_all = FALSE)
+```
+
+
+# update_github
+
+This function install a package from github - see [pak::pkg_install](https://pak.r-lib.org/reference/pkg_install.html)
+    
+```{r function-update_github}
+#' update_github
+#' 
+#' Update package from github
+#' 
+#' @param pkg
+#' 
+#' @importFrom utils installed.packages packageDescription
+#' @importFrom pak pkg_install
+#' 
+#' @return nothing just messaging what is happening
+#' 
+#' @export
+#' 
+
+update_github <- function( pkg) {
+  message(paste("## Upgrading or installing packages: ", pkg, " now..."))
+  pak::pkg_install(pkg = pkg)
+  return(paste0("Done!"))
+}
+
+```
+  
+```{r example-update_github}
+# No example - cf - 
+## https://github.com/r-lib/pkgcache#using-pkgcache-in-cran-packages
+
+# update_github(pkg = 'vidonne/unhcrthemes')
+
+
+     
+```
+  
+```{r tests-update_github}
+test_that("update_github works", {
+  expect_true(inherits(update_github, "function"))
+  expect_equal(update_github("testthat"), "Done!")
+})
+```
+  
+  
+# check_github
+
+This functions compare what you have in your system compared to the last version in github.
+    
+```{r function-check_github}
+#' check_github
+#' 
+#' check latest github version of R package
+#' 
+#' 
+#' @param pkg
+#' 
+#' @importFrom utils packageVersion
+
+#' 
+#' @return list with the comparison between what is in the system and
+#'  what is in github
+#' 
+#' @export
+
+
+check_github <- function(pkg) {
+  #  withr::local_envvar(
+  #     R_USER_CACHE_DIR = tempfile(),
+  #     .local_envir = teardown_env()
+  #   )
+  #   
+  # withr::defer(
+  #     .Call(pkgcache__gcov_flush),
+  #     teardown_env()
+  #   )
+  # @importFrom pak meta_update pkg_cache_add_file
+  # pak::meta_update()
+  # pak::pkg_cache_add_file() 
+  installed_version <- tryCatch(packageVersion(gsub(".*/", "", pkg)), error=function(e) NA)
+  url <- paste0("https://raw.githubusercontent.com/", pkg, "/master/DESCRIPTION")
+  
+  x <- readLines(url)
+  remote_version <- gsub("Version:\\s*", "", x[grep('Version:', x)])
+  
+  res <- list(package = pkg,
+              installed_version = installed_version,
+              latest_version = remote_version,
+              up_to_date = NA)
+  
+  if (is.na(installed_version)) {
+    message(paste("##", pkg, "is not installed..."))
+  } else {
+    if (remote_version > installed_version) {
+      msg <- paste("##", pkg, "is out of date...")
+      message(msg)
+      res$up_to_date <- FALSE
+    } else if (remote_version == installed_version) {
+      message(paste("Package", pkg, " is up-to-date with the last available version"))
+      res$up_to_date <- TRUE
+    }
+  }
+  
+  return(res)
+}
+
+
+
+
+```
+  
+```{r example-check_github}
+# No example - cf - 
+## https://github.com/r-lib/pkgcache#using-pkgcache-in-cran-packages
+
+# check_github('vidonne/unhcrthemes')
+```
+  
+```{r tests-check_github}
+
+test_that("check_github works", {
+  expect_true(inherits(check_github, "function")) 
+  
+  pkg <- "r-lib/pkgdown"
+  result <- check_github(pkg)
+  
+  url <- paste0("https://raw.githubusercontent.com/", pkg, "/master/DESCRIPTION")
+  x <- readLines(url)
+  remote_version <- gsub("Version:\\s*", "", x[grep('Version:', x)])
+  
+  installed_version <- tryCatch(packageVersion(gsub(".*/", "", pkg)), error=function(e) NA)
+  
+  
+  expect_is(result, "list")
+  expect_equal(result$latest_version, remote_version)
+ 
+  # if (remote_version > installed_version) {
+  #   expect_equal(result$up_to_date, FALSE)
+  # } else if (remote_version == installed_version) {
+  #   expect_equal(result$up_to_date, TRUE) }
+  
+})
+```
+  
+
+
+# unhcrverse
+
+This functions check that you have `{unhcrverse}` installed on your system and install it, if missing.
+    
+```{r function-unhcrverse}
+#' unhcrverse
+#' 
+#' check and load latest version of unhcrverse
+#' 
+#' @return nothing only messages
+#' @param dev Boolean TRUE / FALSE to indicate if the dev version should be used
+#' @return list
+#' @export
+
+unhcrverse <- function( dev = FALSE) {
+  message("Welcome to {unhcrverse}! ")
+  message("--------------------- ")
+  message("There are currently 12 packages in {unhcrverse}.")
+  message("We will check if you have the required package (or the last version) in your system and install them if necessary! ")
+  message("--------------------- ")
+  
+  if( dev == TRUE ) {
+    message( "You decided to install the development versions for each component of unhcRverse. ")
+    message(" Current Development version of the packages are within respective maintainer personal account")
+  } else {
+    message( "You are installing the most stable version from https://github.com/unhcRverse ")
+  }
+  
+  
+  ## Core Dev - Cedric Vidonne
+  
+    if( dev == TRUE ) {
+       chck <- check_github('vidonne/unhcrthemes')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('vidonne/unhcrthemes')}
+    } else {
+       chck <- check_github('unhcrverse/unhcrthemes')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrthemes')  }
+    }
+    if( dev == TRUE ) {
+       chck <- check_github('vidonne/unhcrdown')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('vidonne/unhcrdown')}
+    } else {
+       chck <- check_github('unhcrverse/unhcrdown')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/unhcrdown')  }
+    }
+  
+  
+    if( dev == TRUE ) {
+       chck <- check_github('vidonne/unhcrdesign')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('vidonne/unhcrdesign')}
+    } else {
+       chck <- check_github('unhcrverse/unhcrdesign')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrdesign')    }
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('vidonne/unhcrtemplate')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('vidonne/unhcrtemplate')}
+    } else {
+       chck <- check_github('unhcrverse/unhcrtemplate')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/unhcrtemplate') }
+  }
+  
+  ## Core Dev - Ahmadou Dicko
+  
+    if( dev == TRUE ) {
+       chck <- check_github('PopulationStatistics/popdata')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('PopulationStatistics/popdata')}
+    } else {
+       chck <- check_github('unhcrverse/popdata')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('unhcrverse/popdata')  }
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('dickoa/ridl')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('dickoa/ridl')}
+    } else {
+       chck <- check_github('unhcrverse/ridl')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/ridl')}
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('dickoa/rhdx')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('dickoa/rhdx')}
+    } else {
+       chck <- check_github('unhcrverse/rhdx')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/rhdx') }
+  }
+    if( dev == TRUE ) {
+       chck <- check_github('dickoa/robotoolbox')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('dickoa/robotoolbox')}
+    } else {
+       chck <- check_github('unhcrverse/robotoolbox')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/robotoolbox')  }
+  }
+  
+  
+  ## Core Dev - Edouard Legoupil
+  
+    if( dev == TRUE ) {
+       chck <- check_github('edouard-legoupil/HighFrequencyChecks')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('edouard-legoupil/HighFrequencyChecks')}
+    } else {
+       chck <- check_github('unhcrverse/HighFrequencyChecks')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/HighFrequencyChecks')}
+      }
+      
+    if( dev == TRUE ) {
+       chck <- check_github('edouard-legoupil/kobocruncher')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/kobocruncher')}
+    } else {
+       chck <- check_github('unhcrverse/kobocruncher')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('unhcrverse/kobocruncher')  }
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('edouard-legoupil/unhcrdatapackage')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/unhcrdatapackage')}
+    } else {
+       chck <- check_github('unhcrverse/unhcrdatapackage')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrdatapackage')  }
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('edouard-legoupil/XlsFormPrettyPrint')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/XlsFormPrettyPrint')}
+    } else {
+       chck <- check_github('unhcrverse/XlsFormPrettyPrint')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/XlsFormPrettyPrint')}
+    }
+  return(NULL)
+}
+
+
+```
+  
+```{r example-unhcrverse}
+
+# install.packages("pak")
+# pak::pkg_install("unhcRverse/unhcRverse")
+
+# unhcrverse::unhcrverse() 
+
+## If you want to contribute to package development, 
+# which you are probably if you are currently checking this test :)
+# use the version from the developers
+# unhcrverse::unhcrverse(dev = TRUE)
+```
+  
+```{r tests-unhcrverse}
+test_that("unhcrverse works", {
+  expect_true(inherits(unhcrverse, "function"))   
+ # expect_equal(unhcrverse(), NULL)
+ #  expect_equal(unhcrverse(dev = TRUE), NULL)
+})
+```
+  
+
+
+```{r development-inflate, eval=FALSE}
+# Define License with use_*_license()
+#usethis::use_mit_license("UNHCR")
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(flat_file = "dev/dev_fusen.Rmd", vignette_name = "unhcrverse functions")
+pkgdown::build_site()
+```
+

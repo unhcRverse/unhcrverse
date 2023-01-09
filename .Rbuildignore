@@ -1,2 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^unhcRverse2\.Rproj$
+^_pkgdown.yml
+^docs
+^dev
+^LICENSE\.md$

@@ -1,10 +1,31 @@
-Package: unhcrverse
 Type: Package
+Package: unhcrverse
 Title: UNHCR package universe
-Version: 0.1.0
-Author: Community
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: Install in one line most reliable versions of core UNHCR packages.
-License: MIT
+Version: 0.0.1
+Authors@R: c(
+    person("Cedric", "Vidonne", , "cedric@vidonne.me", role = c("aut", "ctb")),
+    person("Ahmadou", "Dicko", , "mail@ahmadoudicko.com", role = c("aut", "ctb")),
+    person("Matheus", "Soldi Hardt", , "matheus@unhcr.org", role = c("aut", "ctb")),
+    person("Hisham", "Galal", , "galalh@unhcr.org", role = c("aut", "ctb")),
+    person("Edouard", "Legoupil", , "legoupil@unhcr.org", role = c("aut", "cre"))
+  )
+Maintainer: Edouard Legoupil <legoupil@unhcr.org>
+Description: Install in one line the most reliable versions of core UNHCR
+    packages.
+License: MIT + file LICENSE
+URL: https://github.com/unhcRverse/unhcRverse
+BugReports: https://github.com/unhcRverse/unhcRverse/issues
+Imports: 
+    pak,
+    utils
+Suggests: 
+    DiagrammeR,
+    knitr,
+    rmarkdown,
+    testthat,
+    withr
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.3
