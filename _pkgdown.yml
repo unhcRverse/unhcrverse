@@ -8,8 +8,8 @@ navbar:
   left:
   - text: Core Ecosystem
     href: articles/ecosystem.html
-  - text: Experimental Project
-    href: articles/experimentation.html
+  - text: Showcase
+    href: articles/showcase.html
   - text: Coding Style
     href: articles/codingstyle.html
   - text: Coordination

@@ -22,8 +22,8 @@ unhcrverse::unhcrverse()
 ### Deprecated packages
 Any project from `{unhcrverse}` that has pending bug reports for some time but where there is no Core developers working with UNHCR anymore to fix them will be labelled as deprecated. This list includes for instance now [koboloader](https://unhcr.github.io/koboloadeR/docs/) and [unhcrstyle](https://unhcr-web.github.io/unhcRstyle/docs/)
 
-### Experimental projects
-Any project can be submitted to be referenced in the [unhcrverse experimentation](articles/experimentation.html). Community members will provide feedback through discussion in the [issue system](https://github.com/unhcRverse/unhcRverse/issues) and inline with [coding style conventions](articles/codingstyle.html).
+### Showcase projects
+Any project can be submitted to be referenced in the [unhcrverse showcase](articles/showcase.html). Community members will provide feedback through discussion in the [issue system](https://github.com/unhcRverse/unhcRverse/issues) and inline with [coding style conventions](articles/codingstyle.html).
 
 ## ...Made by and for People...
 

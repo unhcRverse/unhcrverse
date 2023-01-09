@@ -1,9 +1,9 @@
 ---
-title: "Experimentation"
+title: "Showcase"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Experimentation}
+  %\VignetteIndexEntry{Showcase}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,9 +17,9 @@ knitr::opts_chunk$set(
 
  
 
-Any project, i.e. Training material, presentation or highlighted analysis, can be suggested to be included in the `unhcRverse` though a issue posted in this current repository.  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will be forked into `unhcRverse` within a months.
+Any project, i.e. Training material, presentation or highlighted analysis, can be included in the `{unhcRverse}` Showcase vignette though a [issue posted in this current repository](https://github.com/unhcRverse/unhcRverse/issues).  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will referenced in the vignette within one month.
 
-Having a project forked as experimental within `unhcRverse` is for the project maintainer:
+Having a project referenced here is for the project maintainer:
 
  * A recognition of the project and an way to showcase the work done in order to inspire colleagues.
 
@@ -27,7 +27,7 @@ Having a project forked as experimental within `unhcRverse` is for the project m
 
  * An opportunity to be identified as an R-champions and of having a "word to say" in the governance of the `unhcRverse`
  
-Below is an initial listing of repository to potentially include as __experimental__:
+Below is an initial listing of repositories:
 
 ##  Data Scrapping
 
