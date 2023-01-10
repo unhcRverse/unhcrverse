@@ -75,7 +75,13 @@ Below is an initial listing of showcased repositories:
  * https://github.com/bozdagilgi/UNHCR-ETH-RMS-IDP-2022
  * https://github.com/bozdagilgi/UNHCR-RMS-ETH-RAS-2022
  * https://github.com/UNHCR-CostaRica/ENAHOrbm
- 
+
+## Datavisualisation
+
+ * https://github.com/TadeHabte/shiny-with-flexdashboard
+ * https://github.com/TadeHabte/Animation-in-R
+ * https://github.com/TadeHabte/Drill_down
+
 ## Registration Data Analysis 
 
  * https://github.com/unhcr-americas/proGres-analysis
