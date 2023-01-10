@@ -19,53 +19,79 @@ knitr::opts_chunk$set(
 
 Any project, i.e. Training material, presentation or highlighted analysis, can be included in the `{unhcRverse}` Showcase vignette though a [issue posted in this current repository](https://github.com/unhcRverse/unhcRverse/issues).  Community members will provide feedback through discussion in the issue system and unless some strong reservation are raised, the project will referenced in the vignette within one month.
 
-Having a project referenced here is for the project maintainer:
+Having a project referenced here is for authors:
 
  * A recognition of the project and an way to showcase the work done in order to inspire colleagues.
 
  * An opportunity to request and benefit from peer review from all R-users within UNHCR and potentially third-party support.
 
  * An opportunity to be identified as an R-champions and of having a "word to say" in the governance of the `unhcRverse`
- 
-Below is an initial listing of repositories:
 
-##  Data Scrapping
+
+Not that you can also find good reference in the [humanitarian-user-group](https://humanitarian-user-group.github.io/) and join the [linked interagency skype group](https://join.skype.com/qYBKC5q3wKp4). Last as UNHCR staff, you can also joint the [internal UNHCR R discussion on Microsoft Team](https://teams.microsoft.com/l/team/19%3abJPOOPqjzEEM31OYga5Jzw8mqGxDb_V2EKJedvKIims1%40thread.tacv2/conversations?groupId=68d8e31a-a244-479b-8467-4dc6bf9b7fdd&tenantId=e5c37981-6664-4134-8a0c-6543d2af80be)
+
+ 
+Below is an initial listing of showcased repositories:
+
+
+## R Training
+
+ * https://github.com/unhcr-americas/reproducibility
+ * https://github.com/vidonne/unhcRstyle_workshop
+ * https://github.com/dickoa/panafrican-dima-r-training 
+ * https://github.com/unhcr-americas/SurveyAnalysisTutorial
+ 
+
+## Data Scrapping
 
  * https://github.com/unhcr-americas/usastats
  * https://github.com/PopulationStatistics/Eurostats
- * https://github.com/unhcr-americas/IatiTidy
  * https://github.com/unhcr-americas/iati
+ * https://github.com/unhcr-americas/IatiTidy
+ 
+## Activities Tracking
 
-##  Statistical Quality Control
+ * https://github.com/MatayoBweta/three_rp_planning
+ * https://github.com/response4venezuelans/R4RMRP2022
+ * https://github.com/response4venezuelans/Submission2324QualityApp
+ * https://github.com/unhcr-americas/weekly-report
+
+## Statistical Quality Control
 
  * https://github.com/PopulationStatistics/StatisticalQualityAssurance
  * https://github.com/PopulationStatistics/StatisticsCore
 
-## Survey management
+## Survey Management
 
+ * https://github.com/MatayoBweta/shiny_question_scoring_system
  * https://github.com/unhcr-americas/surveyDesigner
 
-## R Training
+## UNHCR RBM (Result Based Management) "survey indicator" calculation
 
- * https://github.com/vidonne/unhcRstyle_workshop
- * https://github.com/dickoa/panafrican-dima-r-training 
- * https://github.com/unhcr-americas/reproducibility
- * https://github.com/unhcr-americas/SurveyAnalysisTutorial
+ * https://github.com/bozdagilgi/UNHCR-RMS-Indicators
+ * https://github.com/bozdagilgi/UNHCR-BFA-RMS-2022
+ * https://github.com/bozdagilgi/UNHCR-ETH-RMS-IDP-2022
+ * https://github.com/bozdagilgi/UNHCR-RMS-ETH-RAS-2022
+ * https://github.com/UNHCR-CostaRica/ENAHOrbm
+ 
+## Registration Data Analysis 
+
+ * https://github.com/unhcr-americas/proGres-analysis
+
+## Composite indicators 
+
  * https://github.com/unhcr-mena/analytic-hierarchy-process
  * https://github.com/unhcr-americas/vulnerability-scoring
- 
+ * https://github.com/unhcr-americas/Area_Based_Approach
+ * https://github.com/unhcr-mauritania/model
 
 ## Reproducible data analysis & data story telling examples
 
- * https://github.com/UNHCR-WEB/R-usergroup
  * https://github.com/unhcr-americas/ageingonthemove
  * https://github.com/unhcr-americas/riadis
- * https://github.com/unhcr-americas/proGres-analysis
+ * https://github.com/UNHCR-WEB/R-usergroup
  * https://github.com/unhcr-americas/Americas-Protection-Monitoring_2020
  * https://github.com/unhcr-americas/VenSit_PM_2020
- * https://github.com/unhcr-mauritania/model
- * https://github.com/unhcr-americas/Area_Based_Approach
  * https://github.com/unhcr-americas/RegionalTrends
  * https://github.com/unhcr-americas/LAPOP-SMA
  * https://github.com/unhcr-mena/focus-analysis
- * https://github.com/unhcr-americas/weekly-report
