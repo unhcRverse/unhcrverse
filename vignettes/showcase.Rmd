@@ -46,6 +46,7 @@ Below is an initial listing of showcased repositories:
 
  * https://github.com/unhcr-americas/usastats
  * https://github.com/PopulationStatistics/Eurostats
+ * https://github.com/unhcr-americas/darien_gap_human_mobility
  * https://github.com/unhcr-americas/iati
  * https://github.com/unhcr-americas/IatiTidy
  
@@ -65,6 +66,7 @@ Below is an initial listing of showcased repositories:
 
  * https://github.com/MatayoBweta/shiny_question_scoring_system
  * https://github.com/unhcr-americas/surveyDesigner
+ * https://github.com/unhcr-americas/DataCollectionMonitoring
 
 ## UNHCR RBM (Result Based Management) "survey indicator" calculation
 
