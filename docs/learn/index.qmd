@@ -39,7 +39,7 @@ Hands on session - using official Statistics to build charts
 
  - Kobo Survey Management with {HighFrequencyChecks} 
  
- - Kobosurvey Data Exploration with {KoboCruncher}
+ - Kobo survey [Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with {KoboCruncher}
  
  - Indicator calculation for RMS with {IndicatorCalc}
  
@@ -65,9 +65,10 @@ Facilitating Data Interpretation
 
 ## Day 4 Morning -  R for Processes 
  
+ - Package building & ShinyApp creation with {Graveler} 
+ 
  - Building index: an overview of {A2SIT}
  
- - Package building & ShinyApp creation with {Graveler} 
   
 
 # Afternoon - Hands-on {.slide-blue}
