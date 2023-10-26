@@ -35,7 +35,7 @@ The session will focus on presenting dedicated packages created by UNHCR staff i
 
  - An introduction to [Analysis Reproducibility](https://unhcr-americas.github.io/reproducibility/index.html)
 
- - Data [Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) using [{refugees}](https://populationstatistics.github.io/refugees/) & [{unchrthemes}](https://unhcr-dataviz.github.io/unhcrthemes/), access data API with [{robotoolbox}](https://dickoa.gitlab.io/robotoolbox/), [{rhdx}](http://dickoa.gitlab.io/rhdx/), [{riddle}](https://edouard-legoupil.github.io/riddle/), [{popdata}](https://edouard-legoupil.github.io/popdata/)
+ - Data [Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) using [{refugees}](https://populationstatistics.github.io/refugees/) & [{unchrthemes}](https://unhcr-dataviz.github.io/unhcrthemes/), access data through API with [{robotoolbox}](https://dickoa.gitlab.io/robotoolbox/), [{rhdx}](http://dickoa.gitlab.io/rhdx/), [{riddle}](https://edouard-legoupil.github.io/riddle/), [{popdata}](https://edouard-legoupil.github.io/popdata/), [{activityinfo-R}](https://www.activityinfo.org/support/docs/R/)
  
  - From Scripts to Functions: An illustration with [{unhcrplot}](https://edouard-legoupil.github.io/unhcrdatapackage/)
  
@@ -65,7 +65,7 @@ Working on UNHCR recent household survey dataset
  
  - [Tips](https://github.com/vidonne/r-tips#tips) to set up reproducible analysis pipeline
  
- - Work as a team: Collaborate through Version Control on Github. 
+ - "Work as a Team": Collaboration through Version Control on Github. 
  
 
 # Afternoon 3 - Hands-on {.slide-blue}
