@@ -9,7 +9,7 @@ embed-resources: true
 
 This workshop can not replace __fact-sheet-able certifications__ like the self-paced R training offered through [UNHCR Learn & Connect](https://unhcr.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=e90e2279-e3a4-4ef2-8b74-757f91d224b2). Rather than learning R _in general terms_, the sessions will provide an overview of how R is being used and customized within UNHCR context. 
 
-Each sessions (_presentations & applied exercise_) is organised to last one hour around a __specific learning objective__.
+Each of the 12 sessions (_presentations & exercise_) is organised to last one hour around a __specific learning objective__.
 
 Hands-on Co-Dev sessions between the training facilitator and the operation country team on __practical challenges__ will take place in the afternoon
 
@@ -35,11 +35,9 @@ The session will focus on presenting dedicated packages created by UNHCR staff i
 
  - An introduction to [Analysis Reproducibility](https://unhcr-americas.github.io/reproducibility/index.html)
 
- - [Data Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) - using [{refugees}](https://populationstatistics.github.io/refugees/) & [{unchrthemes}](https://unhcr-dataviz.github.io/unhcrthemes/)
+ - Data [Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) using [{refugees}](https://populationstatistics.github.io/refugees/) & [{unchrthemes}](https://unhcr-dataviz.github.io/unhcrthemes/), access data API with [{robotoolbox}](https://dickoa.gitlab.io/robotoolbox/), [{rhdx}](http://dickoa.gitlab.io/rhdx/), [{riddle}](https://edouard-legoupil.github.io/riddle/), [{popdata}](https://edouard-legoupil.github.io/popdata/)
  
- - Building functions: An overview of [{unhcrplot}](https://edouard-legoupil.github.io/unhcrdatapackage/)
- 
- - Accessing data API: [{robotoolbox}](https://dickoa.gitlab.io/robotoolbox/), [{riddle}](https://edouard-legoupil.github.io/riddle/), [{rhdx}](http://dickoa.gitlab.io/rhdx/), [{popdata}](https://edouard-legoupil.github.io/popdata/)
+ - From Scripts to Functions: An illustration with [{unhcrplot}](https://edouard-legoupil.github.io/unhcrdatapackage/)
  
 
 # Afternoon 1 - Hands-on {.slide-blue}
@@ -65,7 +63,9 @@ Working on UNHCR recent household survey dataset
  
  - Build and Automate Report with [{unhcrdown}](https://unhcr-dataviz.github.io/unhcrdown/) and [Posit Connect](http://rstudio.unhcr.org): An example with [weekly report](https://github.com/unhcr-americas/weekly-report) 
  
- - Set up reproducible & collaborative analysis pipeline: [Tips](https://github.com/vidonne/r-tips#tips) and version control with github. 
+ - [Tips](https://github.com/vidonne/r-tips#tips) to set up reproducible analysis pipeline
+ 
+ - Work as a team: Collaborate through Version Control on Github. 
  
 
 # Afternoon 3 - Hands-on {.slide-blue}
@@ -77,7 +77,9 @@ Facilitating Data Interpretation
 
 ## Day 4 Morning -  R for Processes 
  
- - Package building & Shiny __Companion App__ creation with [{Graveler}](https://edouard-legoupil.github.io/graveler/) 
+ - Package building, Documentation & Testing with [{fusen}](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal/}](https://edouard-legoupil.github.io/unhcrdataportal/)
+ 
+ - Create Shiny __Companion App__ creation with [{Graveler}](https://edouard-legoupil.github.io/graveler/) 
  
  - Building [Severity index](https://rstudio.unhcr.org/SeverityIndex/): an overview of [{A2SIT}](https://unhcr-guatemala.github.io/A2SIT/)
  
