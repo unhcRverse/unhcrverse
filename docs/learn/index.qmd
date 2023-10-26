@@ -1,5 +1,5 @@
 ---
-title: UNHCRverse
+title: UnhcrRverse
 subtitle: Workshop on UNHCR Packages
 format: unhcr-revealjs
 embed-resources: true
@@ -23,11 +23,11 @@ Presentation in the morning, hands-on sessions on practical operational topics i
 
  - An introduction to [Analysis Reproducibility](https://unhcr-americas.github.io/reproducibility/index.html)
 
- - [Data Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) - using {refugees} & {unchrthemes}
+ - [Data Manipulation and Visualization](https://vidonne.github.io/unhcrpractice/workshop/2022-11-dvt-budapest/dataviz_with_r_unhcrthemes.html) - using [{refugees}](https://populationstatistics.github.io/refugees/) & [{unchrthemes}](https://unhcr-dataviz.github.io/unhcrthemes/)
  
- - Building functions: An overview of {unhcrplot}
+ - Building functions: An overview of [{unhcrplot}](https://edouard-legoupil.github.io/unhcrdatapackage/)
  
- - Accessing data api: {robotoolbox}, {riddle}, {rhdx}
+ - Accessing data API: [{robotoolbox}](https://dickoa.gitlab.io/robotoolbox/), [{riddle}](https://edouard-legoupil.github.io/riddle/), [{rhdx}](http://dickoa.gitlab.io/rhdx/), [{popdata}](https://edouard-legoupil.github.io/popdata/)
  
 
 # Afternoon 1 - Hands-on {.slide-blue}
@@ -37,23 +37,23 @@ Hands on session - using official Statistics to build charts
 
 ## Day 2  Morning - R for Surveys
 
- - Kobo Survey Management with {HighFrequencyChecks} 
+ - Kobo Survey Management with [{HighFrequencyChecks}](https://edouard-legoupil.github.io/HighFrequencyChecks/) 
  
- - Kobo survey [Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with {KoboCruncher}
+ - Kobo survey [Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with [{KoboCruncher}](https://edouard-legoupil.github.io/kobocruncher)
  
- - Indicator calculation for RMS with {IndicatorCalc}
+ - Indicator calculation for RMS with [{IndicatorCalc}](https://unhcr-americas.github.io/IndicatorCalc/)
  
 
-# 2 Afternoon 2 - Hands-on {.slide-blue}
+# Afternoon 2 - Hands-on {.slide-blue}
 
 Working on UNHCR recent household survey dataset 
  
  
 ## Day 3 Morning -  R for Reporting
  
- - Reporting with {unhcrdown} and Posit Connect: An example with weekly report 
+ - Reporting with [{unhcrdown}](https://unhcr-dataviz.github.io/unhcrdown/) and Posit Connect: An example with weekly report 
  
- - Collaborative report building under version control with github. 
+ - [Tips](https://github.com/vidonne/r-tips#tips) and Collaborative report building under version control with github. 
  
 
 # Afternoon 3 - Hands-on {.slide-blue}
@@ -65,9 +65,9 @@ Facilitating Data Interpretation
 
 ## Day 4 Morning -  R for Processes 
  
- - Package building & ShinyApp creation with {Graveler} 
+ - Package building & Shiny __Companion App__ creation with [{Graveler}](https://edouard-legoupil.github.io/graveler/) 
  
- - Building index: an overview of {A2SIT}
+ - Building [Severity index](https://rstudio.unhcr.org/SeverityIndex/): an overview of [{A2SIT}](https://unhcr-guatemala.github.io/A2SIT/)
  
   
 
