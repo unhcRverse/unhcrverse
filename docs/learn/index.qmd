@@ -30,7 +30,7 @@ Presentation in the morning, hands-on sessions on practical operational topics i
  - Accessing data api: {robotoolbox}, {riddle}, {rhdx}
  
 
-# Afternoon - Hands-on {.slide-blue}
+# Afternoon 1 - Hands-on {.slide-blue}
 
 Hands on session - using official Statistics to build charts
  
@@ -44,7 +44,7 @@ Hands on session - using official Statistics to build charts
  - Indicator calculation for RMS with {IndicatorCalc}
  
 
-# 2 Afternoon - Hands-on {.slide-blue}
+# 2 Afternoon 2 - Hands-on {.slide-blue}
 
 Working on UNHCR recent household survey dataset 
  
@@ -56,7 +56,7 @@ Working on UNHCR recent household survey dataset
  - Collaborative report building under version control with github. 
  
 
-# Afternoon - Hands-on {.slide-blue}
+# Afternoon 3 - Hands-on {.slide-blue}
 
 Developing a presentation from a survey
 
@@ -71,6 +71,6 @@ Facilitating Data Interpretation
  
   
 
-# Afternoon - Hands-on {.slide-blue}
+# Afternoon 4 - Hands-on {.slide-blue}
 
 Organizing data for severity index
