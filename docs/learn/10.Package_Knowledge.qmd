@@ -1,0 +1,28 @@
+---
+title: UNHCR Quarto Theme
+subtitle: For revealjs
+format: unhcr-revealjs
+embed-resources: true
+---
+
+## Presentation with Quarto
+Alpha Version:
+
+    Alpha versions are the earliest stages of software development.
+    They are typically not feature-complete and may contain many bugs and incomplete features.
+    Alpha versions are often used for internal testing and may not be released to the public.
+    Developers use alpha versions to identify and fix major issues.
+
+Beta Version:
+
+    Beta versions come after alpha versions in the development cycle.
+    They are more stable than alpha versions but may still contain bugs and issues.
+    Beta versions are often released to a select group of users for testing, known as beta testers.
+    Beta testing helps identify issues and gather user feedback before the final release.
+
+Release Candidate (RC):
+
+    A release candidate is a version of the software that is considered stable and feature-complete.
+    RC versions are released to a wider audience for testing to ensure there are no major issues.
+    If no critical bugs are found in the release candidate, it may become the final release.
+ 

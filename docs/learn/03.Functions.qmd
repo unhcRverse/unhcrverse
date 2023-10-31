@@ -1,0 +1,8 @@
+---
+title: Creating functions
+subtitle: "Deep dive in {unhcrplot}"
+format: unhcr-revealjs
+embed-resources: true
+---
+
+ 

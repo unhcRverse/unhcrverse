@@ -1,0 +1,308 @@
+---
+title: UNHCR Quarto Theme
+subtitle: For revealjs
+format: unhcr-revealjs
+embed-resources: true
+---
+
+## Presentation with Quarto
+Alpha Version:
+
+    Alpha versions are the earliest stages of software development.
+    They are typically not feature-complete and may contain many bugs and incomplete features.
+    Alpha versions are often used for internal testing and may not be released to the public.
+    Developers use alpha versions to identify and fix major issues.
+
+Beta Version:
+
+    Beta versions come after alpha versions in the development cycle.
+    They are more stable than alpha versions but may still contain bugs and issues.
+    Beta versions are often released to a select group of users for testing, known as beta testers.
+    Beta testing helps identify issues and gather user feedback before the final release.
+
+Release Candidate (RC):
+
+    A release candidate is a version of the software that is considered stable and feature-complete.
+    RC versions are released to a wider audience for testing to ensure there are no major issues.
+    If no critical bugs are found in the release candidate, it may become the final release.
+## Presentation title
+
+- YAML arguments define the content of the title slide.
+- Add arguments as needed
+
+```{yaml}
+#| echo: true
+#| eval: false
+
+---
+title: UNHCR Quarto Theme
+subtitle: For revealjs
+author: Cedric Vidonne
+institute: IPDA
+date: last-modified
+format: unhcr-revealjs
+---
+
+```
+
+## Basic slides
+
+- Each slide starts with a level 2 heading (`## Slide 1`). For example:
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+## Slide 1
+
+Some content for slide 1
+
+## Slide 2
+
+Some content for slide 2
+```
+
+## Section slides
+
+- A section starts with a level 1 heading (`# Section 1`). For example:
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+# Section 1
+
+Some content for section 1
+```
+
+# Section
+
+Example of a section slide
+
+# UNHCR section {.slide-blue}
+
+Add `{.slide-blue}` class to make it UNHCR blue
+
+## Lists
+
+- To add bullet points to a slide, use the Markdown list syntax.
+- Works the same way with numbered lists. For example:
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+- Item 1
+    - Item 1.1
+    - Item 1.2
+- Item 2
+- Item 3
+```
+
+
+
+## Incremental list
+
+- By default the lists are **not** incremental.
+- Add the `{.incremental}` class, so each bullet will appear separately.
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+::: {.incremental}
+- Item 1
+- Item 2
+:::
+```
+
+::: {.incremental}
+- This is the 1<sup>st</sup> incremental bullet.
+- And here the 2<sup>nd</sup>.
+:::
+
+::: {.aside}
+Include `incremental:true` in the YAML to set it globally.
+:::
+
+## Incremental content
+
+- Use `. . .` to separate content and turn it incremental.
+- Any content can be incremental. For example:
+
+```{markdown}
+#| echo: true
+#| eval: false
+
+This will appear first
+
+. . .
+
+And then that!
+```
+
+## UNHCR helpers
+
+**Text**
+
+- Use `{.text-blue}` to apply [UNHCR blue]{.text-blue} color
+- Use `{.text-grey}` for [lighter text]{.text-grey} color
+
+**Background**
+
+- Use `{.bg-blue}` for [light blue]{.bg-blue} background
+- Use `{.bg-grey}` for [light grey]{.bg-grey} background
+
+::: {.aside}
+
+For dark background slides use `{.text-yellow}` and `{.bg-yellow}` classes
+
+:::
+
+## Columns
+
+- To create columns, use a `div` container with class `{.columns}`, containing two or more `div` containers with class `{.column}` and a `width` attribute. For example:
+
+```{markdown}
+#| echo: true
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+```
+
+## Images
+
+- To insert an image, use the Markdown image syntax. For example:
+
+```{markdown}
+#| echo: true
+![](path/to/image.jpg)
+```
+
+![](https://raw.githubusercontent.com/vidonne/unhcrdown/master/inst/resources/img/cover-example.jpg)
+
+## Code
+
+- To include code, use fenced code blocks with a language specifier. 
+- By default the `echo` parameter of code block is set to `false`, turn it to `true` to see the code and the result.
+
+```{markdown}
+#| echo: true
+
+\```{r}
+#| echo: true
+#| warning: false
+library(tidyverse)
+library(unhcrthemes)
+\```
+
+```
+
+
+
+## Plots
+
+- Use the [`{unhcrthemes}`](https://vidonne.github.io/unhcrthemes/) package to produce UNHCR branded plots directly in the presentation. For example: 
+
+```{r}
+#| label: idp-plot
+#| fig-align: center
+
+library(tidyverse)
+library(unhcrthemes)
+
+dplyr::count(mpg, class) |>
+  dplyr::arrange(n) |>
+  dplyr::mutate(class = factor(class, levels = class)) |>
+  ggplot(aes(n, class)) +
+  geom_col(fill = unhcr_pal(n = 1, "pal_blue")) +
+  geom_text(aes(label = n), hjust = 0, nudge_x = 1) +
+  labs(
+    title = "Simple bar chart with labels using ggplot",
+    subtitle = "This plot shows the default style of theme_unhcr()",
+    caption = "Source: mtcars"
+  ) +
+  scale_x_continuous(expand = expansion(c(0, 0.1))) +
+  theme_unhcr(grid = FALSE, axis = "y", axis_title = FALSE, axis_text = "y")
+```
+
+## Tables
+
+- Use `knitr::kable()` function for simple table. For example:
+
+```{r}
+#| label: kable-ex
+#| echo: false
+#| eval: true
+knitr::kable(head(select(mtcars, mpg, cyl, disp), n = 3)) 
+```
+
+## More tables
+
+- Many packages can help you stylize tables, like `{gt}`, `{dt}` and more.
+- Use them to customize further the table design in your presentations.
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| label: gt-ex
+#| echo: true
+#| eval: false
+gt::gt(head(mtcars)) 
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: gt-ex
+#| eval: true
+```
+
+:::
+:::
+
+## Speaker Notes:
+
+- You can add speaker notes to your slides that are only visible to the presenter during the presentation.
+- To add speaker notes, use the following syntax:
+
+```{markdown}
+#| echo: true
+
+## Slide with speaker notes
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+```
+
+## Exporting into PDF
+
+- Toggle into Print View using the `E` key (or using the [Navigation Menu](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)).
+- Open the in-browser print dialog (CTRL/CMD+P).
+- Change the destination setting to **Save as PDF**.
+- Find more info on the print to PDF settings [here](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf).
+
+## More Information
+
+You can learn more about controlling the appearance and layout of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+
+# Thank you {.slide-blue}
+
+Enjoy the template!
+

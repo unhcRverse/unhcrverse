@@ -1,0 +1,6 @@
+---
+title: Survey Data Exploration
+subtitle: "using {KoboCruncher}"
+format: unhcr-revealjs
+embed-resources: true
+---
