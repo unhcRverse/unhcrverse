@@ -287,9 +287,40 @@ See [myproject_embed.html](myproject_embed.html)
 
 ![](img/version_control_PhD.gif)
 
+## Humanitarian Data Product {.slide-blue}
 
 
+---
 
+## Humanitarian Data Product
+
+```{r, echo = FALSE, out.width = "80%"}
+knitr::include_graphics("img/humprod_unhcr.svg")
+```
+
+---
+
+## Reproducible pipelines with R markdown or Quarto
+
+```{r, echo = FALSE, out.width = "70%"}
+knitr::include_graphics("img/tools_change_new.svg")
+```
+
+---
+
+## Reproducible pipelines with R markdown or Quarto
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/reproducible_flow_tools.svg")
+```
+
+---
+
+## Reproducible pipelines with R markdown or Quarto
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/reproducible_flow_r.svg")
+```
 
 ---
 
@@ -344,6 +375,86 @@ R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
 
 
 
+
+---
+
+## Find these slides at 
+
+- [GitHub](http://pakillo.github.io/Rmarkdown-talk-Mar2015)
+
+- [Figshare]()
+
+- [Source code and materials](https://github.com/Pakillo/Rmarkdown-talk-Mar2015)
+
+
+
+
+---
+
+##  Notebook for Data Insights documentation: Analysis Repo
+
+.pull-left[
+
+> Insight: The capacity to gain an accurate and deep understanding of someone or something
+
+Not all charts will emulate need for interpretation - the data analyst need to gemerate the one that can create __debates__.
+
+Charts need to be __crafted__ - for instance use chart title framed as "opening question"...
+
+Insights arive when a multifunctional team is able to explain __unexpected patterns__, to challenge or revise __existing assumptions__, or to identify evidence to support __Call to action__.
+
+]
+.pull-right[
+.img[![Eat the cake](img/story.png)] 
+]
+
+???
+https://www.ictworks.org/wp-content/uploads/2021/02/usaid-guide-artificial-intelligence.pdf
+https://bluemoondigital.co/our-blog/5-elements-storytelling-data/
+Check the analysis repo: http://analysis.unhcr.org
+
+
+---
+
+##   Notebook to communicate with data: Microsite 
+.pull-left[
+<span style='font-size:30px;'>From __assumptions to evidence__ based statement</span>
+
+Data is to support Narrative - not the other way around!
+
+Leverage Art Data Storytelling to: 
+ * __Explain__, 
+ * __Enlighten__,
+ * __Engage__ 
+
+
+]
+.pull-right[
+.img75[![Eat the cake](img/read.png)] 
+]
+
+???
+See https://github.com/unhcr-americas/ageingonthemove/blob/main/README.md
+
+https://distill.pub/2020/communicating-with-interactive-articles/#applications-tab 
+Research Dissemination
+Conducting novel research requires deep understanding and expertise in a specific area. Once achieved, researchers continue contributing new knowledge for future researchers to use and build upon. Over time, this consistent addition of new knowledge can build up, contributing to what some have called research debt. Not everyone is an expert in every field, and it can be easy to lose perspective and forget the bigger picture. Yet research should be understood by many. Interactive articles can be used to distill the latest progress in various research fields and make their methods and results accessible and understandable to a broader audience.
+Opportunities
+
+    Engage and excite broader audience with latest research progress
+    Remove research debt, onboard new researchers
+    Make faster and clearer research progress 
+
+Challenges
+
+    No clear incentive structure for researchers
+    Little funding for bespoke research dissemination and communication
+    Not seen as a legitimate research contribution (e.g., to the field, or one's career) 
+
+---
+
+
+
 ---
 
 ## Some useful links 
@@ -384,86 +495,6 @@ R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
 - [reports](http://cran.r-project.org/web/packages/reports/index.html)
 
 - [Rgitbook](http://jason.bryer.org/Rgitbook/)
-
-
-
-
----
-
-## Find these slides at 
-
-- [GitHub](http://pakillo.github.io/Rmarkdown-talk-Mar2015)
-
-- [Figshare]()
-
-- [Source code and materials](https://github.com/Pakillo/Rmarkdown-talk-Mar2015)
-
-
-
-
----
-
-## Step 2- Notebook for Data Insights documentation: Analysis Repo
-
-.pull-left[
-
-> Insight: The capacity to gain an accurate and deep understanding of someone or something
-
-Not all charts will emulate need for interpretation - the data analyst need to gemerate the one that can create __debates__.
-
-Charts need to be __crafted__ - for instance use chart title framed as "opening question"...
-
-Insights arive when a multifunctional team is able to explain __unexpected patterns__, to challenge or revise __existing assumptions__, or to identify evidence to support __Call to action__.
-
-]
-.pull-right[
-.img[![Eat the cake](img/story.png)] 
-]
-
-???
-https://www.ictworks.org/wp-content/uploads/2021/02/usaid-guide-artificial-intelligence.pdf
-https://bluemoondigital.co/our-blog/5-elements-storytelling-data/
-Check the analysis repo: http://analysis.unhcr.org
-
-
----
-
-## Step 3- Notebook to communicate with data: Microsite 
-.pull-left[
-<span style='font-size:30px;'>From __assumptions to evidence__ based statement</span>
-
-Data is to support Narrative - not the other way around!
-
-Leverage Art Data Storytelling to: 
- * __Explain__, 
- * __Enlighten__,
- * __Engage__ 
-
-
-]
-.pull-right[
-.img75[![Eat the cake](img/read.png)] 
-]
-
-???
-See https://github.com/unhcr-americas/ageingonthemove/blob/main/README.md
-
-https://distill.pub/2020/communicating-with-interactive-articles/#applications-tab 
-Research Dissemination
-Conducting novel research requires deep understanding and expertise in a specific area. Once achieved, researchers continue contributing new knowledge for future researchers to use and build upon. Over time, this consistent addition of new knowledge can build up, contributing to what some have called research debt. Not everyone is an expert in every field, and it can be easy to lose perspective and forget the bigger picture. Yet research should be understood by many. Interactive articles can be used to distill the latest progress in various research fields and make their methods and results accessible and understandable to a broader audience.
-Opportunities
-
-    Engage and excite broader audience with latest research progress
-    Remove research debt, onboard new researchers
-    Make faster and clearer research progress 
-
-Challenges
-
-    No clear incentive structure for researchers
-    Little funding for bespoke research dissemination and communication
-    Not seen as a legitimate research contribution (e.g., to the field, or one's career) 
-
----
 
 
 

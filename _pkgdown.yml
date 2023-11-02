@@ -6,6 +6,8 @@ template:
 navbar:
   title: unhcrverse
   left:
+  - text: Learn
+    href: learn/intro.html
   - text: Core Ecosystem
     href: articles/ecosystem.html
   - text: Showcase

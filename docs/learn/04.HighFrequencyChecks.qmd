@@ -1,8 +1,0 @@
----
-title:  Data Collection Monitoring
-subtitle: "using {HighFrequencyChecks}"
-format: unhcr-revealjs
-embed-resources: true
----
- 
- 

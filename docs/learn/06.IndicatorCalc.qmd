@@ -1,7 +1,0 @@
----
-title: Apply Indicator Calculation
-subtitle: "using {IndicatorCalc}"
-format: unhcr-revealjs
-embed-resources: true
----
- 

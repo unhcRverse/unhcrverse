@@ -47,11 +47,13 @@ Using official Statistics to calculate indicators and build charts
 
 ## Day 2  Morning - R for Surveys
 
- - Kobo [Data Collection Management](04.HighFrequencyChecks.html) with [{HighFrequencyChecks}](https://edouard-legoupil.github.io/HighFrequencyChecks/) 
+[The Survey Toolbox](04.SurveyToolbox.html)
+
+ - Kobo [Data Collection Management](https://edouard-legoupil.github.io/HighFrequencyChecks/tutorial/index.html) with [{HighFrequencyChecks}](https://edouard-legoupil.github.io/HighFrequencyChecks/) 
  
- - Kobo [Survey Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with [{KoboCruncher}](05.KoboCruncher.html)
+ - Kobo [Survey Data Exploration](file:///home/edouard/R-projects/UNHCR_package/kobocruncher/docs/tutorial/00-Intro.html#1) with [{KoboCruncher}](05.KoboCruncher.html)
  
- - Apply [Indicator calculations for RMS](06.IndicatorCalc.html) with [{IndicatorCalc}](https://unhcr-americas.github.io/IndicatorCalc/)
+ - Apply [Indicator calculations for RMS](https://edouard-legoupil.github.io/IndicatorCalc/tutorial/index.html) with [{IndicatorCalc}](https://unhcr-americas.github.io/IndicatorCalc/)
  
 
 # Afternoon 2 - Hands-on {.slide-blue}
