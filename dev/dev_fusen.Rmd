@@ -24,7 +24,7 @@ This function install a package from github - see [pak::pkg_install](https://pak
 #' 
 #' Update package from github
 #' 
-#' @param pkg
+#' @param pkg  list of packages from universe
 #' 
 #' @importFrom utils installed.packages packageDescription
 #' @importFrom pak pkg_install
@@ -178,7 +178,7 @@ This functions check that you have `{unhcrverse}` installed on your system and i
 unhcrverse <- function( dev = FALSE) {
   message("Welcome to {unhcrverse}! ")
   message("--------------------- ")
-  message("There are currently 12 packages in {unhcrverse}.")
+  message("There are currently a few packages in {unhcrverse}.")
   message("We will check if you have the required package (or the last version) in your system and install them if necessary! ")
   message("--------------------- ")
   
@@ -194,35 +194,21 @@ unhcrverse <- function( dev = FALSE) {
   
     if( dev == TRUE ) {
        chck <- check_github('vidonne/unhcrthemes')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('vidonne/unhcrthemes')}
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('unhcr-dataviz/unhcrthemes')}
     } else {
        chck <- check_github('unhcrverse/unhcrthemes')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrthemes')  }
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcr-dataviz/unhcrthemes')  }
     }
+  
     if( dev == TRUE ) {
        chck <- check_github('vidonne/unhcrdown')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('vidonne/unhcrdown')}
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('unhcr-dataviz/unhcrdown')}
     } else {
        chck <- check_github('unhcrverse/unhcrdown')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/unhcrdown')  }
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcr-dataviz/unhcrdown')  }
     }
   
-  
-    if( dev == TRUE ) {
-       chck <- check_github('vidonne/unhcrdesign')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('vidonne/unhcrdesign')}
-    } else {
-       chck <- check_github('unhcrverse/unhcrdesign')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrdesign')    }
-    }
-  
-    if( dev == TRUE ) {
-       chck <- check_github('vidonne/unhcrtemplate')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('vidonne/unhcrtemplate')}
-    } else {
-       chck <- check_github('unhcrverse/unhcrtemplate')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/unhcrtemplate') }
-  }
+ 
   
   ## Core Dev - Ahmadou Dicko
   
@@ -230,66 +216,82 @@ unhcrverse <- function( dev = FALSE) {
        chck <- check_github('PopulationStatistics/popdata')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('PopulationStatistics/popdata')}
     } else {
-       chck <- check_github('unhcrverse/popdata')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('unhcrverse/popdata')  }
+       chck <- check_github('PopulationStatistics/popdata')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('PopulationStatistics/popdata')  }
+    }
+    if( dev == TRUE ) {
+       chck <- check_github('PopulationStatistics/refugees')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('PopulationStatistics/refugees')}
+    } else {
+       chck <- check_github('PopulationStatistics/refugees')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('PopulationStatistics/refugees')  }
     }
   
-    if( dev == TRUE ) {
-       chck <- check_github('dickoa/ridl')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('dickoa/ridl')}
-    } else {
-       chck <- check_github('unhcrverse/ridl')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/ridl')}
-    }
+ 
   
     if( dev == TRUE ) {
        chck <- check_github('dickoa/rhdx')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('dickoa/rhdx')}
     } else {
-       chck <- check_github('unhcrverse/rhdx')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcrverse/rhdx') }
+       chck <- check_github('dickoa/rhdx')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('dickoa/rhdx') }
   }
     if( dev == TRUE ) {
        chck <- check_github('dickoa/robotoolbox')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('dickoa/robotoolbox')}
     } else {
-       chck <- check_github('unhcrverse/robotoolbox')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/robotoolbox')  }
+       chck <- check_github('dickoa/robotoolbox')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('dickoa/robotoolbox')  }
   }
   
   
   ## Core Dev - Edouard Legoupil
+    if( dev == TRUE ) {
+       chck <- check_github('Edouard-Legoupil/graveler')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('Edouard-Legoupil/graveler')}
+    } else {
+       chck <- check_github('Edouard-Legoupil/graveler')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('Edouard-Legoupil/graveler')}
+    }
+  
+    if( dev == TRUE ) {
+       chck <- check_github('Edouard-Legoupil/riddle')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('Edouard-Legoupil/riddle')}
+    } else {
+       chck <- check_github('Edouard-Legoupil/riddle')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('Edouard-Legoupil/riddle')}
+      }
   
     if( dev == TRUE ) {
        chck <- check_github('edouard-legoupil/HighFrequencyChecks')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('edouard-legoupil/HighFrequencyChecks')}
     } else {
-       chck <- check_github('unhcrverse/HighFrequencyChecks')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/HighFrequencyChecks')}
+       chck <- check_github('edouard-legoupil/HighFrequencyChecks')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/HighFrequencyChecks')}
       }
       
     if( dev == TRUE ) {
        chck <- check_github('edouard-legoupil/kobocruncher')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/kobocruncher')}
     } else {
-       chck <- check_github('unhcrverse/kobocruncher')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('unhcrverse/kobocruncher')  }
+       chck <- check_github('edouard-legoupil/kobocruncher')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('edouard-legoupil/kobocruncher')  }
     }
   
     if( dev == TRUE ) {
        chck <- check_github('edouard-legoupil/unhcrdatapackage')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/unhcrdatapackage')}
     } else {
-       chck <- check_github('unhcrverse/unhcrdatapackage')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/unhcrdatapackage')  }
+       chck <- check_github('edouard-legoupil/unhcrdatapackage')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/unhcrdatapackage')  }
     }
   
     if( dev == TRUE ) {
-       chck <- check_github('edouard-legoupil/XlsFormPrettyPrint')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('edouard-legoupil/XlsFormPrettyPrint')}
+       chck <- check_github('unhcr-americas/XlsFormUtil')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcr-americas/XlsFormUtil')}
     } else {
-       chck <- check_github('unhcrverse/XlsFormPrettyPrint')
-       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcrverse/XlsFormPrettyPrint')}
+       chck <- check_github('unhcr-americas/XlsFormUtil')
+       if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcr-americas/XlsFormUtil')}
     }
   return(NULL)
 }

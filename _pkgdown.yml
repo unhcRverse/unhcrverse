@@ -7,7 +7,7 @@ navbar:
   title: unhcrverse
   left:
   - text: Learn
-    href: learn/intro.html
+    href: learn/index.html
   - text: Core Ecosystem
     href: articles/ecosystem.html
   - text: Showcase

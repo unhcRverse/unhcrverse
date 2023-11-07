@@ -3,5 +3,6 @@
 ^unhcRverse2\.Rproj$
 ^_pkgdown.yml
 ^docs
+^.github
 ^dev
 ^LICENSE\.md$

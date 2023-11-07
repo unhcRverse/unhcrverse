@@ -12,17 +12,12 @@
 ### Packages that are *Stable-enough*
 The list of mature projects includes [set of packages](articles/ecosystem.html) to ease the production of statistical evidence and data stories. Those **Packages** should aim to reach over time the standards outlined in the [CRAN policies](https://cran.r-project.org/web/packages/policies.html).
 
-```{r}
-install.packages("pak")
-pak::pkg_install("unhcRverse/unhcRverse")
-unhcrverse::unhcrverse()
+```
+install.packages("pak")  
 
-# Enable this universe
-# options(repos = c(
-#     ggseg = 'https://unhcrverse-universe.dev',
-#     CRAN = 'https://cloud.r-project.org'))
-# # Install some packages
-# install.packages('unhcrverse')
+pak::pkg_install("unhcRverse/unhcRverse")  
+
+unhcrverse::unhcrverse()  
 
 ```
 

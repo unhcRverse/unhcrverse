@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 ## What is a package?
 
-An R package is a collection of functions that are bundled together in a way that lets them be easily shared. Usually these functions are designed to work together to complete a specific task such as analysing a particular kind of data. You are probably familiar with many packages already, for example ggplot2 or dplyr.
+An R package is a collection of functions that are bundled together in a way that lets them be easily shared. Usually these functions are designed to work together to complete a specific task such as analyzing a particular kind of data. You are probably familiar with many packages already, for example ggplot2 or dplyr.
 
 Packages can take various forms during their life cycle. For more details have a look at the “What is a package?” section of Hadley Wickham’s “R packages” book (http://r-pkgs.had.co.nz/package.html#package)
 
@@ -40,7 +40,7 @@ Of course often you will want to share your package, either to let other people 
 
 ## How to develop packages?
 
-> We **DO STRONGLY RECOMMEND** to use [fusen package](https://thinkr-open.github.io/fusen/index.html) to develop packages as it facilitates a lot peer review and enforces a series of good practices (example, unit testing..)
+> We **DO RECOMMEND** to use [fusen package](https://thinkr-open.github.io/fusen/index.html) to develop packages as it facilitates a lot peer review and enforces a series of good practices (example, unit testing..)
 
 In addition, there are plenty of resources available to learn how to develop packages. See a list below: 
 
@@ -58,10 +58,6 @@ In addition, there are plenty of resources available to learn how to develop pac
  *  Write your own R package (UBC STAT 545) http://stat545.com/packages00_index.html
  *  R package workshop https://combine-australia.github.io/r-pkg-dev/
  
-  
-
-
-
 
 
 ## 'Stable-enough' packages within `{unhcrverse}`
@@ -76,13 +72,13 @@ The list of mature projects includes set of packages to ease the production of s
 
 
  
- 1. __Design and branding__ such as [unhcrdown](https://github.com/vidonne/unhcrdown): UNHCR templates for R Markdown,   [unhcrthemes](https://github.com/vidonne/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes, 
+ 1. __Design and branding__ such as [unhcrdown](https://github.com/unhcr-dataviz/unhcrdown): UNHCR templates for R Markdown,   [unhcrthemes](https://github.com/unhcr-dataviz/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes, 
  
  
  2. __Data Access__ such as [unhcrdatapackage](https://github.com/edouard-legoupil/unhcrdatapackage): Use UNHCR Open data, [ridl](https://github.com/dickoa/ridl): API to connect to internal data source, [robotoolbox](https://github.com/dickoa/robotoolbox): API to connect to Kobo Data Collection Server, [rhdx](https://github.com/dickoa/rhdx): API to connect to Humanitarian Data Exchange and [popdata](https://github.com/PopulationStatistics/popdata): API to connect to the system for official statistic curation
 
 
- 3. __Survey Data Processing__ such as [HighFrequencyChecks](https://github.com/edouard-legoupil/HighFrequencyChecks/): Perform High Frequency Check or  [kobocruncher](https://github.com/edouard-legoupil/kobocruncher): Process data crunching for survey dataset or [XlsFormPrettyPrint](https://github.com/edouard-legoupil/XlsFormPrettyPrint): to work with multiple xlsform
+ 3. __Survey Data Processing__ such as [HighFrequencyChecks](https://github.com/edouard-legoupil/HighFrequencyChecks/): Perform High Frequency Check or  [kobocruncher](https://github.com/edouard-legoupil/kobocruncher): Process data crunching for survey dataset or [XlsFormUtil](https://github.com/unhcr-americas/XlsFormUtil): to work with multiple xlsform
 
 You can install them all with the following:
 
@@ -103,7 +99,7 @@ For instance:
 
  *   [koboloader](https://unhcr.github.io/koboloadeR/docs/) got deprecated by  [kobocruncher](https://github.com/edouard-legoupil/kobocruncher)
  
- *  [unhcrstyle](https://unhcr-web.github.io/unhcRstyle/docs/) got deprecated by [unhcrdown](https://github.com/vidonne/unhcrdown) and  [unhcrthemes](https://github.com/vidonne/unhcrthemes)
+ *  [unhcrstyle](https://unhcr-web.github.io/unhcRstyle/docs/) got deprecated by [unhcrdown](https://github.com/unhcr-dataviz/unhcrdown) and  [unhcrthemes](https://github.com/unhcr-dataviz/unhcrthemes)
 
 
 

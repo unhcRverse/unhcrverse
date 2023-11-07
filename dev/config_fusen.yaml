@@ -1,0 +1,19 @@
+dev_fusen.Rmd:
+  path: dev/dev_fusen.Rmd
+  state: active
+  R:
+  - R/check_github.R
+  - R/unhcrverse.R
+  - R/update_github.R
+  tests:
+  - tests/testthat/test-update_github.R
+  - tests/testthat/test-check_github.R
+  - tests/testthat/test-unhcrverse.R
+  vignettes: vignettes/unhcrverse-functions.Rmd
+  inflate:
+    flat_file: dev/dev_fusen.Rmd
+    vignette_name: unhcrverse functions
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: ask
