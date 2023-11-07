@@ -38,18 +38,18 @@ unhcrverse <- function( dev = FALSE) {
   ## Core Dev - Cedric Vidonne
   
     if( dev == TRUE ) {
-       chck <- check_github('vidonne/unhcrthemes')
+       chck <- check_github('unhcr-dataviz/unhcrthemes')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {update_github('unhcr-dataviz/unhcrthemes')}
     } else {
-       chck <- check_github('unhcrverse/unhcrthemes')
+       chck <- check_github('unhcr-dataviz/unhcrthemes')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) { update_github('unhcr-dataviz/unhcrthemes')  }
     }
   
     if( dev == TRUE ) {
-       chck <- check_github('vidonne/unhcrdown')
+       chck <- check_github('unhcr-dataviz/unhcrdown')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {   update_github('unhcr-dataviz/unhcrdown')}
     } else {
-       chck <- check_github('unhcrverse/unhcrdown')
+       chck <- check_github('unhcr-dataviz/unhcrdown')
        if( chck$up_to_date == FALSE | is.na( chck$up_to_date) ) {  update_github('unhcr-dataviz/unhcrdown')  }
     }
   

@@ -7,7 +7,7 @@
 update_github(pkg)
 }
 \arguments{
-\item{pkg}{}
+\item{pkg}{list of packages from universe}
 }
 \value{
 nothing just messaging what is happening

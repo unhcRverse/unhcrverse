@@ -4,7 +4,7 @@
 #' 
 #' Update package from github
 #' 
-#' @param pkg
+#' @param pkg  list of packages from universe
 #' 
 #' @importFrom utils installed.packages packageDescription
 #' @importFrom pak pkg_install
