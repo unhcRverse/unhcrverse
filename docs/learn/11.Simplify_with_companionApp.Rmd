@@ -1,0 +1,236 @@
+---
+title: "Create interactive web Companion App"
+subtitle: "Quick-start development with {graveler}"
+output:
+  unhcrdown::html_slides:
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+## Agenda
+
+  * Introduction to Shiny
+  * Shiny App Structure
+  * User Interface (UI)
+  * Server Logic
+  * Reactive Elements
+  * Deployment
+  * Advanced Topics
+  * Conclusion
+
+---
+
+## Introduction to Shiny
+What is Shiny?
+
+  * Shiny is an R package for building interactive web applications.
+  * Allows you to turn your R code into interactive web apps without the need for web development skills.
+
+Why Shiny?
+
+  * Data visualization
+  * Data exploration
+  * Interactive reporting
+  * Dashboards
+
+---
+
+## Shiny App Components
+
+Every Shiny app consists of few main components:
+
+ *  User Interface (UI) defines the app's appearance and layout.
+ *  Server Logic defines the app's behavior and data processing.
+ *  Style Defined through CSS.
+ *  Client side interaction defined with Javascript.
+
+---
+
+## User Interface (UI) Elements
+
+  * UI is defined using a set of elements like fluidPage, sidebarLayout, and widgets.
+  * These elements structure the layout and interaction of your app.
+
+Example UI
+
+```  
+
+# Define UI structure
+ui <- fluidPage(
+  titlePanel("My Shiny App"),
+  sidebarLayout(
+    sidebarPanel(
+      # Input widgets
+    ),
+    mainPanel(
+      # Output elements
+    )
+  )
+)
+``` 
+
+---
+
+## Server Logic  Function
+
+  * The server function is where you define the app's logic.
+  * It reacts to user inputs and generates outputs.
+
+Example Server Logic
+
+``` 
+# Define server logic
+server <- function(input, output) {
+  # Reactive expressions and outputs
+}
+``` 
+
+---
+
+## Reactive Elements  Expressions
+
+  * Reactive expressions are used to compute outputs based on inputs.
+  * They ensure that your app responds to user interactions in real-time.
+
+Example Reactive Expression
+
+``` 
+# Define a reactive expression
+output$plot <- renderPlot({
+  # Code to generate a plot based on input
+})
+``` 
+
+---
+
+## Deployment Options
+
+  * Shiny apps can be deployed locally or on the web.
+  * Options include Shiny Server, Shinyapps.io, and RStudio Connect.
+
+Deploying Locally
+
+  * Use shiny::runApp() to run your app locally.
+
+ 
+---
+
+## Shiny Modules
+
+  * Modularize your app by creating Shiny modules for reusability.
+  
+  
+---
+
+## What is Golem?
+
+  * Golem is an opinionated Shiny framework that promotes structured app development.
+  * It enforces best practices for code organization, modularization, and scalability.
+  * Golem is designed for large-scale, production-ready Shiny apps.
+
+Golem Features
+
+  * Robust app structure
+  * Automated testing
+  * Modular app design
+  * Code validation
+
+---
+
+## Benefits of Using Golem
+ 
+
+  * Improved code organization
+  * Easier maintenance and collaboration
+  * Built-in testing for quality assurance
+  * Scalability for large projects
+  * Community-driven development
+
+---
+
+## Creating a Golem Application 
+
+  * Use the golem::create_golem() function to set up a new Golem application.
+  * Golem creates a project structure with pre-configured files and folders.
+
+Example
+
+``` 
+# Create a new Golem app
+golem::create_golem(path = "my_golem_app")
+``` 
+
+---
+
+## Golem Project Structure
+
+  * Golem enforces a structured project layout.
+  * Key directories include R, inst, tests, man, and app.
+
+Example Structure
+
+``` 
+my_golem_app/
+|-- DESCRIPTION
+|-- NAMESPACE
+|-- app/
+|-- R/
+|-- inst/
+|-- tests/
+|-- ...
+``` 
+
+---
+
+## Modules and Testing 
+
+  * Golem promotes modular design by separating app components into modules.
+  * Modules are self-contained and can be reused in different parts of the app.
+
+Automated Testing
+
+  * Golem provides automated testing using testthat.
+  * Ensure app reliability with unit tests.
+
+---
+
+## Deployment and Maintenance
+Deployment Options
+
+  * Deploy your Golem app locally or to Shinyapps.io, Docker, or other platforms.
+  * Golem includes deployment scripts.
+
+Maintenance
+
+  * Golem apps are easier to maintain due to their organized structure.
+  * Continuous development and maintenance are supported.
+
+
+---
+
+## Key Takeaways
+
+  * Shiny allows you to create interactive web apps with R.
+  * Apps have a UI structure and server logic.
+  * Reactive elements enable real-time interactivity.
+  * Deployment options include local and web-based.
+  * Golem is a powerful framework for structured Shiny app development.
+  * It enforces best practices, modularity, and automated testing.
+  * Use Golem for large-scale and production-ready Shiny apps.
+  * Explore advanced features for customization.  
+    
+---
+
+## Next Steps
+
+Start building your Shiny app and explore advanced topics.
+
+Thank you for participating 
+
+Questions?
+
+

@@ -1,0 +1,59 @@
+---
+title: "UnhcrRverse"
+subtitle: "An intro to UNHCR R Packages Universe"
+output:
+  unhcrdown::html_page:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.retina = 2,
+                      fig.showtext = TRUE,
+                      dev = "ragg_png",
+                      dpi = 300)
+```
+
+##  Basics of R
+
+ - An introduction to [Analysis Reproducibility](01.Reproducibility)
+
+ - Data [Manipulation and Visualization](02.Tidyverse.html) using [`{refugees}`](https://populationstatistics.github.io/refugees/) & [`{unchrthemes}`](https://unhcr-dataviz.github.io/unhcrthemes/)
+ 
+ - From [Scripts to Functions](03.Functions.html): An illustration with [`{unhcrplot}`](https://edouard-legoupil.github.io/unhcrdatapackage/), access data through API with [`{robotoolbox}`](https://dickoa.gitlab.io/robotoolbox/), [`{rhdx}`](http://dickoa.gitlab.io/rhdx/), [`{riddle}`](https://edouard-legoupil.github.io/riddle/), [`{popdata}`](https://edouard-legoupil.github.io/popdata/), [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
+ 
+
+ 
+##  R for Surveys
+
+[The Survey Toolbox](04.SurveyToolbox.html)
+
+ - Kobo Data Collection Management with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
+ 
+ - Kobo Survey Data Exploration with [`{KoboCruncher}`](https://edouard-legoupil.github.io/kobocruncher)
+ 
+ - Apply Indicator calculations for RMS] with [`{IndicatorCalc}`](https://unhcr-americas.github.io/IndicatorCalc/tutorial/index.html)
+ 
+ 
+##   R for Reporting
+ 
+ - "Work as a Team": Collaboration through [Version Control](07.VersionControl.html) on Github. 
+ 
+ - Build wth [Report Template](08.Template_Report.html) with [`{unhcrdown}`](https://unhcr-dataviz.github.io/unhcrdown/) and [Posit Connect](http://rstudio.unhcr.org): An example with [weekly report](https://github.com/unhcr-americas/weekly-report) 
+ 
+ - [Analysis Automation Tips](09.Automate_generation.html) to set up reproducible analysis pipeline
+ 
+ 
+ 
+##  R for Processes 
+ 
+ - [Package knowledege](10.Package_Knowledge.html): Development, Documentation & Testing with [`{fusen}`](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal/}](https://edouard-legoupil.github.io/unhcrdataportal/)
+ 
+ - Create [Shiny Companion App](11.Simplify_with_companionApp.html) with [`{Graveler}`](https://edouard-legoupil.github.io/graveler/) 
+ 
+ - Building [Severity Composite Index](12.Composite_Indicator.html): an overview of [`{A2SIT}`](https://rstudio.unhcr.org/SeverityIndex/)
+ 
+  
+ 

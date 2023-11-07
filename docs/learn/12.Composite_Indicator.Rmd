@@ -1,6 +1,6 @@
 ---
-title: "Building Humanitarian Severity Index with R, COINr & Compind"
-subtitle: "Ensure Statistical Rigor & Robustness"
+title: "Building Humanitarian Severity Index"
+subtitle: "Ensure Statistical Rigor & Robustness with {COINr}"
 output: 
   unhcrdown::html_slides:
     self_contained: true

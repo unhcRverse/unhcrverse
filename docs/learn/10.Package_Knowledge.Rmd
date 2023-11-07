@@ -1,0 +1,214 @@
+---
+title: "Package your Knowledge!"
+subtitle: "Mainstream documentation and test with {fusen}"
+output: 
+  unhcrdown::html_slides:
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+---
+
+# Learning objectives
+
+ * Why creating packages?
+ 
+ * how to transition from functions to packages, 
+ 
+ * why documentation is crucial
+ 
+ * Most current issues to fix package check
+
+---
+
+
+## Why Create Packages?
+
+Code Organization
+
+  * Packages help you organize your code.
+  * Group related functions and data into a single unit.
+
+Code Reusability
+
+  * Share your work with others or your future self.
+  * Functions and datasets are easily accessible.
+
+Collaboration
+
+  * Share your packages with the R community.
+  * Contribute to the R ecosystem.
+
+ 
+---
+
+## From a collection of Function to a Package 
+
+ 
+  * Create a directory with a package structure.
+  * Place your functions and data in the package.
+  * Add package documentation.
+  *  Use `devtools` to build and install the package.
+
+---
+
+## Key Differences
+
+  * Packages are a collection of functions, data, and documentation.
+  * A package can be easily shared and used across different projects.
+
+---
+
+## Package Directory Structure
+
+``` 
+
+MyPackage/
+|-- R/
+|   |-- my_function.R
+|
+|-- man/
+|   |-- my_function.Rd
+|
+|-- DESCRIPTION
+|-- NAMESPACE
+|-- README.md
+```
+
+  
+---
+
+##  Steps to Create a Package
+
+  * Use devtools or usethis to create a package structure.
+  * Write your functions and add them to the R directory.
+  * Document your functions using roxygen2.
+  * Build the package using devtools::document() and devtools::install().
+  * Your package is now ready for use and sharing. 
+
+---
+
+## Documentation Is Essential
+Why Document Packages?
+
+  * Documentation provides information on how to use a package.
+  * Helps users understand the purpose and usage of functions.
+  * Makes your package user-friendly.
+  * Avoid polluting the global namespace with internal functions.
+  * Use a proper namespace to manage exported functions.
+
+R Documentation
+
+  * Write comprehensive and clear documentation with roxygen2.
+  * Add details about functions, data, and examples.
+  * Use pkgdown to create a user-friendly package website.
+  * Create informative vignettes to explain package usage and to help users understand your package.
+
+
+---
+
+## Test & Unit Testing
+  * Implement thorough unit tests using testthat.
+  * Ensure tests cover the majority of package functionality.
+
+---
+
+## Managing release
+
+  * Follow semantic versioning (SemVer) principles.
+  * Increment versions based on changes (major, minor, patch).
+  * Specify the license in your package's DESCRIPTION file. Use MIT license and reference unhcr
+
+Alpha Version:
+
+  * Alpha versions are the earliest stages of software development.
+  * They are typically not feature-complete and may contain many bugs and incomplete features.
+  * Alpha versions are often used for internal testing and may not be released to the public.
+  * Developers use alpha versions to identify and fix major issues.
+
+Beta Version:
+
+  * Beta versions come after alpha versions in the development cycle.
+  * They are more stable than alpha versions but may still contain bugs and issues.
+  * Beta versions are often released to a select group of users for testing, known as beta testers.
+  * Beta testing helps identify issues and gather user feedback before the final release.
+
+Release Candidate (RC):
+
+  * A release candidate is a version of the software that is considered stable and feature-complete.
+  * RC versions are released to a wider audience for testing to ensure there are no major issues.
+  * If no critical bugs are found in the release candidate, it may become the final release.
+ 
+
+
+
+---
+
+## Package Checks
+
+  * Regularly perform package checks using devtools::check().
+  * Address any warnings, errors, and notes.
+  * Use R CMD check to test your package thoroughly.
+  * Address any issues identified by this tool.
+
+ 
+
+Bug Fixes and Updates
+
+  * Regularly fix reported bugs and update the package.
+  * Keep it compatible with new R releases and dependencies.
+
+Performance Optimization
+
+  * Profile your code with profvis.
+  * Identify bottlenecks and optimize them.
+
+Robustness
+
+  * Make your package robust against different inputs.
+  * Handle errors and exceptions gracefully. 
+
+Testing on Different Platforms
+ 
+ 
+  * Set up a CI system (e.g., GitHub Actions, Travis CI).
+  * Automatically run tests on code changes.
+  * Ensure your package works on multiple platforms.
+  * Test compatibility with different R versions.
+
+---
+
+## Security
+
+  * Address security concerns, especially for data access or web interactions.
+  * Sanitize inputs and validate user input.
+
+---
+
+## If you want to go fast, go alone, if you want to go far, go together
+
+  * __Community Engagement__: Engage with the R community and respond to user feedback, Consider contributions from other developers.
+
+  * __Code of Conduct__: Include a code of conduct in your package to promote an inclusive community.
+
+  * __Long-Term Maintenance__: Plan for long-term maintenance and have a transition plan in place.
+
+  * __Peer Review__: Consider having your package peer-reviewed by other R developers.
+
+---
+
+## Conclusion
+
+  * Creating packages in R is essential for code organization and sharing.
+  * Transition from standalone functions to packages for better code management.
+  * Proper documentation is crucial for effective collaboration and code sharing.
+
+---
+
+## Thank You
+
+Thank you for your attention!
+
+Questions?
+

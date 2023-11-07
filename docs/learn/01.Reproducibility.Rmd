@@ -11,11 +11,10 @@ output:
 ---
  
 
----
 
 # Learning objectives
 
-**About today:**
+
 
 - Understand what you can gain from analysis reproducibility. 
 
@@ -23,9 +22,7 @@ output:
 
 - Have a demonstration of a practical way to make a cake using household survey data: crunching, analysis & interpretation & data stories! 
 
-**Not today:**
 
-- Induction Training on R language! For this head to [UNHCR Learn & Connect- R training](https://unhcr.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=e90e2279-e3a4-4ef2-8b74-757f91d224b2)
 
 ???
 Have you ever completed the development of a data product with the feeling that you may have done a mistake or not have used the optimal way to clean or process your data?  
@@ -61,7 +58,6 @@ Last, you may also take advantage of going through one or more of the R learning
 The best way to start and learn is to have a concrete project! If you have one and need mentoring, we can liaise after the session. 
 
 ---
-
 
 ## A Vision for data analysis
 
@@ -361,6 +357,32 @@ Correct at any steps in the process and re-run all..
 
 .img[![Eat the cake](img/tips.jpg)] 
 
+
+---
+
+### Search, Test, Try...
+
+.pull-left[
+
+![](img/change.png)
+]
+
+.pull-right[
+
+
+Search and ask in [Stackoverflow](https://stackoverflow.com/questions/tagged/r)
+
+Go through [Cheat-sheets](https://rstudio.cloud/learn/cheat-sheets)
+
+Consult Key Manuals, maybe starting with [R for Data Science](https://r4ds.had.co.nz/)
+
+Follow blogs like general [Rbloggers](https://www.r-bloggers.com/), [Tidyverse blog](https://www.tidyverse.org/blog/) or more specific [HumanitaRian-useR-group](https://humanitarian-user-group.github.io/) as well some twitter accounts.
+
+Join forum like [Inter-Agency R skype group](https://join.skype.com/qYBKC5q3wKp4) or Internal UNHCR Ms Discussion group (ask to join!).
+
+]
+
+
 ---
 
 ## Packaging functions  
@@ -372,61 +394,13 @@ Gradual automation
  * level 1: write a command
  * level 2: organize multiple command together in re-usable function
  * Level 3: organize multiple functions together in a package
- * Level 4: includes test data & Documentation
- * Level 5: <span style='font-size:30px;'>Unit testing, aka code review</span> 
- * Level 6: <span style='font-size:30px;'>Graphical User Interface (GUI)</span> 
+ * Level 4: includes test data, Documentation & Unit testing, aka code review</span> 
+ * Level 5: <span style='font-size:30px;'>Graphical User Interface (GUI) with Shiny</span> 
 ]
 .pull-right[
 .img75[![Eat the cake](img/package.png)] 
 ]
 
-
----
-class: center, middle, inverse
-
-# Hands-on practice 
-
-
-.img75[![Eat the cake](img/workflow.png)] 
-
-
-???
-A comparison of packages for Automated Exploratory Data Analysis 
-https://arxiv.org/pdf/1904.02101.pdf
-https://github.com/mstaniak/autoEDA-resources
-
-One of the most significant disadvantages of PowerBI is that it is read-only. As a user, you cannot use charts/tables to make decisions and save them in a database directly. Also, PowerBI doesn’t have an accessible source code. You can only edit fields in WYSIWYG mode, which makes PowerBI easy to start but difficult to maintain. Having no source code makes it nearly impossible to have proper version control, automatically test logic, or collaborate on large projects. https://appsilon.com/powerbi-vs-r-shiny/
-
-
-Pros of Power BI - Cross-filtering
-
-Pros of RStudio - 
- - Visual editor for R Markdown documents
- - In-line code execution using blocks
- - Sophisticated statistical packages
- - Supports Rcpp, python and SQL
- - Can be themed
- - In-line graphing support
- - Latex support
-
-
-What is RStudio?
-An integrated development environment for R, with a console, syntax-highlighting editor that supports direct code execution. Publish and distribute data products across your organization. One button deployment of Shiny applications, R Markdown reports, Jupyter Notebooks, and more. Collections of R functions, data, and compiled code in a well-defined format. You can expand the types of analyses you do by adding packages.
-
-
-You can use R script with Power BI in several ways. The key ones include:
-
- - Data source – expand the range of available data sources, provide data processing logic at the import stage
- - Processing script – enrich data processing capabilities and engineering features
- - Visualization – extend the range of visualizations available in R and implement charts
- - As a part of Power BI visualization – gain the ability to build R-based visualizations and package them into ready-to-put boxes directly into Power BI.
-https://www.predicagroup.com/blog/visualizing-data-r-script-power-bi/ 
-
-
-
-class: center, middle, inverse
-
-# Conclusion 
 
 ---
 
@@ -451,17 +425,17 @@ class: center, middle, inverse
 ##  A call for Institutionalisation
 .pull-left[
 
-Using Standard Multi Tier IT Standard Support model to enhance reproducible analysis...
+Using Standard Multi-Tier IT Standard Support model to enhance reproducible analysis...
  
-  * Tier 4: Code Review & Quality Insurance / Contracted Company with global frame agreement 
+  * __Tier 4__: Code Review & Quality Insurance (_Contracted Company with frame agreement_) 
 
-  * Tier 3: Internal package development / Internal R champions team (cost: one yearly Rdev meeting to incentivize contributing staff)
+  * __Tier 3__: Internal package development / Internal R champions team (_one yearly Rdev meeting to incentivize contributing staff_)
 
-  * Tier 2: User induction & Advanced User Support / Global Data Service/DIMA (Data Science Team)
+  * __Tier 2__: User induction & Advanced User Support (_Global Data Service/DIMA_)  
 
-  * Tier 1: Basic User Troubleshooting / Global Service Desk  (WIPRO according to Documented Scenario)
+  * __Tier 1__: Basic User Troubleshooting (_according to Documented Scenario_)
 
-  * Tier 0: Self-support / Package documentation (maintained and improved on continuous basis)
+  * __Tier 0__: Self-support / Package documentation (_maintained and improved on continuous basis_)
 
 ]
 .pull-right[

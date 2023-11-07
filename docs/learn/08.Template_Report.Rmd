@@ -1,6 +1,6 @@
 ---
 title: "Report Template"
-subtitle: "Introduction of unhcdown package"
+subtitle: "Introduction of {unhcdown} package"
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -11,6 +11,13 @@ output:
 ---
 
 
+# Learning objectives
+
+  * Work with Report to enable full reproducibility
+  
+  * Understand the type of reports 
+  
+  * Rmd & Quarto
 
 ## Most science is not reproducible  
 
@@ -140,7 +147,56 @@ knitr - pandoc - Rstudio
 
 
 
+---
 
+## Enable a fully auditable workflow
+
+As soon as all steps (i.e. **DATA + TIDYING + MODELING + VISUALS + NARRATIVE**) are done through **series of written commands recorded in scripts**:
+
+ - when spotting error in the data, or using different dataset, one just need to adjust in the script and report will update automatically;
+ 
+ - Data manipulation becomes be *de facto* fully documented (no more manual changes in Excel);
+
+ - Analysis is self-explanatory and ready for any kind of collaborative review;
+
+ - Customization are facilitated and allow to deliver  final product  with a professional branding and styling.
+ 
+
+ 
+> Analysis becomes streamlined and [reproducible](https://unhcr-americas.github.io/reproducibility)! 
+
+> A "collaboration mode" is enabled from the begining of the process! 
+
+> As your analysis can be reviewed, you become "covered"... 
+
+???
+ instead of **hundreds of mouse clicks**
+See also http://muschellij2.github.io/summerR_2015/modules/module12.html
+
+
+
+---
+
+## unhcrdown
+
+[unhcrdown](https://github.com/vidonne/unhcrdown) provides a set of templates following UNHCR Brand recommendations. The goal of this package is to ease and speed up the creation of reports, presentation and website while promoting the UNHCR visual identity.
+
+.pull-left[
+
+**Content**
+
+1. Microsoft Word document
+2. HTML to PDF paged reports
+3. Microsoft PowerPoint presentation
+4. HTML slides
+
+]
+
+.pull-right[
+
+![unhcrdown templates](https://raw.githubusercontent.com/vidonne/unhcrdown/master/man/figures/new_template.png)
+
+]
 
 ---
 
@@ -287,7 +343,61 @@ See [myproject_embed.html](myproject_embed.html)
 
 ![](img/version_control_PhD.gif)
 
-## Humanitarian Data Product {.slide-blue}
+ ## Agenda
+
+  * Introduction to R Markdown
+  * Dynamic Reporting
+  * Automating Report Generation
+  * Customizing and Styling
+  * Conclusion
+
+## What is R Markdown?
+
+  * R Markdown is an authoring format that combines code, text, and results in a single document.
+  * It allows you to create reports, presentations, and dashboards with R code and text.
+
+## Basic Structure
+
+```{markdown}
+
+---
+title: "My Report"
+output: 
+  html_document
+---
+
+# Section 1
+This is a text section.
+```
+
+
+## R Markdown Output Formats
+
+- R Markdown supports various output formats, such as HTML, PDF, and Word documents.
+
+
+---
+
+## Report Styling
+
+  * Customize report style using CSS.
+  * Change fonts, colors, and layouts.
+
+---
+
+## Branding with {unhcrdown}
+
+  * Add organization logos and headers.
+  * Maintain a consistent look across reports.
+
+---
+
+## Conclusion & Key Takeaways
+
+  * R Markdown is a versatile tool for report generation.
+  * Parameterized reports enable dynamic customization.
+  * Automate report generation for efficiency.
+  * Customize and brand reports as needed.
 
 
 ---
@@ -322,72 +432,19 @@ knitr::include_graphics("img/reproducible_flow_tools.svg")
 knitr::include_graphics("img/reproducible_flow_r.svg")
 ```
 
----
 
-## Combine Rmarkdown with version control (Git) 
-
-&nbsp;
-
-![](img/git_versioning.png)
-
-
-R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
-
-
-
----
-
-## An efficient, fully reproducible workflow based on Rmarkdown and Git 
-
-![](img/git_collaboration.png)
-
-[K. Ram 2013](http://www.scfbm.org/content/8/1/7)
-
-
-
-
----
-
-## Doing Reproducible Research 
-
-1. Everything with a script: **avoid manual data manipulation**.
-
-2. Everything **within one directory** (Rstudio projects).
-    ![](img/projects.png)
-
-3. Use **relative paths**: "data/dataset.csv" rather than "C:/Users/..."
-
-
-
----
-
-## Doing Reproducible Research (cont.) 
-
-4. Use Rmarkdown to produce reports combining code and results.
-
-5. Record exact versions of software used.
-    - sessionInfo()
-    - checkpoint
-    - packrat
-    - etc
-
+ 
 
 
 
 
 
 ---
-
-## Find these slides at 
-
-- [GitHub](http://pakillo.github.io/Rmarkdown-talk-Mar2015)
-
-- [Figshare]()
-
-- [Source code and materials](https://github.com/Pakillo/Rmarkdown-talk-Mar2015)
+class: inverse, center, middle
 
 
 
+ 
 
 ---
 
@@ -451,9 +508,7 @@ Challenges
     Little funding for bespoke research dissemination and communication
     Not seen as a legitimate research contribution (e.g., to the field, or one's career) 
 
----
-
-
+ 
 
 ---
 

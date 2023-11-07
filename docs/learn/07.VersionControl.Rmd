@@ -1,0 +1,320 @@
+---
+title: "Work as a team under Version Control"
+subtitle: "Learn how to leverage Github in your work"
+output: 
+  unhcrdown::html_slides:
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+---
+
+ 
+
+# Learning objectives
+
+  * Understand Git workflow
+  
+  * See git good practices
+  
+  * use github as a portfolio to ease work discovery
+
+
+
+---
+
+## Git Version control    
+
+Create an account on Github - https://github.com/join?  
+install Github desktop https://desktop.github.com/ 
+
+---
+
+## Rstudio – Git tab
+Source: RStudio IDE : : CHEAT SHEET
+---
+
+## Git workflow
+
+Master
+Branch
+Source: Git Workflows
+
+---
+
+## Git - what
+
+Free: you don't need to pay to use any functionality
+Open source: Anyone can modify or contribute to the Git code
+Distributed: run Git on your local machine... all machines maintain a copy of the action history (commits) and can be synchronized at any time.
+Version Control: save changes made to one (or several) file(s) over time. makes it easy to go back to previous versions (time travel) and coordinate several people working on the same file/project
+
+---
+
+## Git - when
+Have you changed a code and now it doesn't run/compile anymore?
+go back to the previous version with one (or two) commands on the terminal
+Do you want to avoid the previous situation altogether?
+use "branches" to make and test the changes before deploying  the new code to production.
+Do you want to guarantee the integrity of the code in production?
+use pull requests reviewed by at least another team member
+Do you want to keep a history of the contributions each member made to the project and its evolution?
+use commands such as “git log” and “git blame”
+
+
+---
+
+## Git - why
+Collaboration 
+Agility 
+Application integrity 
+Privacy
+
+---
+
+## Git - dos  
+Commit often
+Make your checkpoints
+Do not commit incomplete code
+Break the task into several small sub-tasks
+Commit only related work
+Write descriptive/meaningful commit messages
+Limit your subject to 50 character
+The commit message must complete the sentence "This commit ..." 
+Use the body of the message to explain “what” and “why”, not “how”
+Test your code before pushing
+Use branches
+Update the master code with pull requests
+
+---
+
+## Git - Don’ts
+
+Don’t git push straight to master.
+Create branches!
+Do not commit files that can be regenerated (e.g. binary, graphs)
+Do not commit configuration files (e.g. “.vscode/”, access tokens)
+Do not change a repository's public history
+Avoid rewriting the master’s history.
+  
+ 
+???
+You only need to set this configuration once in your computer
+Use the email of your Github account
+
+
+---
+
+## Git - Check the results:
+Git config
+usethis::use_git_config(user.name = “User Name”,
+		                       user.email = “email@email.com”)
+usethis::git_sitrep()
+
+
+
+---
+
+## Git - Opens a browser window to the GitHub form to generate a PAT
+You can change the PAT’s name 
+After you have created the PAT, copy the token 
+
+Create a GitHub personal access token (PAT)
+usethis::create_github_token()
+  
+
+The command will open the .Renviron file
+Insert the variable GITHUB_PAT and paste the token as it value:
+
+
+Restart R in RStudio: Ctrl-Shift-F10
+Register the token in your computer
+usethis::edit_r_environ()
+
+---
+
+## Git - Clone vs Fork 
+Clone
+Fork
+Source: toolsqa
+
+ 
+---
+
+## Git - Clone: Exercise
+Create a repository in GitHub
+Create a new project in RStudio
+File > New Project > Version Control > Git
+ 
+Repository URL: Paste the GitHub repository URL
+Project directory name: is auto filled with the repository name, after you paste the URL
+Create project as subdirectory of: set the path of the local git repository
+ 
+Clone: Exercise 
+Create a repository on your GitHub account
+Name it: “first_repo”
+Choose it visibility (in this case, we can set it to public) 
+Select Add a README file 
+Click Create repository 
+
+Clone: Exercise
+
+Clone: Exercise
+Create a new project in RStudio
+File > New Project > Version Control > Git
+
+Clone: Exercise
+Create a new project in RStudio
+File > New Project > Version Control > Git
+Paste the GitHub repository URL
+
+Clone: Exercise
+Create a new project in RStudio
+File > New Project > Version Control > Git
+Paste the GitHub repository URL
+Choose the local working directory
+
+Clone: Exercise
+Create a new project in RStudio
+File > New Project > Version Control > Git
+Paste the GitHub repository URL
+Choose the local working directory
+Create a new R file
+
+Clone: Exercise
+Create a new project in RStudio
+File > New Project > Version Control > Git
+Paste the GitHub repository URL
+Choose the local working directory
+Create a new R file
+Add some content and save it 
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+Click Commit
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+Click Commit
+Add a commit message
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+Click Commit
+Add a commit message
+Click Commit
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+Click Commit
+Add a commit message
+Click Commit
+Click Push
+
+Clone: Exercise
+Probably you will need to autorize Git Credential Manager
+
+Clone: Exercise
+Let’s push the changes to GitHub
+Go to the Git tab
+Staged the file
+Click Commit
+Add a commit message
+Click Commit
+Click Push
+Refresh the repository website 
+ 
+
+Arguments:
+repo_spec: A string identifying the GitHub repo
+destdir: The new folder is stored here
+fork: If FALSE, repo_spec is cloned. If TRUE, repo_spec is forked, then the fork is cloned, and some additional steps are set for future pull requests
+Source: usethis
+
+Fork and Clone: Example
+usethis::create_from_github("unhcr-americas/Americas-Protection-Monitoring_2020",
+                  		            destdir = "C:/Users/Public/Desktop", 
+                                             fork = TRUE)
+
+Before changing anything, create a branch:
+Create branch
+usethis::pr_init(branch = “branch_name")
+
+After that, update and add new files to the repository. 
+Do not forget to commit your changes with descriptive and meaningful messages
+
+--- 
+
+## Git - Create pull request (PR)
+pr_push()
+
+Once you're ready to submit, run pr_push() to push your local branch to GitHub:
+Source: usethis
+Opens a browser window to the GitHub Pull Request page
+Click “Create pull request”
+Add a message explaining the pull request content and click “Create pull request”
+Now the repository owner will evaluate your PR and if everything is alright, he/she will merge the PR to the master repo 
+
+After the PR have been merged to the master repo, run pr_finish() to delete the local branch:
+Delete the local branch
+pr_finish()
+
+Source: usethis
+
+Let`s work with the unhcr-git-exercise repository
+Activities
+Fork the repository
+Create branch
+Modify a file
+Commit the changes
+Create a pull request
+Exercise
+
+ ---
+class: left, top
+
+# Good luck in your R journey!
+
+### Reach out to us for questions, analysis mentoring or code peer review!
+
+
+.pull-left[
+
+__DIMA Americas__: <br>
+
+Check our github @ <a href="http://github.com/unhcr-americas"><i class="fa fa-github fa-fw"></i>&nbsp;unhcr-americas</a>  and learn about __UnhcRverse packages__<br>
+
+Slides created with [**remark.js**](http://remarkjs.com/) and the R package [**xaringan**](https://github.com/yihui/xaringan). Slides notes for this presentation can be displayed by pressing keyboard shortcut `p` - Navigation help with keyboard shortcut `h`
+
+
+]
+
+.pull-right[
+
+<img src="img/giphy.gif" width="310px"/>
+
+]
+
+
+References
+Usethis Package: Jennifer Bryan presentation
+ 

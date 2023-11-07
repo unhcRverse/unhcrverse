@@ -1,7 +1,0 @@
----
-title: UNHCR Quarto Theme
-subtitle: For revealjs
-format: unhcr-revealjs
-embed-resources: true
----
- 

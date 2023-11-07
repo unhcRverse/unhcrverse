@@ -1,0 +1,284 @@
+---
+title: "Creating functions, a first step into R programming"
+subtitle: "Illustration with {unhcrplot}"
+output: 
+  unhcrdown::html_slides:
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+---
+ 
+
+# Learning objectives
+
+  * Understand Why Functions are needed
+  
+  * Learn to transition from Scripts to Functions
+  
+  * Call Custom Function
+  
+  * Function Documentation
+  
+  * Plotting Functions
+  
+  * Function Parameter
+
+ 
+---
+
+## Why Functions?  
+
+Code Reusability
+
+  * Functions allow you to reuse code.
+  * Write a function once and use it multiple times.
+
+Modularity
+
+  * Functions help in breaking down complex tasks into smaller, manageable pieces.
+  * Easier to debug and maintain.
+
+Collaboration
+
+  * Functions make it easier to collaborate with others.
+  * Share functions instead of long scripts.
+
+---
+
+## Transition from Scripts to Functions
+
+Script Example
+
+```{r}
+# Script to calculate the mean of a numeric vector
+data <- c(1, 2, 3, 4, 5)
+mean_value <- mean(data)
+print(mean_value)
+```
+
+ 
+
+Function Example
+
+```{r}
+
+# Function to calculate the mean of a numeric vector
+calculate_mean <- function(data) {
+  mean_value <- mean(data)
+  return(mean_value)
+}
+
+data <- c(1, 2, 3, 4, 5)
+mean_value <- calculate_mean(data)
+print(mean_value)
+```
+
+
+---
+
+## Key Differences
+
+  * Functions encapsulate code into reusable units.
+  * Parameters allow customization of function behavior.
+
+Creating Functions in R
+Function Structure
+
+```{r}
+
+function_name <- function(parameter1, parameter2, ...) {
+  # Function body
+  # Perform operations
+  return(result)
+}
+```
+
+---
+
+## Example: Custom Function
+
+```{r}
+
+# Custom function to calculate the median of a numeric vector
+calculate_median <- function(data) {
+  median_value <- median(data)
+  return(median_value)
+}
+```
+
+
+---
+
+## Calling Custom Function
+
+```{r}
+
+data <- c(1, 2, 3, 4, 5)
+median_value <- calculate_median(data)
+print(median_value)
+```
+
+
+---
+
+## Import Data
+
+
+- Data import: [`readr`](https://readr.tidyverse.org/), [`readxl`](https://readxl.tidyverse.org/), etc.
+
+
+---
+
+## Start with Documentation 
+
+Why Document Functions?
+
+  * Documentation provides information on how to use a function.
+  * Helps other users (including your future self) understand the purpose and usage of the function.
+  * Standard practice for sharing code.
+
+R Documentation
+
+  * Use roxygen2 or devtools for generating R documentation.
+  * Add details about parameters, return values, and examples.
+  
+Code Style and Consistency 
+
+  * Follow modern and consistent code formatting.
+  * Use tools like styler for code formatting.
+
+---
+
+## Example Documentation
+
+```{r}
+
+#' Calculate the median of a numeric vector.
+#'
+#' This function takes a numeric vector and returns its median value.
+#'
+#' @param data A numeric vector.
+#'
+#' @return The median of the input vector.
+#'
+#' @examples
+#' data <- c(1, 2, 3, 4, 5)
+#' median_value <- calculate_median(data)
+#'
+#' @export
+calculate_median <- function(data) {
+  median_value <- median(data)
+  return(median_value)
+}
+```
+
+
+---
+
+## Use Modular Code
+ 
+
+  * Modular code is organized into small, reusable components.
+  * Makes your code more readable and maintainable.
+  * Reduces redundancy and duplication.
+
+Recurrent Plots
+
+  * Recurrent plots are plots used multiple times in your code or projects.
+
+---
+
+## What is a Plotting Function?
+
+  * A plotting function is a custom R function that generates a specific plot.
+  * Encapsulates the plot's code and logic.
+
+Advantages
+
+  * Reusability
+  * Consistency
+  * Code organization
+
+```{r}
+
+# Define a plotting function
+# plot_histogram <- function(data, variable) {
+#   ggplot(data, aes(x = {{ variable }})) +
+#     geom_histogram(binwidth = 1, fill = "lightblue") +
+#     labs(title = paste("Histogram of", deparse(substitute(variable))))
+# }
+```
+
+
+---
+
+## Function Parameters
+
+  * Plotting functions can accept parameters to customize the plot.
+  * Parameters allow you to create dynamic and flexible plots.
+
+Customization Example
+
+```{r}
+
+# Customize the plotting function
+#plot_histogram(mtcars, mpg)
+```
+ 
+Plot Customization
+
+  * Allow users to customize plots by providing parameters.
+  * Parameters can control titles, colors, labels, etc.
+
+Example with Custom Parameters
+
+```{r}
+
+# Customize plot appearance
+# plot_histogram(mtcars, mpg, title = "Custom Histogram", fill_color = "lightgreen")
+```
+
+
+---
+
+## Organizing Plotting Functions
+
+  * Create a directory or package to store your plotting functions.
+  * Name files descriptively and include documentation.
+
+---
+
+## Advanced Features
+
+  * Saving plots to svg or png
+  * Creating dynamic dashboards
+  * Integrate your plotting functions into Shiny apps for interactive visualization.
+
+---
+
+## Conclusion: Key Takeaways
+
+  * Functions are essential for code reusability and modularity.  
+  
+  * Transition from scripts to functions for better code organization. 
+  
+  * Documenting functions is crucial for effective collaboration and code sharing.  
+  
+  * Modular code with plotting functions improves code organization and reusability.  
+ 
+  * Function parameters allow customization of plots.  
+ 
+  * Building a directory of plotting functions streamlines your work.
+
+---
+
+## Thank You
+
+
+Thank you for your attention!
+
+Questions?
+    
+Reference:  R programming: [R for Data Science](https://r4ds.had.co.nz/), [Advanced R Programming](https://adv-r.hadley.nz/), etc.

@@ -79,7 +79,7 @@ The list of mature projects includes set of packages to ease the production of s
  1. __Design and branding__ such as [unhcrdown](https://github.com/vidonne/unhcrdown): UNHCR templates for R Markdown,   [unhcrthemes](https://github.com/vidonne/unhcrthemes): UNHCR branded theme for ggplot2 and data visualization colour palettes, 
  
  
- 2. __Data Access__ such as [unhcrdatapackage](https://github.com/edouard-legoupil/unhcrdatapackage): Use UNHCR Open data, [ridl](https://github.com/dickoa/ridl): API to connect to internal data source, [robotoolbox](https://github.com/dickoa/obotoolbox): API to connect to Kobo Data Collection Server, [rhdx](https://github.com/dickoa/hcrdata): API to connect to Humanitarian Data Exchange and [popdata](https://github.com/PopulationStatistics/popdata): API to connect to the system for official statistic curation
+ 2. __Data Access__ such as [unhcrdatapackage](https://github.com/edouard-legoupil/unhcrdatapackage): Use UNHCR Open data, [ridl](https://github.com/dickoa/ridl): API to connect to internal data source, [robotoolbox](https://github.com/dickoa/robotoolbox): API to connect to Kobo Data Collection Server, [rhdx](https://github.com/dickoa/rhdx): API to connect to Humanitarian Data Exchange and [popdata](https://github.com/PopulationStatistics/popdata): API to connect to the system for official statistic curation
 
 
  3. __Survey Data Processing__ such as [HighFrequencyChecks](https://github.com/edouard-legoupil/HighFrequencyChecks/): Perform High Frequency Check or  [kobocruncher](https://github.com/edouard-legoupil/kobocruncher): Process data crunching for survey dataset or [XlsFormPrettyPrint](https://github.com/edouard-legoupil/XlsFormPrettyPrint): to work with multiple xlsform

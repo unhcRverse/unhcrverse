@@ -17,6 +17,13 @@ install.packages("pak")
 pak::pkg_install("unhcRverse/unhcRverse")
 unhcrverse::unhcrverse()
 
+# Enable this universe
+# options(repos = c(
+#     ggseg = 'https://unhcrverse-universe.dev',
+#     CRAN = 'https://cloud.r-project.org'))
+# # Install some packages
+# install.packages('unhcrverse')
+
 ```
 
 ### Deprecated packages

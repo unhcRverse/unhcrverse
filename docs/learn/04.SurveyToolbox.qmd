@@ -206,7 +206,7 @@ Scope:
 
 ::: {.column width="50%"}
 
-App Maturity: __alpha-version__
+App Maturity: __beta-version__
  
 
  - [Link to app](https://rstudio.unhcr.org/kobocruncher/) 
@@ -235,7 +235,7 @@ Scope:
 
 ::: {.column width="50%"}
 
-App Maturity: __alpha-version__
+App Maturity: __beta-version__
  
 
  - [Link to app](https://rstudio.unhcr.org/IndicatorCalc/) 
@@ -244,3 +244,12 @@ App Maturity: __alpha-version__
 
 ::::
 
+
+
+## In-details Presentation of the 3 __beta-version__
+
+ - Kobo [Data Collection Management](https://edouard-legoupil.github.io/HighFrequencyChecks/tutorial/index.html) with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
+ 
+ - Kobo [Survey Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with [`{KoboCruncher}`](https://edouard-legoupil.github.io/kobocruncher)
+ 
+ - Apply [Indicator calculations for RMS](https://edouard-legoupil.github.io/IndicatorCalc/tutorial/index.html)
