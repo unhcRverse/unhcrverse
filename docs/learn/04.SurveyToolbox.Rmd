@@ -22,13 +22,13 @@ output:
  
 ## and Capacity!
  
- * Many Steps in the survey data life-cyle involves data processing steps that cannot be implemented solely with __Excel__ and most of field data expert are not sufficiently trained to use and customise R scripts.
+ * Many Steps in the survey data life-cycle involves data processing steps that cannot be implemented solely with __Excel__. Most field data experts (mostly Information Management Officer generalist) are not sufficiently skilled or trained to use and customize R scripts by themselves.
  
- * Global Scale up of Household Survey can not be rolled out with __ad-hoc international consultancies__, as it can be difficult to build an effective and actionable pool of expert to be mobilized in parallel for all operations running a survey. 
+ * Global Scale up of Household Survey can not be rolled out with __ad-hoc international consultancies__, as it can be difficult to build an effective and actionable pool of experts to be mobilized for all operations running a survey in parallel. 
  
- * Even if consultants are being called in, the various steps of the processes needs to be standardized to allow for __Quality Assurance__ such as Data Audit trail or Analysis reproducibility  
+ * Even if consultants are being called in, the various steps of the processes needs to be standardized to allow for proper supervision and  __Quality Assurance__ (such as Data Audit trail or Analysis reproducibility).  
  
- * There's a need to __knowledge building__ to improve the processes over time based on field implementation feedback and make it replicable
+ * There's a need to __knowledge building__ to improve the processes over time based on field implementation feedback and make it replicable.
   
 ---
 
@@ -43,7 +43,7 @@ Need to get tools for field staff with minimal programming skills, that can enha
 
 __SOLUTION__: Dedicated interface helping the implementation and documentation of every steps.
 
-The toolkit is mirroring ["Survey Solution" project funded by JDC](https://www.jointdatacenter.org/improving-the-quality-of-survey-data-on-forcibly-displaced-populations/) for [Kobotoolbox](http://kobo.unhcr.org), the Survey Platform used by UNHCR. It also enforce the usage of UNHCR [Internal Data Repository: RIDL](http::/ridl.unhcr.org).
+The toolkit is mirroring the ["Survey Solution" project funded by JDC](https://www.jointdatacenter.org/improving-the-quality-of-survey-data-on-forcibly-displaced-populations/) for [Kobotoolbox](http://kobo.unhcr.org), the Survey Platform used by UNHCR. It also enforce the usage of UNHCR [Internal Data Repository: RIDL](http::/ridl.unhcr.org).
 
 ???
 all of which are critical in improving the quality of the data collected and managed on populations affected by forced displacement. With the scope of guaranteeing quality in the different stages of survey design and implementation, this project proposes different tools and methods for:
@@ -54,9 +54,9 @@ To cover the target populations in different population settings (i.e. returnee 
 
 ---
 
-## Companion App: design stategy
+## Companion App: design strategy
 
- * Minimize scope: rather multiple simple __companion apps__ to be used at different stages of the whole process than a single complex _do-it-all_ one
+ * Minimize scope: rather multiple simple __companion apps__ to be used at different stages of the whole process than a single _do-it-all_ complex one. Because of their restricted scopes, apps are easier to maintain.
  
  * Self-explanatory: Interface developed to help the diffusion of guidance: __learning by doing__ to be paired with __micro-learning__ for field staff in charge of the implementation on the ground
  
@@ -91,6 +91,7 @@ Scope:
 App Maturity: __Alpha-version__ 
 
  - [Initial Wireframe created](https://rstudio.unhcr.org/rmsSampling/)
+ - [Link to doc](https://github.com/unhcr-americas/rmsSampling)
 
  - [ISSUE -- Pending discussion on decision tree](https://github.com/unhcr-americas/rmsSampling/issues/1)
 
@@ -125,13 +126,15 @@ Scope:
 
  - Compare contextualized version with baseline global template
 
- - Select the methodology based on a decision tree for each group
+ - Estimate the survey duration 
 
- - Define sample size based on expected accuracy
+ - Provides a pretty-print version of the master version
 
 App Maturity: __Release-Candidate__ 
 
  - [Link to app](https://rstudio.unhcr.org/XlsFormUtil/)
+ - No specific elements of complexity...
+ - [Link to doc](https://unhcr-americas.github.io/XlsFormUtil/)
 ]
 
 .pull-right[
@@ -159,6 +162,7 @@ Scope:
 App Maturity: __alpha-version__
 
  - [Initial Wireframe created](https://rstudio.unhcr.org/Survey_Designer/)
+ - [Link to doc](https://unhcr-americas.github.io/surveyDesigner/)
  
  - [ISSUE -- Build cost/quality threshold simulation](https://github.com/unhcr-americas/surveyDesigner/issues/27)
  
@@ -202,6 +206,7 @@ App Maturity: __beta-version__
 
 
  - [Link to app](https://rstudio.unhcr.org/HighFrequencyChecks/) 
+ - [Link to doc](https://edouard-legoupil.github.io/HighFrequencyChecks/)
 ]
 
 .pull-right[
@@ -235,6 +240,7 @@ App Maturity: __beta-version__
  
 
  - [Link to app](https://rstudio.unhcr.org/kobocruncher/) 
+ - [Link to doc](https://unhcr-americas.github.io/IndicatorCalc/)
 ]
 
 .pull-right[
@@ -265,6 +271,7 @@ App Maturity: __beta-version__
  
 
  - [Link to app](https://rstudio.unhcr.org/IndicatorCalc/) 
+ - [Link to doc](https://rstudio.unhcr.org/XlsFormUtil/)
 ]
 
 .pull-right[
