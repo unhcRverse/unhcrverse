@@ -197,11 +197,13 @@ Processing metadata and paradata opens avenues for understanding the behavior of
 
 Scope: 
 
- - Compare contextualized version with baseline global template
+ - Assess the quality of enumerator work according to predefined check on regular basis
 
- - Select the methodology based on a decision tree for each group
+ - Perform data cleaning through a documented and standardised data cleaning log
 
- - Define sample size based on expected accuracy
+ - Apply a first level of data anonymisation in order to obtain "Scientific Use File"
+ 
+ - All points above systematically recorded in RIDL allowing the data to go from the __raw_ to _cleaned & anonymised_ status, so that indicators can be calculated.
 
 App Maturity: __beta-version__
 
@@ -261,9 +263,9 @@ App Maturity: __beta-version__
 
 Scope: 
 
- - Perform a mapping between a specific suvey and expected variables/modality for on survey
+ - Perform a mapping between a specific survey and expected variables/modality for on survey
  
- - Ease variable recoding
+ - Ease variables recoding
  
  - Output standard report and dataset for indicators - included directly in RIDL
 
