@@ -1365,8 +1365,22 @@ class: inverse, center, middle
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D)
 
-???
-Resources Ggplot:
+<a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
+
+--- 
+
+# Resources  
+
+ - [R Essential Training: Wrangling and Visualizing Data](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefc58c829f0006?type=9882927d138b100019b928e75843018d)
+
+ - [learn R tidyverse](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa6ae8c4f30003?type=9882927d138b100019b928e75843018d)
+
+ - [R for Excel users](https://wd3.myworkday.com/unhcr/learning/course/9c1ac0ad65dd1001b5838b7d40590001?type=9882927d138b100019b928e75843018d)
+
+ - [Data Visualization in R with ggplot2](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfbd3773f3f0004?type=9882927d138b100019b928e75843018d)
+
+- [Creating Maps with R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefd839751a0006?type=9882927d138b100019b928e75843018d)
+
 
 - [Ggplot main doc](https://ggplot2.tidyverse.org/index.html)
 - [The ggplot flipbook](https://evamaerey.github.io/ggplot_flipbook/ggplot_flipbook_xaringan.html#1) by Gina Reynolds

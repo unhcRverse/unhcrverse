@@ -350,4 +350,13 @@ class: inverse, center, middle
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D)
 
+
+<a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
+
+---
+
+## Ressources
+
+ - [Creating GitHub Portfolios](https://wd3.myworkday.com/unhcr/learning/course/16fc80c3079810011fc3d41e32520000?type=9882927d138b100019b928e75843018d)
  
+ - [GitHub Actions for CI/CD](https://wd3.myworkday.com/unhcr/learning/course/db0ba7c05d98100035cf8c5c92240001?type=9882927d138b100019b928e75843018d)

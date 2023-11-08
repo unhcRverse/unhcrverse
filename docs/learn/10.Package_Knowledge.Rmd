@@ -216,3 +216,13 @@ class: inverse, center, middle
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
 
 
+<a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
+
+---
+
+## Reference
+
+ - [Hadley - R packages](https://r-pkgs.org/)
+ 
+ - [Fusen](https://thinkr-open.github.io/fusen/index.html)
+

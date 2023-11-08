@@ -328,12 +328,17 @@ class: inverse, center, middle
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
 
+
+<a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
+
 ---
 
-## Some useful links 
+## Ressources
 
 
 .pull-left[
+
+- [Creating Reports and Presentations with R Markdown and RStudio](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa22015cc00003?type=9882927d138b100019b928e75843018d)
 
 - [Rmarkdown by RStudio](http://rmarkdown.rstudio.com/)
 
@@ -345,12 +350,11 @@ class: inverse, center, middle
 
 - [Reproducible Research in Coursera](https://www.coursera.org/course/repdata)
 
-- [Nice R code](http://nicercode.github.io/guides/reports/)
-
 - [Reproducible Research with R and RStudio](http://christophergandrud.github.io/RepResR-RStudio/)
 
 - [Ten simple rules for reproducible computational research](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285)
 
+- [Nice R code](http://nicercode.github.io/guides/reports/)
 
 ]
 
