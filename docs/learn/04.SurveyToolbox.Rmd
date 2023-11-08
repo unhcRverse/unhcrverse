@@ -42,7 +42,7 @@ Need to get tools for field staff with minimal programming skills, that can enha
  * Data Collection Monitoring
  * Data Analysis 
 
-__SOLUTION__: Dedicated interface helping the implementation and documentation of every steps.
+__SOLUTION__: Dedicated interface helping the implementation and documentation of every steps. Advanced users can also use the functions directly for specific siuations not covered by generic interface.
 
 The toolkit is mirroring the ["Survey Solution"](https://github.com/michael-cw?tab=repositories) project funded by [Joint Data Center](https://www.jointdatacenter.org/improving-the-quality-of-survey-data-on-forcibly-displaced-populations/) for [Kobotoolbox](http://kobo.unhcr.org), the Survey Platform used by UNHCR. It also enforce the usage of UNHCR [Internal Data Repository: RIDL](http::/ridl.unhcr.org).
 
@@ -283,6 +283,27 @@ App Maturity: __beta-version__
 ]
 
 
+---
+
+##  How to finalise and maintain such Toolbox
+.pull-left[
+
+The regular Standard Multi-Tier IT Standard Support model...
+ 
+  * __Tier 4__: Code Review & Quality Insurance (_Contracted Company with frame agreement_) 
+
+  * __Tier 3__: Internal development (_one yearly R developers meeting to establish roadmap and incentivize contributing staff_)
+
+  * __Tier 2__: User induction & Advanced User Support (_Global Data Service/DIMA_)  
+
+  * __Tier 1__: Basic User Troubleshooting (_according to Documented Scenario_)
+
+  * __Tier 0__: Self-support / Package documentation (_maintained and improved on continuous basis_)
+
+]
+.pull-right[
+.img75[![Eat the cake](img/tiers.jpg)] 
+]
 
 ---
 

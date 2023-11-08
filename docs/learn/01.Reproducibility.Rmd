@@ -421,27 +421,6 @@ Gradual automation
 .img[![Eat the cake](img/Group.png)] 
 ]
 
----
-
-##  A call for Institutionalisation
-.pull-left[
-
-Using Standard Multi-Tier IT Standard Support model to enhance reproducible analysis...
- 
-  * __Tier 4__: Code Review & Quality Insurance (_Contracted Company with frame agreement_) 
-
-  * __Tier 3__: Internal package development / Internal R champions team (_one yearly Rdev meeting to incentivize contributing staff_)
-
-  * __Tier 2__: User induction & Advanced User Support (_Global Data Service/DIMA_)  
-
-  * __Tier 1__: Basic User Troubleshooting (_according to Documented Scenario_)
-
-  * __Tier 0__: Self-support / Package documentation (_maintained and improved on continuous basis_)
-
-]
-.pull-right[
-.img75[![Eat the cake](img/tiers.jpg)] 
-]
 
 ---
 class: inverse, center, middle
