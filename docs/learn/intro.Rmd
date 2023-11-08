@@ -13,7 +13,7 @@ output:
 
 ## Intro
 
-This workshop can not replace __fact-sheet-able certifications__ like the self-paced R training offered through [UNHCR Learn & Connect](https://unhcr.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=e90e2279-e3a4-4ef2-8b74-757f91d224b2). Rather than learning R _in general terms_, the sessions will provide an overview of how R is being used and customized within UNHCR context. 
+This workshop can not replace __fact-sheet-able certifications__ like the self-paced R training offered through [Workday](https://wd3.myworkday.com/unhcr/d/inst/24999$538/rel-task/3001$142.htmld). Rather than learning R _in general terms_, the sessions will provide an overview of how R is being used and customized within UNHCR context. 
 
 Each of the 12 sessions (_presentations & exercise_) is organised to last one hour around a __specific learning objective__.
 
@@ -129,6 +129,9 @@ Organizing data for severity index
 <i class="fa fa-pencil  fa-fw fa-2x"></i> No need to take notes, all the session __content__ will be shared 
 
 <i class="fa fa-cog fa-fw fa-2x"></i> All practical exercises are designed to get you __testing the commands__:
+
+
+<a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 
 ???
 > Login on a dedicated cloud-based version of RStudio with base packages pre-installed for this session @ 

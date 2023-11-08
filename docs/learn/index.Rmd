@@ -49,7 +49,7 @@ knitr::opts_chunk$set(echo = TRUE,
  
 ##  R for Processes 
  
- - [Package knowledge](10.Package_Knowledge.html): Development, Documentation & Testing with [`{fusen}`](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal/}](https://edouard-legoupil.github.io/unhcrdataportal/)
+ - [Package your knowledge](10.Package_Knowledge.html): Development, Documentation & Testing with [`{fusen}`](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal}](https://edouard-legoupil.github.io/unhcrdataportal/)
  
  - Create [Shiny Companion App](11.Simplify_with_companionApp.html) with [`{Graveler}`](https://edouard-legoupil.github.io/graveler/) 
  
