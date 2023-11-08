@@ -65,7 +65,7 @@ To cover the target populations in different population settings (i.e. returnee 
 
 ---
 
-## Starting wih sampling frame
+## Starting with sampling frame
 
 The construction of the sampling frame & the selection of the appropriate sampling design is crucial to produce statistically valid estimates that ensure results representativeness
 
@@ -284,7 +284,7 @@ App Maturity: __beta-version__
 
 ---
 
-## In-details Presentation of the 3 __beta-version__
+## Presentation of the 3 app under __beta-version__
 
  - Kobo [Data Collection Management](https://edouard-legoupil.github.io/HighFrequencyChecks/tutorial/index.html) with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
  
