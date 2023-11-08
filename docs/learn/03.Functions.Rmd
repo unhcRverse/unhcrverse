@@ -1,6 +1,7 @@
 ---
 title: "Creating functions, a first step into R programming"
 subtitle: "Illustration with {unhcrplot}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -273,12 +274,13 @@ Example with Custom Parameters
   * Building a directory of plotting functions streamlines your work.
 
 ---
+class: inverse, center, middle
 
-## Thank You
+# Thank you
+
+### Questions?
 
 
-Thank you for your attention!
-
-Questions?
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D)
     
 Reference:  R programming: [R for Data Science](https://r4ds.had.co.nz/), [Advanced R Programming](https://adv-r.hadley.nz/), etc.

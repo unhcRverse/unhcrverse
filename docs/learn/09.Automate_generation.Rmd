@@ -1,6 +1,7 @@
 ---
 title: "Automate Report Generation" 
 subtitle: "Tips and Tricks with {RsConnect}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -169,8 +170,11 @@ Inline R Code
 ![](img/git_versioning.png)
 
 
+???
 R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
 
+
+---
 
 
 ## An efficient, fully reproducible workflow based on Rmarkdown and Git 
@@ -186,18 +190,20 @@ R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
 
 ## Doing Reproducible Research 
 
+
+.pull-left[
+
 1. Everything with a script: **avoid manual data manipulation**.
 
 2. Everything **within one directory** (Rstudio projects).
     ![](img/projects.png)
 
+
+]
+
+.pull-right[
+
 3. Use **relative paths**: "data/dataset.csv" rather than "C:/Users/..."
-
-
-
----
-
-## Doing Reproducible Research (cont.) 
 
 4. Use Rmarkdown to produce reports combining code and results.
 
@@ -206,6 +212,8 @@ R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
     - checkpoint
     - packrat
     - etc
+
+]
 
 
 ---
@@ -397,15 +405,18 @@ Features
   * Benefits include centralized content, automation, collaboration, and security.
   * Explore publishing, scheduling, and data access features.
 
+ 
+
+
 ---
+class: inverse, center, middle
 
-## Next Steps
+# Thank you
 
-Apply these tips and tricks to your projects for efficient report automation.
+### Questions?
 
 
-Thank you for participating  
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
 
-Questions? 
 
 Reference: https://docs.posit.co/connect/ 

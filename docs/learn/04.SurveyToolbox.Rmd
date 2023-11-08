@@ -1,6 +1,7 @@
 ---
 title:  "The Survey Companion App Toolbox"
 subtitle: "Improving the quality of survey data on forcibly displaced populations"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -43,7 +44,7 @@ Need to get tools for field staff with minimal programming skills, that can enha
 
 __SOLUTION__: Dedicated interface helping the implementation and documentation of every steps.
 
-The toolkit is mirroring the ["Survey Solution" project funded by JDC](https://www.jointdatacenter.org/improving-the-quality-of-survey-data-on-forcibly-displaced-populations/) for [Kobotoolbox](http://kobo.unhcr.org), the Survey Platform used by UNHCR. It also enforce the usage of UNHCR [Internal Data Repository: RIDL](http::/ridl.unhcr.org).
+The toolkit is mirroring the ["Survey Solution"](https://github.com/michael-cw?tab=repositories) project funded by [Joint Data Center](https://www.jointdatacenter.org/improving-the-quality-of-survey-data-on-forcibly-displaced-populations/) for [Kobotoolbox](http://kobo.unhcr.org), the Survey Platform used by UNHCR. It also enforce the usage of UNHCR [Internal Data Repository: RIDL](http::/ridl.unhcr.org).
 
 ???
 all of which are critical in improving the quality of the data collected and managed on populations affected by forced displacement. With the scope of guaranteeing quality in the different stages of survey design and implementation, this project proposes different tools and methods for:

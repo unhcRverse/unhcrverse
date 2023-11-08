@@ -1,6 +1,7 @@
 ---
 title: "Report Template"
 subtitle: "Introduction of {unhcdown} package"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -18,6 +19,9 @@ output:
   * Understand the type of reports 
   
   * Rmd & Quarto
+
+
+---
 
 ## Most science is not reproducible  
 
@@ -113,6 +117,11 @@ output:
 
 
 
+---
+
+## Leave behind your current workflow 
+
+![](img/version_control_PhD.gif)
 
 
 ---
@@ -123,11 +132,6 @@ output:
 
 
 knitr - pandoc - Rstudio
-
-
-
-
-
 
 ---
 
@@ -143,213 +147,10 @@ knitr - pandoc - Rstudio
     + books
     + websites
     + ...
-
-
-
-
----
-
-## Enable a fully auditable workflow
-
-As soon as all steps (i.e. **DATA + TIDYING + MODELING + VISUALS + NARRATIVE**) are done through **series of written commands recorded in scripts**:
-
- - when spotting error in the data, or using different dataset, one just need to adjust in the script and report will update automatically;
  
- - Data manipulation becomes be *de facto* fully documented (no more manual changes in Excel);
-
- - Analysis is self-explanatory and ready for any kind of collaborative review;
-
- - Customization are facilitated and allow to deliver  final product  with a professional branding and styling.
  
 
- 
-> Analysis becomes streamlined and [reproducible](https://unhcr-americas.github.io/reproducibility)! 
-
-> A "collaboration mode" is enabled from the begining of the process! 
-
-> As your analysis can be reviewed, you become "covered"... 
-
-???
- instead of **hundreds of mouse clicks**
-See also http://muschellij2.github.io/summerR_2015/modules/module12.html
-
-
-
 ---
-
-## unhcrdown
-
-[unhcrdown](https://github.com/vidonne/unhcrdown) provides a set of templates following UNHCR Brand recommendations. The goal of this package is to ease and speed up the creation of reports, presentation and website while promoting the UNHCR visual identity.
-
-.pull-left[
-
-**Content**
-
-1. Microsoft Word document
-2. HTML to PDF paged reports
-3. Microsoft PowerPoint presentation
-4. HTML slides
-
-]
-
-.pull-right[
-
-![unhcrdown templates](https://raw.githubusercontent.com/vidonne/unhcrdown/master/man/figures/new_template.png)
-
-]
-
----
-
-## Let's see it in action 
-
-In Rstudio, create new Rmarkdown document and click on `Knit HTML`.
-
-
-
-
-
-
-
-=================
-left: 30%
-
-Example project:
-
-Does sunshine influence happiness?
-
-See [myproject.Rmd](myproject.Rmd)
-
-***
-
-![](img/myproject.png)
-
-
-
-
-
-
-
----
-
-## HTML output 
-
-![](img/html_output.png)
-
-
-
-
-
-
-
----
-
-## Spotted error in the data? No problem! 
-incremental:true
-
-&nbsp;
-
-Make changes in Rmarkdown document, click `knit` and report will update automatically!
-
-
-
-
-
-
-
-
----
-
-## Other formats: PDF, Word 
-
-![](img/pdf_output.png)
-
-***
-
-![](img/word_output.png)
-
-
-
-
-
-
----
-
-## Adding citations 
-
-![](img/citation_Rmd.png)
-
-
-See [output](myproject_citations.html)
-
-![](img/references.png)
-
-
-
-
-
-
----
-
-## Embedding data and Rmd source in HTML report 
-
-![](img/embed.png)
-
-See [myproject_embed.html](myproject_embed.html)
-
-
-
-
-
----
-
-## Interactive documents: Rmarkdown + plotly
-
-![](img/interactive_plot.png)
-
-
-[See examples](http://127.0.0.1:4382/ggvis.Rmd)
-
-
-
-
-
----
-
-## Give you and your collaborators a little treat  
-
-![](img/xkcd_programming.png)
-
-
-
-
-
-
-
----
-
-## Convert your old R scripts to Rmarkdown 
-
-- with [one click in RStudio](http://www.rstudio.com/ide/docs/authoring/markdown_notebooks)
-
-![](img/notebook.png)
-
-- using `knitr::spin`
-
-
-
----
-
-## Leave behind your current workflow 
-
-![](img/version_control_PhD.gif)
-
- ## Agenda
-
-  * Introduction to R Markdown
-  * Dynamic Reporting
-  * Automating Report Generation
-  * Customizing and Styling
-  * Conclusion
 
 ## What is R Markdown?
 
@@ -370,47 +171,58 @@ output:
 This is a text section.
 ```
 
-
-## R Markdown Output Formats
-
-- R Markdown supports various output formats, such as HTML, PDF, and Word documents.
-
-
+ 
 ---
 
-## Report Styling
+## Enable a fully auditable workflow
 
-  * Customize report style using CSS.
-  * Change fonts, colors, and layouts.
+As soon as all steps (i.e. **DATA + TIDYING + MODELING + VISUALS + NARRATIVE**) are done through **series of written commands recorded in scripts**:
 
+ - when spotting error in the data, or using different dataset, one just need to adjust in the script and report will update automatically;
+ 
+ - Data manipulation becomes be *de facto* fully documented (no more manual changes in Excel);
+
+ - Analysis is self-explanatory and ready for any kind of collaborative review;
+
+ - Customization are facilitated and allow to deliver  final product  with a professional branding and styling.
+ 
+> Analysis becomes streamlined and [reproducible](https://unhcr-americas.github.io/reproducibility)! 
+
+> A "collaboration mode" is enabled from the begining of the process! 
+
+> As your analysis can be reviewed, you become "covered"... 
+
+???
+ instead of **hundreds of mouse clicks**
+See also http://muschellij2.github.io/summerR_2015/modules/module12.html
+ 
 ---
 
-## Branding with {unhcrdown}
+## unhcrdown
 
+[unhcrdown](https://github.com/vidonne/unhcrdown) provides a set of templates following UNHCR Brand recommendations. The goal of this package is to ease and speed up the creation of reports, presentation and website while promoting the UNHCR visual identity.
+
+.pull-left[
+
+**Content**
+
+1. Microsoft Word document
+2. HTML to PDF paged reports
+3. Microsoft PowerPoint presentation
+4. HTML slides
+
+]
+
+.pull-right[
   * Add organization logos and headers.
   * Maintain a consistent look across reports.
 
----
-
-## Conclusion & Key Takeaways
-
-  * R Markdown is a versatile tool for report generation.
-  * Parameterized reports enable dynamic customization.
-  * Automate report generation for efficiency.
-  * Customize and brand reports as needed.
-
+![unhcrdown templates](https://raw.githubusercontent.com/vidonne/unhcrdown/master/man/figures/new_template.png)
+]
 
 ---
 
-## Humanitarian Data Product
-
-```{r, echo = FALSE, out.width = "80%"}
-knitr::include_graphics("img/humprod_unhcr.svg")
-```
-
----
-
-## Reproducible pipelines with R markdown or Quarto
+## Reproducible pipelines with R markdown  
 
 ```{r, echo = FALSE, out.width = "70%"}
 knitr::include_graphics("img/tools_change_new.svg")
@@ -418,7 +230,7 @@ knitr::include_graphics("img/tools_change_new.svg")
 
 ---
 
-## Reproducible pipelines with R markdown or Quarto
+## Reproducible pipelines with R markdown  
 
 ```{r, echo = FALSE, out.width = "100%"}
 knitr::include_graphics("img/reproducible_flow_tools.svg")
@@ -426,7 +238,7 @@ knitr::include_graphics("img/reproducible_flow_tools.svg")
 
 ---
 
-## Reproducible pipelines with R markdown or Quarto
+## Reproducible pipelines with R markdown  
 
 ```{r, echo = FALSE, out.width = "100%"}
 knitr::include_graphics("img/reproducible_flow_r.svg")
@@ -434,21 +246,9 @@ knitr::include_graphics("img/reproducible_flow_r.svg")
 
 
  
-
-
-
-
-
----
-class: inverse, center, middle
-
-
-
- 
-
 ---
 
-##  Notebook for Data Insights documentation: Analysis Repo
+##  Notebook for Data Insights  
 
 .pull-left[
 
@@ -508,11 +308,32 @@ Challenges
     Little funding for bespoke research dissemination and communication
     Not seen as a legitimate research contribution (e.g., to the field, or one's career) 
 
- 
+
+---
+
+## Conclusion & Key Takeaways
+
+  * R Markdown is a versatile tool for report generation.
+  * Parameterized reports enable dynamic customization.
+  * Automate report generation for efficiency.
+  * Customize and brand reports as needed.
+
+---
+class: inverse, center, middle
+
+# Thank you
+
+### Questions?
+
+
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
 
 ---
 
 ## Some useful links 
+
+
+.pull-left[
 
 - [Rmarkdown by RStudio](http://rmarkdown.rstudio.com/)
 
@@ -531,11 +352,9 @@ Challenges
 - [Ten simple rules for reproducible computational research](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285)
 
 
+]
 
-
----
-
-## More links (software/R packages) 
+.pull-right[
 
 - [CRAN Task View on Reproducible Research](http://cran.r-project.org/web/views/ReproducibleResearch.html)
 
@@ -552,4 +371,5 @@ Challenges
 - [Rgitbook](http://jason.bryer.org/Rgitbook/)
 
 
+]
 

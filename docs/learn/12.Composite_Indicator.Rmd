@@ -1,6 +1,7 @@
 ---
 title: "Building Humanitarian Severity Index"
 subtitle: "Ensure Statistical Rigor & Robustness with {COINr}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -1284,3 +1285,12 @@ class: inverse, left, middle
  
  * Call for peer and/or independent review to cover yourself! when using scripted reproducible analysis, this should be very quick!!!
 
+---
+class: inverse, center, middle
+
+# Thank you
+
+### Questions?
+
+
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 

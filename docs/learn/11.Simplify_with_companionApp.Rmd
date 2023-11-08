@@ -1,6 +1,7 @@
 ---
 title: "Create interactive web Companion App"
 subtitle: "Quick-start development with {graveler}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output:
   unhcrdown::html_slides:
     self_contained: true
@@ -223,14 +224,16 @@ Maintenance
   * Use Golem for large-scale and production-ready Shiny apps.
   * Explore advanced features for customization.  
     
+ 
 ---
+class: inverse, center, middle
 
-## Next Steps
+# Thank you
 
-Start building your Shiny app and explore advanced topics.
+### Questions?
 
-Thank you for participating 
 
-Questions?
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
+
 
 

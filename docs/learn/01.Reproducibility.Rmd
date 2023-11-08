@@ -1,6 +1,7 @@
 ---
 title: "Analysis Reproducibility"
 subtitle: "Why it matters and how to do it?"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -441,6 +442,17 @@ Using Standard Multi-Tier IT Standard Support model to enhance reproducible anal
 .pull-right[
 .img75[![Eat the cake](img/tiers.jpg)] 
 ]
+
+---
+class: inverse, center, middle
+
+# Thank you
+
+### Questions?
+
+ 
+
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D)
 
 
  

@@ -1,7 +1,7 @@
 ---
 name: Comment Slide Deck docs/learn/01.Reproducibility.Rmd
 about: Suggest an idea for this presentation
-title: "[learn]"
+title: "[learn 01.Reproducibility]"
 labels: enhancement
 assignees: ''
 

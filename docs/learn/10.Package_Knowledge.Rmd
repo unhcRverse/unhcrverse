@@ -1,6 +1,7 @@
 ---
 title: "Package your Knowledge!"
 subtitle: "Mainstream documentation and test with {fusen}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -205,10 +206,13 @@ Testing on Different Platforms
   * Proper documentation is crucial for effective collaboration and code sharing.
 
 ---
+class: inverse, center, middle
 
-## Thank You
+# Thank you
 
-Thank you for your attention!
+### Questions?
 
-Questions?
+
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
+
 

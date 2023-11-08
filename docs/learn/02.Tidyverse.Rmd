@@ -1,6 +1,7 @@
 ---
 title: "Data Manipulation & Visualization"
 subtitle: "An Introduction to the {tidyverse} with {refugees} & {unhcthemes}"
+date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
     self_contained: true
@@ -33,12 +34,16 @@ library(unhcrthemes)
 # Learning objectives
 
 - An intro to Rstudio Development Interface
-- Basic of the grammar of data manipulation with[`dplyr`](https://dplyr.tidyverse.org/) & [`tidyr`](https://tidyr.tidyverse.org/) using [{refugees}](https://www.unhcr.org/refugee-statistics/insights/explainers/refugees-r-package.html) package.
-- Basic of the grammar of graphics and [**`ggplot2`**](https://ggplot2.tidyverse.org/index.html)
-- Best practices to create **UNHCR branded** visuals with [**`unhcrthemes`**](https://vidonne.github.io/unhcrthemes/) package
+
+- Basic of the grammar of data manipulation with [**`dplyr`**](https://dplyr.tidyverse.org/) & [**`tidyr`**](https://tidyr.tidyverse.org/) using [**`{refugees}`**](https://www.unhcr.org/refugee-statistics/insights/explainers/refugees-r-package.html) package
+
+- Basic of the grammar of graphics with [**`ggplot2`**](https://ggplot2.tidyverse.org/index.html)
+
+- Get branded visuals with [**`{unhcrthemes}`**](https://unhcr-dataviz.github.io/unhcrthemes/) package
 
 
 
+---
 
 # Learning stages...
 
@@ -49,13 +54,13 @@ library(unhcrthemes)
 
 .pull-right[
 
- __Step 1.__ Develop an understanding of what data science is and what programming and math concepts are needed for it
+ __Step 1.__ Develop an understanding of what data science is and what concepts are needed for it
  
- __Step 2.__ Break data science challenges into small steps - Acquire basic command syntax through very practical and focused project
+ __Step 2.__ Break data science challenges into small steps - Acquire basic command syntax through very practical and focused project - Data Manipulation & visualization
  
- __Step 3.__ Develop Reproducible Analysis Workflow - Understand the relevance, inputs, constraints, and limitations of the various techniques
+ __Step 3.__ Develop Reproducible Analysis Workflow with function and report template  - Understand the relevance, inputs, constraints, and limitations of the various techniques
  
- __Step 4.__ Optimize your problem solving approaches in elegant ways - Build packages
+ __Step 4.__ Optimize your problem solving approaches in elegant ways - Build packages & ShinyApp
 
 ]
 
@@ -75,68 +80,95 @@ class: inverse, center, middle
 
 ## Integrated Development Interface (IDE)
 
-Environment
-History
-Files
-Plots
-Packages
-Help
-Source
-Console/Terminal
+.pull-left[
+  Environment
+  History
+  Files
+  Plots
+  Packages
+  Help
+  Source
+  Console/Terminal
+]
+.pull-right[
+![tidyverse](img/forcats.png)  
+]
 
 ---
 
 ## Rstudio - Source
+
+.pull-left[
 Where you write your R code or document content
-If you are writing a R Markdown document, you can render it in this area using the                  button
+If you are writing a R Markdown document, you can render it in this area 
 To run a R code, you can use the shortcut Crtl + Enter
+]
+.pull-right[
+![tidyverse](img/forcats.png)  
+]
 
 ---
 
 ## Rstudio – Console/Terminal
+
+.pull-left[
 Where you can check the execution of commands and where the code is evaluated
 Can perform quick calculations (that you do not need to save)
+]
+.pull-right[
+![tidyverse](img/forcats.png)  
+]
 
 
 ---
 
 ## Rstudio - Environment/History
+
+.pull-left[
 Where you can see the objects in your working space 
 You can also view your command history (History tab) 
+]
+.pull-right[
+![tidyverse](img/forcats.png)  
+]
 
 ---
 
 ## Rstudio – Files/Plots/Packages/Help
+
+.pull-left[
 You can see the file directories
 View plots
 View which R packages are installed. You can also update the packages
+]
+.pull-right[
+![tidyverse](img/forcats.png)  
+]
 R help
 
 
 ---
 class: inverse, center, middle
 
-# `refugees` with  `dplyr` & `tidyr`
+# Manipulate data on {refugees} with {dplyr} & {tidyr}
 
 ---
 
-### Install required packages
+### Install the {tidyverse}, a collection of opinionated packages!
 
 Got to your [locally installed Rstudio](https://www.rstudio.com/products/rstudio/download/#download) or [sign-up for a free Rstudio Cloud account](https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0)
 
 .pull-left[
 
-First create a new project within R studio and then make sure we have the [tidyverse](https://www.tidyverse.org/packages/) plus additional UNHCR packages
+First create a new project within R studio and then make sure we have the [tidyverse](https://www.tidyverse.org/packages/)  
 
 ```{r, comment='#', evaluate = FALSE} 
 # Tidyverse
-if (!require("tidyverse")) install.packages("tidyverse", dependencies = TRUE)
-if (!require("here")) install.packages("here")
-
-# UnhcRverse  
-
-
-
+if (!require("tidyverse")) 
+  install.packages("tidyverse", 
+                   dependencies = TRUE)
+if (!require("here")) 
+  install.packages("here")
 ```
 ]
 
@@ -161,19 +193,46 @@ The tidyverse is an opinionated collection of R packages designed for data scien
 
 ---
 
-## Refugees Package
+## The {refugees} Data Package
 
-Data can be published as a package. An easy-to-use interface to the datasets served normally through the API, which cover forcibly displaced populations, including refugees, asylum-seekers and internally displaced people, stateless people, and others over a span of more than 70 years. This package provides data from three major sources:
+A package can be made of both functions and data. 
 
- * Data from UNHCR’s annual statistical activities dating back to 1951.
+{refugees} is easy-to-use interface to the datasets served normally through the API, which cover forcibly displaced populations, including refugees, asylum-seekers and internally displaced people, stateless people, and others over a span of more than 70 years. This package provides data from three major sources:
+
+.pull-left[
+
+Data from UNHCR’s annual statistical activities dating back to 1951.
  
- * Data from the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate. 
+Data from the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate. 
  
- * Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.
+Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.
+ 
+ 
+
+]
+
+.pull-right[
+
+```{r, echo = TRUE}
+
+## 2 options to install
+
+# From CRAN
+# install.packages("refugees")
+
+# From Github
+# pak::pkg_install("PopulationStatistics/refugees")
+
+
+## Once installed, load the package!
+library(refugees)
+
+```
+]
 
 ---
 
-## 8 datasets:
+## 8 sub datasets in the package - update every 6 months
 
  1. `population`: Data on forcibly displaced and stateless persons by year, including refugees, asylum-seekers, internally displaced people (IDPs) and stateless people. Detailed definitions of the different population groups can be found on the methodology page of the Refugee Data Finder.
  
@@ -195,15 +254,17 @@ Data can be published as a package. An easy-to-use interface to the datasets ser
 
 ## Data Manipulation
 
-```
+filter, group_by, summarise, slice 
+
+```{r, echo = TRUE}
 library(refugees)
 library(dplyr)
 library(tidyr)
 
 ref_coo_10 <- refugees::population |>
   dplyr::filter(year == 2022) |>
-  dplyr::summarise(refugees = sum(refugees, na.rm = TRUE) + sum(oip, na.rm = TRUE),
-            .by = coo_name) |>
+  dplyr::group_by(coo_name) |>
+  dplyr::summarise(refugees = sum(refugees, na.rm = TRUE) + sum(oip, na.rm = TRUE) ) |>
   dplyr::slice_max(order_by = refugees, n = 10)
 ```
 
@@ -212,54 +273,72 @@ ref_coo_10 <- refugees::population |>
 
 ## Data Manipulation
 
-```
+left_join 
+
+```{r, echo = TRUE}
 fd_last_ten_years <- refugees::population |>
-  filter(year >= 2022-9) |>
-  summarise(refugees = sum(refugees, na.rm = TRUE),
+  dplyr::filter(year >= 2022-9 & year < 2023) |>
+  dplyr::summarise(refugees = sum(refugees, na.rm = TRUE),
             asylum_seekers = sum(asylum_seekers, na.rm = TRUE), 
             oip = sum(oip, na.rm = TRUE), .by = year) |>
-  left_join(refugees::idmc |> 
+  dplyr::left_join(refugees::idmc |> 
               filter(year >= 2022-9) |>
-              summarise(idmc = sum(total, na.rm = TRUE), .by = year), by=c(“year”)) |>
-  left_join(refugees::unrwa |> 
+              summarise(idmc = sum(total, na.rm = TRUE),
+                        .by = year),
+            by=c("year")) |>
+  dplyr::left_join(refugees::unrwa |> 
               filter(year >= 2022-9) |>
-              summarise(unrwa = sum(total, na.rm = TRUE), .by = year), by=c(“year”)) |>
-  pivot_longer(cols = -year, names_to = “population_type”, values_to = “total”) |> 
-  mutate(population_type=factor(population_type, levels=c(“oip”, “unrwa”,“asylum_seekers”, “refugees”,“idmc”)), 
-             population_type=recode(population_type,
-             refugees=“Refugees under UNHCR’s mandate”,
-             asylum_seekers=“Asylum-seekers”,
-             oip=“Other people in need of international protection”,
-             idmc=“Internally displaced persons”,
-             unrwa=“Palestine refugees under UNRWA’s mandate”)) |>
-  arrange(year, population_type)
+              summarise(unrwa = sum(total, na.rm = TRUE), .by = year), by=c("year"))  
 ```
 
 ---
 
 ## Data Manipulation
 
+ pivot_longer
+
+```{r, echo = TRUE}
+fd_last_ten_years <- fd_last_ten_years |>
+  tidyr::pivot_longer(cols = -year, 
+               names_to = "population_type", 
+               values_to = "total") |> 
+  dplyr::mutate(population_type = factor(population_type,
+                                          levels=c("oip", "unrwa","asylum_seekers", "refugees","idmc")), 
+             population_type = dplyr::recode(population_type,
+             refugees="Refugees under UNHCR’s mandate",
+             asylum_seekers="Asylum-seekers",
+             oip="Other people in need of international protection",
+             idmc="Internally displaced persons",
+             unrwa="Palestine refugees under UNRWA’s mandate")) |>
+  dplyr::arrange(year, population_type)
 ```
+
+---
+
+## Data Manipulation
+
+sum with na.rm
+
+```{r, echo = TRUE}
 demo_2022 <- refugees::demographics |> 
-  filter(year==2022 & 
-  pop_type %in% c(“REF”, “ASY”, “IDP”, “OIP”, “RDP”, “RET”, “STA”, “OOC”)) |>
-  
-  summarise(“male 0-17” = sum(m_0_4, na.rm = TRUE) + 
+  filter(year == 2022 & 
+         pop_type %in% c("REF", "ASY", "IDP", "OIP",
+                         "RDP", "RET", "STA", "OOC")) |>
+  summarise("male 0-17" = sum(m_0_4, na.rm = TRUE) + 
                           sum(m_5_11, na.rm = TRUE) + 
                           sum(m_12_17, na.rm = TRUE),
-            “male 18-59”= sum(m_18_59, na.rm = TRUE), 
-            “male 60+”=sum(m_60, na.rm=TRUE), 
-            “female 0-17” = sum(f_0_4, na.rm = TRUE) + 
+            "male 18-59"= sum(m_18_59, na.rm = TRUE), 
+            "male 60+"=sum(m_60, na.rm=TRUE), 
+            "female 0-17" = sum(f_0_4, na.rm = TRUE) + 
                             sum(f_5_11, na.rm = TRUE) + 
                             sum(f_12_17, na.rm = TRUE),
-            “female 18-59”= sum(f_18_59, na.rm = TRUE), 
-            “female 60+”=sum(f_60, na.rm=TRUE)) |>
-            
+            "female 18-59"= sum(f_18_59, na.rm = TRUE), 
+            "female 60+"=sum(f_60, na.rm=TRUE)) |>
   pivot_longer(cols=everything(), 
-               names_sep = “ “, 
-               names_to = c(“.value”, “ages”)) |>
-  mutate(male_p = round(male/(sum(female)+sum(male)),2),   
-         female_p = round(female/(sum(female)+sum(male)),2)) |>
+               names_sep = " ", 
+               names_to = c(".value", "ages")) |>
+  mutate(male_p = round(male/(sum(female) + sum(male)), 2 ),   
+         female_p = round(female/(sum(female) + sum(male)), 2 )) 
   
 ```
 
@@ -269,7 +348,7 @@ demo_2022 <- refugees::demographics |>
 ---
 class: inverse, center, middle
 
-# `ggplot2` and `unhcrthemes`
+# Visualise with {ggplot2} and {unhcrthemes}
 
 ### Introduction
 
@@ -305,7 +384,41 @@ What does it take to create a graphic? Data, axis, geometric objects, etc.
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+#ggplot <- read_csv("data/ggplot.csv")
+
+ggplot <- data.frame(
+      Layer = c(
+        "Data",
+        "Aesthetics",
+        "Geometries",
+        "Statistical transformations",
+        "Scales",
+        "Coordinate System",
+        "Facets",
+        "Visual Themes"
+      ),
+      Function = c(
+        "ggplot(data)",
+        "aes()",
+        "geom_*()",
+        "stat_*()",
+        "scale_*()",
+        "coord_*()",
+        "facet_*()",
+        "theme_*()"
+      ),
+      Explanation = c(
+        "The raw data that you want to plot.",
+        "Aesthetics mappings of the geometric and statistical objects, such as position, color, size, shape, and transparency.",
+        "The geometric shapes that will represent the data.",
+        "Statistical summaries of the data, such as quantiles, fitted curves, and sums.",
+        "Maps between the data and the aesthetic dimensions, such as data range to plot width or factor values to colors.",
+        "The transformation used for mapping data coordinates into the plane of the data rectangle.",
+        "The arrangement of the data into a grid of plots.",
+        "The overall visual defaults of a plot, such as background, grids, axes, default typeface, sizes and colors."
+      )
+    ) 
+
 kableExtra::kbl(head(ggplot, 1), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -330,7 +443,7 @@ kableExtra::kbl(head(ggplot, 1), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 2), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -355,7 +468,7 @@ kableExtra::kbl(head(ggplot, 2), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 3), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -380,7 +493,7 @@ kableExtra::kbl(head(ggplot, 3), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 4), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -405,7 +518,7 @@ kableExtra::kbl(head(ggplot, 4), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 5), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -430,7 +543,7 @@ kableExtra::kbl(head(ggplot, 5), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 6), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -455,7 +568,7 @@ kableExtra::kbl(head(ggplot, 6), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 7), format = 'html') |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -480,7 +593,7 @@ kableExtra::kbl(head(ggplot, 7), format = 'html') |>
 How a **`ggplot2`** graph is built on the grammar of graphics elements:
 
 ```{r, echo=FALSE}
-ggplot <- read_csv("data/ggplot.csv")
+ 
 kableExtra::kbl(head(ggplot, 8), format = 'html', caption = "Credit: Cedric Scherer") |> 
   kableExtra::kable_styling(font_size = 16) |> 
   kableExtra::column_spec(1, bold = TRUE) |> 
@@ -500,7 +613,7 @@ kableExtra::kbl(head(ggplot, 8), format = 'html', caption = "Credit: Cedric Sche
 
 ---
 
-## `unhcrthemes` package
+## {unhcrthemes} package
 
 .pull-left[
 
@@ -535,7 +648,7 @@ ggplot(idp_total) +
 
 ---
 
-## `unhcrthemes` package
+## {unhcrthemes} package
 
 .pull-left[
 
@@ -566,7 +679,7 @@ display_unhcr_all()
 
 ---
 
-## `unhcrthemes` package
+## {unhcrthemes} package
 
 .pull-left[
 
@@ -584,13 +697,13 @@ display_unhcr_all()
 
     - Two recommended **diverging color palette**
     
-3. Available on [github](https://github.com/vidonne/unhcrthemes/), dedicated [documentation page](https://vidonne.github.io/unhcrthemes/index.html) and throughout [examples of the data visualization platform](https://dataviz.unhcr.org/tools/r/).
+3. Available on [github](https://github.com/unhcr-dataviz/unhcrthemes/), dedicated [documentation page](https://unhcr-dataviz/.github.io/unhcrthemes/index.html) and throughout [examples of the data visualization platform](https://dataviz.unhcr.org/tools/r/).
 
 ]
 
 .pull-right[
 
-.center[<img src="https://raw.githubusercontent.com/vidonne/unhcrthemes/master/man/figures/unhcrthemes_sticker.png" alt="unhcrthemes HEX" style="max-width:60%">]
+.center[<img src="https://raw.githubusercontent.com/unhcr-dataviz/unhcrthemes/master/man/figures/logo.svg" alt="unhcrthemes HEX" style="max-width:60%">]
 
 ]
 
@@ -598,18 +711,18 @@ display_unhcr_all()
 ---
 class: inverse, center, middle
 
-# `ggplot2` and `unhcrthemes`
+# {ggplot2} and {unhcrthemes}
 
 ### In action
 
 
 ---
 
-## Aim
+## Replicate an existing chart!
 
 .pull-left[
 
-Replicate a chart example from the [Global Trends 2021](https://www.unhcr.org/globaltrends.html) webpage, using `ggplot2` and make it brand compliant with `unhcrthemes` packages.
+Replicate a chart example from the [Global Trends 2022](https://www.unhcr.org/globaltrends.html) webpage, using `ggplot2` and make it brand compliant with `unhcrthemes` packages.
 
 
 ]
@@ -618,21 +731,26 @@ Replicate a chart example from the [Global Trends 2021](https://www.unhcr.org/gl
 
 
 ```{r, echo=FALSE, fig.height=6}
-fd_last_ten_years <- fd_last_ten_years |>
-  ggplot() +
-  geom_area(aes(x = year, y = total, fill = population_type)) +
-  scale_fill_unhcr_d(palette = “pal_unhcr”) +
-  labs(title = “People forced to flee | 2013 - 2022”, y = “Number of people”, caption = “Source: UNHCR Refugee Data Finder”) +
-  scale_x_continuous(breaks = pretty_breaks(n = 10)) +
-  scale_y_continuous(expand = expansion(c(0, 0.1)), breaks= pretty_breaks(n = 5), labels = label_number(scale_cut = cut_long_scale())) +  
-  theme_unhcr(font_size = 20,
-    grid = “Y”,
-    axis = “x”,
-    axis_title = “y”) +
-    scale_fill_manual(values = c(“#EF4A60”,“#8EBEFF”,“#18375F”,“#0072BC”, “#00B398”)) +
-guides(fill = guide_legend(nrow = 3, byrow = TRUE, reverse = TRUE)) 
-  
-fd_last_ten_years
+fd_last_ten_years |>
+         dplyr::rename( num = total,
+                        pop = population_type) |>
+  ggplot( 
+       aes(x = year, y = num,
+           fill = pop)) +
+  geom_col() +
+  scale_x_continuous(
+    breaks = scales::pretty_breaks(n = 10)) +
+  scale_y_continuous(
+    labels = scales::label_number_si(), 
+    expand = expansion(c(0, 0.1))) +
+  scale_fill_unhcr_d(
+    palette = "pal_unhcr_poc",
+    nmax = 9, order = c(4, 1:3, 9, 8) #<<
+  ) + 
+  labs(title = "People forced to flee worldwide | 2012-2022",
+    caption = "Source: UNHCR Refugee Data Finder") +
+  theme_unhcr(grid = "Y", font_size = 13,
+              axis_title = FALSE) 
 ```
 
 ]
@@ -648,17 +766,18 @@ fd_last_ten_years
 # Install packages 
 # if needed uncomment lines below
 # install.packages('tidyverse')
-# remotes::install_github("vidonne/unhcrthemes") 
+# remotes::install_github("unhcr-datavizunhcr-dataviz/unhcrthemes") 
 
 # Load packages
 library(tidyverse)
 library(unhcrthemes)
 
-# Load data
-displ <- read_csv("data/displaced_pop.csv")
-
+# Load data 
+displ <- fd_last_ten_years |>
+         dplyr::rename( num = total,
+                        pop = population_type)
 # Check data structure
-View(displ)
+#View(displ)
 ```
 
 ]
@@ -667,7 +786,13 @@ View(displ)
 
 
 ```{r, echo=FALSE}
-knitr::kable(head(displ), format = 'html', col.names = c("Year", "Population type", "# of people"))
+displ <- fd_last_ten_years |>
+         dplyr::rename( num = total,
+                        pop = population_type)
+
+knitr::kable(head(displ), 
+             format = 'html', 
+             col.names = c("Year", "Population type", "# of people"))
 ```
 
 ]
@@ -1237,6 +1362,8 @@ class: inverse, center, middle
 
 ### Questions?
 
+
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D)
 
 ???
 Resources Ggplot:
