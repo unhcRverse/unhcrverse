@@ -156,6 +156,15 @@ knitr - pandoc - Rstudio
 
   * R Markdown is an authoring format that combines code, text, and results in a single document.
   * It allows you to create reports, presentations, and dashboards with R code and text.
+  
+
+![](img/rm-cheatsheet1.png)
+
+
+Let's Have a look at the [cheatsheet](https://rmarkdown.rstudio.com/lesson-15.html).
+
+
+--- 
 
 ## Basic Structure
 
@@ -311,7 +320,7 @@ Challenges
 
 ---
 
-## Conclusion & Key Takeaways
+## Key Takeaways
 
   * R Markdown is a versatile tool for report generation.
   * Parameterized reports enable dynamic customization.
@@ -333,7 +342,7 @@ class: inverse, center, middle
 
 ---
 
-## Ressources
+# Ressources
 
 
 .pull-left[
@@ -377,3 +386,10 @@ class: inverse, center, middle
 
 ]
 
+ 
+---
+
+# Excercise
+
+ 
+Create a presentation with key statistical figures for your operation ! 

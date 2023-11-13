@@ -421,6 +421,61 @@ Gradual automation
 .img[![Eat the cake](img/Group.png)] 
 ]
 
+---
+
+## The Reproducible Research Manisfesto
+
+ 1. For every result, **keep track** of how it was produced
+
+ 2. **Avoid manual data manipulation** steps
+
+ 3. **Archive** the exact versions of all external programs used
+
+ 4. **Version control** all custom scripts
+
+ 5. **Record all intermediate results**, when possible in standardized formats
+
+ 6. For analyses that include randomness, **note underlying random seeds**
+
+ 7. Always **store raw data** behind plots
+
+ 8. Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
+
+ 9.  Connect **textual statements** to underlying results
+
+ 10. Provide **public access** to scripts, runs, and results
+
+---
+
+##   From "click" to "script"
+
+.pull-left[
+
+Using the right combination of packages, you can integrate all necessary data analysis steps into **scripts**:
+
+
+ * Data management (clean, recode, merge, reshape)
+
+ * Data analysis (test, regression, multivariate analysis, etc...)
+ 
+ * Data visualisation (plot, map, graph...)
+
+ * Writing up results (report and presentation generation)
+]
+
+.pull-right[ 
+
+![](img/analysis.png)
+
+More on reproducible analysis [here](https://ropensci.github.io/reproducibility-guide/sections/introduction/)
+
+]
+
+---
+
+## Save time and minimize space for errors...
+
+![](img/exhausted.png)
 
 ---
 class: inverse, center, middle
@@ -434,5 +489,9 @@ class: inverse, center, middle
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D)
 
- 
+---
+
+## Let install R & Rstudio...
+
+
  

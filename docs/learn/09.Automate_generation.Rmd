@@ -423,7 +423,7 @@ class: inverse, center, middle
 
 ---
 
-## Reference: 
+# Reference 
 
   - [Cleaning Bad Data in R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfac68c28de0003?type=9882927d138b100019b928e75843018d)
   
@@ -432,3 +432,10 @@ class: inverse, center, middle
   - [Text Analytics and Predictions with R Essential Training](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf498b2cb990006?type=9882927d138b100019b928e75843018d)
   
   - [Documentation Posit Connect](https://docs.posit.co/connect/) 
+  
+ 
+---
+
+# Excercise
+
+Let's automate the data cleaning report!

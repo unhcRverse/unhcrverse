@@ -285,10 +285,10 @@ App Maturity: __beta-version__
 
 ---
 
-##  How to finalise and maintain such Toolbox
+##  How to finalise and maintain such Toolbox...
 .pull-left[
 
-The regular Standard Multi-Tier IT Standard Support model...
+Applying Standard Multi-Tier IT Standard Support model...
  
   * __Tier 4__: Code Review & Quality Insurance (_Contracted Company with frame agreement_) 
 

@@ -303,19 +303,7 @@ pr_finish()
 ]
 
 
---- 
 
-## Git - Practises
-
-
-Let`s work with the unhcr-git-exercise repository
-Activities
-Fork the repository
-Create branch
-Modify a file
-Commit the changes
-Create a pull request
-Exercise
 
 ---
 class: left, top
@@ -355,8 +343,22 @@ class: inverse, center, middle
 
 ---
 
-## Ressources
+# Ressources
 
  - [Creating GitHub Portfolios](https://wd3.myworkday.com/unhcr/learning/course/16fc80c3079810011fc3d41e32520000?type=9882927d138b100019b928e75843018d)
  
  - [GitHub Actions for CI/CD](https://wd3.myworkday.com/unhcr/learning/course/db0ba7c05d98100035cf8c5c92240001?type=9882927d138b100019b928e75843018d)
+
+--- 
+
+## Excercise
+
+ * Fork this repository
+ 
+ * Create branch
+
+ *  Modify a file
+
+ * Commit the changes
+
+ * Create a pull request

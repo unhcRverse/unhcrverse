@@ -50,6 +50,9 @@ Collaboration
 
 ## Transition from Scripts to Functions
 
+
+.pull-left[
+
 Script Example
 
 ```{r}
@@ -58,6 +61,11 @@ data <- c(1, 2, 3, 4, 5)
 mean_value <- mean(data)
 print(mean_value)
 ```
+
+
+]
+
+.pull-right[
 
  
 
@@ -76,15 +84,23 @@ mean_value <- calculate_mean(data)
 print(mean_value)
 ```
 
+]
 
 ---
 
 ## Key Differences
 
+
+.pull-left[
+
   * Functions encapsulate code into reusable units.
   * Parameters allow customization of function behavior.
 
-Creating Functions in R
+
+]
+
+.pull-right[
+
 Function Structure
 
 ```{r}
@@ -95,10 +111,26 @@ function_name <- function(parameter1, parameter2, ...) {
   return(result)
 }
 ```
+]
 
 ---
 
 ## Example: Custom Function
+
+
+.pull-left[
+
+ 1. Takes an input
+
+ 2. Apply a transformation
+
+ 3. Generates an output
+
+
+]
+
+.pull-right[
+
 
 ```{r}
 
@@ -108,7 +140,7 @@ calculate_median <- function(data) {
   return(median_value)
 }
 ```
-
+]
 
 ---
 
@@ -124,20 +156,23 @@ print(median_value)
 
 ---
 
-## Import Data
+## Import Data 
 
 
-- Data import: [`readr`](https://readr.tidyverse.org/), [`readxl`](https://readxl.tidyverse.org/), etc.
+from Excel - [`readxl`](https://readxl.tidyverse.org/),
+
+
+from Text: [`readr`](https://readr.tidyverse.org/),  etc.
 
 
 ---
 
-## Start with Documentation 
-
-Why Document Functions?
+## Why Document Functions?
 
   * Documentation provides information on how to use a function.
+  
   * Helps other users (including your future self) understand the purpose and usage of the function.
+  
   * Standard practice for sharing code.
 
 R Documentation
@@ -259,9 +294,9 @@ Example with Custom Parameters
 
 ---
 
-## Conclusion: Key Takeaways
+## Key Takeaways
 
-  * Functions are essential for code reusability and modularity.  
+  * Functions are essential for code re-usability and modularity.  
   
   * Transition from scripts to functions for better code organization. 
   
@@ -288,7 +323,7 @@ class: inverse, center, middle
 
 ---
 
-## Reference:  
+# Reference
 
  - [Build Advanced Charts in R](https://wd3.myworkday.com/unhcr/learning/course/efee8410b2b410017044140f1aeb0001?type=9882927d138b100019b928e75843018d)
  
@@ -301,3 +336,9 @@ class: inverse, center, middle
  - [R for Data Science](https://r4ds.had.co.nz/), 
 
  - [Advanced R Programming](https://adv-r.hadley.nz/)
+ 
+---
+
+# Excercise
+
+Use the char your previously created and turn it into a function with parameters

@@ -69,6 +69,101 @@ https://towardsdatascience.com/the-stages-of-learning-data-science-3cc8be181f54
 
 See Video - https://www.youtube.com/watch?v=hpMc6TgT34I 
  
+---  
+
+## Essential Concept: Objects & Data elements
+
+-  `Vectors` are a core data structure in R, and are created with `c()`. Elements in a vector must be of the same type.
+
+-  `Data.frame` where each column is a vector, but adjacent vectors can hold different things
+
+- `Matrix` just like a data frame except it's all numeric
+
+- `List` are made of any dimension, mix and match
+
+- `Factors` are a special class that R uses for categorical variables, which also allows for value labeling and ordering.
+
+Reference link on [Manipulating data](http://www.cookbook-r.com/Manipulating_data/)
+
+
+---
+
+## Vector Example
+
+```{r eval=FALSE}
+  numbers = c(23, 13, 5, 7, 31)
+  names = c("mohammed", "hussein", "ali")
+
+#Elements are indexed starting at 1, and are accessed with `[]` notation.
+	numbers[1] # 23
+	names[1] # mohammed
+```
+
+---  
+
+## PART 2: Data frames
+
+[Data frames](http://www.r-tutor.com/r-introduction/data-frame)
+
+```{r eval=FALSE}
+    books = data.frame(
+        title = c("harry potter", "war and peace", "lord of the rings"),
+        author = c("rowling", "tolstoy", "tolkien"),
+        num_pages = c("350", "875", "500")
+    )
+
+# you can access columns of a data frame with `$`.
+	books$title # c("harry potter", "war and peace", "lord of the rings")
+	books$author[1] # "rowling"
+
+#You can also create new columns with `$`.
+	books$num_bought_today = c(10, 5, 8)
+	books$num_bought_yesterday = c(18, 13, 20)
+	books$total_num_bought = books$num_bought_today + books$num_bought_yesterday
+```
+
+---
+
+## Load a Data Frame
+
+``` {r eval=FALSE}
+
+data(CASchools)
+mydata <- CASchools
+
+# load a data set from csv and assign it to an object called 'mydata'
+#mydata <- read.csv("unhcr_mass_comm_db_merged_20140612.csv") 
+
+# first few rows of the dataset
+head(mydata)
+
+# last few rows
+tail(mydata)
+
+# variable names
+colnames(mydata)
+
+# pop-up view of entire data set (uncomment to run)
+# View(mydata)
+
+```
+
+---
+
+## Initial Exploration
+
+```{r eval=FALSE}
+# dimension of the data frame
+dim(mydata)
+
+# Structure of the data frame of all variables
+# this includes the class(type) i.e factor or not
+str(mydata)
+
+# summary statistics with means for every variable
+summary(mydata)
+```
+
 
 ---
 class: inverse, center, middle
@@ -376,6 +471,18 @@ class: inverse, center, middle
 ???
 You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 What does it take to create a graphic? Data, axis, geometric objects, etc.
+
+
+## Decomposition of a Graphic
+
+The **"grammar of graphics"** is a [conceptual description](https://ramnathv.github.io/pycon2014-r/visualize/ggplot2.html) of all potential graphs. It can be summarized as follows:
+
+```
+-  plot ::= coord scale+ facet? layer+
+
+-  layer ::= data mapping stat geom position?
+```
+![](img/ggplot2-anatomy-all-annotated.png) 
 
 ---
 
@@ -1387,4 +1494,14 @@ class: inverse, center, middle
 - [A ggplot2 tutorial for beautiful plotting in R](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/) and [ggplot Wizardry Hands-On](https://z3tt.github.io/OutlierConf2021/) by Cedric Scherer
 - Ggplot workshop [Part1](https://www.youtube.com/watch?v=h29g21z0a68)/[Part2](https://www.youtube.com/watch?v=0m4yywqNPVY) by Thomas Lin Pedersen (one of the main maintainer of ggplot)
 
+ 
+---
+
+# Excercise
+
+Check the last #tidytuesday submission on Refugee 
+
+https://twitter.com/search?q=%20%23TidyTuesday%20refugees&src=typed_query
+
+Select a chart and try to reproduce it!!
 
