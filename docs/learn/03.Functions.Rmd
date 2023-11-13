@@ -291,6 +291,21 @@ Example with Custom Parameters
   * Saving plots to svg or png
   * Creating dynamic dashboards
   * Integrate your plotting functions into Shiny apps for interactive visualization.
+  
+  
+---
+
+## access data through API
+
+ * [`{robotoolbox}`](https://dickoa.gitlab.io/robotoolbox/),
+ 
+ * [`{rhdx}`](http://dickoa.gitlab.io/rhdx/),
+ 
+ * [`{riddle}`](https://edouard-legoupil.github.io/riddle/), 
+ 
+ * [`{popdata}`](https://edouard-legoupil.github.io/popdata/),
+ 
+ * [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
 
 ---
 
