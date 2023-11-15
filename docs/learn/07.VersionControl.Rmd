@@ -15,7 +15,7 @@ output:
 
 # Learning objectives
 
-.pull-left[
+
 
   * Understand Git workflow
   
@@ -23,11 +23,7 @@ output:
   
   * use github as a portfolio to ease work discovery
   
-  
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
+
   
 
 
@@ -36,13 +32,13 @@ output:
 
 ## Git Version control    
 
+.pull-left[ 
 Create an account on Github - https://github.com/join?  
 install Github desktop https://desktop.github.com/ 
 
-.pull-left[ 
 ]
 .pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
+.img75[![](img/git.jpg)] 
 ]
   
  
@@ -50,34 +46,32 @@ install Github desktop https://desktop.github.com/
 
 ## Git workflow
 
-Master
-Branch
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
+
+![](img/git_collaboration.png)
 
 ---
 
 ## Git - what
 
+.pull-left[ 
 Free: you don't need to pay to use any functionality
 Open source: Anyone can modify or contribute to the Git code
 Distributed: run Git on your local machine... all machines maintain a copy of the action history (commits) and can be synchronized at any time.
 Version Control: save changes made to one (or several) file(s) over time. makes it easy to go back to previous versions (time travel) and coordinate several people working on the same file/project
 
 
-.pull-left[ 
 ]
 .pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
+.img75[![](img/git_versioning.png)] 
 ]
 
 
 ---
 
 ## Git - when 
+
+
+.pull-left[ 
 
 Have you changed a code and now it doesn't run/compile anymore?
 
@@ -90,10 +84,9 @@ use pull requests reviewed by at least another team member
 Do you want to keep a history of the contributions each member made to the project and its evolution? 
 
 
-.pull-left[ 
 ]
 .pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
+.img75[![](img/code_meme.jpg)] 
 ]
 
 
@@ -109,49 +102,55 @@ Privacy
 .pull-left[ 
 ]
 .pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
+.img75[![](img/github.jpg)] 
 ]
 
 ---
 
 ## Git - dos  
+
 Commit often
+
 Make your checkpoints
+
 Do not commit incomplete code
+
 Break the task into several small sub-tasks
+
 Commit only related work
+
 Write descriptive/meaningful commit messages
+
 Limit your subject to 50 character
+
 The commit message must complete the sentence "This commit ..." 
+
 Use the body of the message to explain “what” and “why”, not “how”
+
 Test your code before pushing
+
 Use branches
+
 Update the master code with pull requests
 
 
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
 
 ---
 
 ## Git - Don’ts
 
 Don’t git push straight to master.
+
 Create branches!
+
 Do not commit files that can be regenerated (e.g. binary, graphs)
+
 Do not commit configuration files (e.g. “.vscode/”, access tokens)
+
 Do not change a repository's public history
+
 Avoid rewriting the master’s history.
 
-
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
   
  
 ???
@@ -164,16 +163,15 @@ Use the email of your Github account
 ## Git - Check the results
 
 Git config
+```{r}
 usethis::use_git_config(user.name = “User Name”,
 		                       user.email = “email@email.com”)
 usethis::git_sitrep()
+```
 
 
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
+
+
 
 
 ---
@@ -184,31 +182,29 @@ You can change the PAT’s name
 After you have created the PAT, copy the token 
 
 Create a GitHub personal access token (PAT)
+```{r}
+
 usethis::create_github_token()
+```
+
   
 
 The command will open the .Renviron file
+
 Insert the variable GITHUB_PAT and paste the token as it value:
 
 Restart R in RStudio: Ctrl-Shift-F10
 Register the token in your computer
+```{r}
+
 usethis::edit_r_environ()
+```
 
 
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
 
 
----
 
-## Git - Clone vs Fork 
 
-Clone
-
-Fork 
 
  
 ---
@@ -257,10 +253,10 @@ Click Push
 Refresh the repository website 
 ]
 .pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
+.img75[![](img/code_meme.jpg)] 
 ]
 
- ---
+---
 
 ## Git -Branches
 
@@ -271,13 +267,6 @@ usethis::pr_init(branch = “branch_name")
 
 After that, update and add new files to the repository. 
 Do not forget to commit your changes with descriptive and meaningful messages
-
-
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
 
 --- 
 
@@ -295,14 +284,6 @@ Now the repository owner will evaluate your PR and if everything is alright, he/
 After the PR have been merged to the master repo, run pr_finish() to delete the local branch:
 Delete the local branch
 pr_finish()
-
-.pull-left[ 
-]
-.pull-right[
-.img75[![Eat the cake](img/code_meme.jpg)] 
-]
-
-
 
 
 ---

@@ -69,9 +69,9 @@ https://towardsdatascience.com/the-stages-of-learning-data-science-3cc8be181f54
 
 See Video - https://www.youtube.com/watch?v=hpMc6TgT34I 
  
----  
+---
 
-## Essential Concept: Objects & Data elements
+# Essential Concept: Objects & Data elements
 
 -  `Vectors` are a core data structure in R, and are created with `c()`. Elements in a vector must be of the same type.
 
@@ -88,7 +88,7 @@ Reference link on [Manipulating data](http://www.cookbook-r.com/Manipulating_dat
 
 ---
 
-## Vector Example
+# Vector Example
 
 ```{r eval=FALSE}
   numbers = c(23, 13, 5, 7, 31)
@@ -99,9 +99,9 @@ Reference link on [Manipulating data](http://www.cookbook-r.com/Manipulating_dat
 	names[1] # mohammed
 ```
 
----  
+---
 
-## PART 2: Data frames
+# Data frames
 
 [Data frames](http://www.r-tutor.com/r-introduction/data-frame)
 
@@ -124,7 +124,7 @@ Reference link on [Manipulating data](http://www.cookbook-r.com/Manipulating_dat
 
 ---
 
-## Load a Data Frame
+# Load a Data Frame
 
 ``` {r eval=FALSE}
 
@@ -150,7 +150,7 @@ colnames(mydata)
 
 ---
 
-## Initial Exploration
+# Initial Exploration
 
 ```{r eval=FALSE}
 # dimension of the data frame
@@ -186,7 +186,7 @@ class: inverse, center, middle
   Console/Terminal
 ]
 .pull-right[
-![tidyverse](img/forcats.png)  
+![ ](img/rstudio.png)  
 ]
 
 ---
@@ -199,7 +199,7 @@ If you are writing a R Markdown document, you can render it in this area
 To run a R code, you can use the shortcut Crtl + Enter
 ]
 .pull-right[
-![tidyverse](img/forcats.png)  
+![ ](img/rstudio.png)  
 ]
 
 ---
@@ -211,7 +211,7 @@ Where you can check the execution of commands and where the code is evaluated
 Can perform quick calculations (that you do not need to save)
 ]
 .pull-right[
-![tidyverse](img/forcats.png)  
+![ ](img/rstudio.png)  
 ]
 
 
@@ -224,7 +224,7 @@ Where you can see the objects in your working space
 You can also view your command history (History tab) 
 ]
 .pull-right[
-![tidyverse](img/forcats.png)  
+![ ](img/rstudio.png)  
 ]
 
 ---
@@ -237,7 +237,7 @@ View plots
 View which R packages are installed. You can also update the packages
 ]
 .pull-right[
-![tidyverse](img/forcats.png)  
+![ ](img/rstudio.png)  
 ]
 R help
 
@@ -351,10 +351,13 @@ library(refugees)
 
 filter, group_by, summarise, slice 
 
+
 ```{r, echo = TRUE}
 library(refugees)
 library(dplyr)
-library(tidyr)
+
+## Now prepare top 10 countries of origin for refugee and other in needs of international protection in 2022
+
 
 ref_coo_10 <- refugees::population |>
   dplyr::filter(year == 2022) |>
@@ -363,6 +366,8 @@ ref_coo_10 <- refugees::population |>
   dplyr::slice_max(order_by = refugees, n = 10)
 ```
 
+
+Now prepare top 10 countries of asylum for asylum seekers in 2021!
 
 ---
 
@@ -391,8 +396,13 @@ fd_last_ten_years <- refugees::population |>
 ## Data Manipulation
 
  pivot_longer
+ 
+ Creating a pivot table - from 
 
 ```{r, echo = TRUE}
+
+library(tidyr)
+
 fd_last_ten_years <- fd_last_ten_years |>
   tidyr::pivot_longer(cols = -year, 
                names_to = "population_type", 
@@ -1474,9 +1484,9 @@ class: inverse, center, middle
 
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 
---- 
+---
 
-# Resources  
+## Resources  
 
  - [R Essential Training: Wrangling and Visualizing Data](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefc58c829f0006?type=9882927d138b100019b928e75843018d)
 
@@ -1499,9 +1509,9 @@ class: inverse, center, middle
 
 # Excercise
 
-Check the last #tidytuesday submission on Refugee 
+*  Check the last #tidytuesday submission on Refugee: https://twitter.com/search?q=%20%23TidyTuesday%20refugees&src=typed_query
 
-https://twitter.com/search?q=%20%23TidyTuesday%20refugees&src=typed_query
+* Check data literacy app: https://rstudio.unhcr.org/Data_Literacy/
 
-Select a chart and try to reproduce it!!
+> Select a chart and try to reproduce it!!
 

@@ -244,4 +244,8 @@ class: inverse, center, middle
  [Creating Interactive Presentations with Shiny and R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195ced25308e8e0005?type=9882927d138b100019b928e75843018d)
  
  [R: Interactive Visualizations with htmlwidgets](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa6c1cdad00001?type=9882927d138b100019b928e75843018d)
+ 
+ [getstarted/shiny-basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+ 
+ [production-grade-r-shiny-with-golem-prototyping](https://towardsdatascience.com/production-grade-r-shiny-with-golem-prototyping-51b03f37c2a9)
 
