@@ -163,7 +163,7 @@ Use the email of your Github account
 ## Git - Check the results
 
 Git config
-```{r}
+```
 usethis::use_git_config(user.name = “User Name”,
 		                       user.email = “email@email.com”)
 usethis::git_sitrep()
@@ -182,7 +182,7 @@ You can change the PAT’s name
 After you have created the PAT, copy the token 
 
 Create a GitHub personal access token (PAT)
-```{r}
+```
 
 usethis::create_github_token()
 ```
