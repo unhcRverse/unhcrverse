@@ -285,7 +285,8 @@ App Maturity: __beta-version__
 
 ---
 
-##  How to finalise and maintain such Toolbox...
+##  From Prototype to Production
+
 .pull-left[
 
 Applying Standard Multi-Tier IT Standard Support model...
@@ -307,10 +308,10 @@ Applying Standard Multi-Tier IT Standard Support model...
 
 ---
 
-## Presentation of the 3 app under __beta-version__
+## Using pacakges....
 
- - Kobo [Data Collection Management](https://edouard-legoupil.github.io/HighFrequencyChecks/tutorial/index.html) with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
+ - Kobo [Data Collection Management](https://edouard-legoupil.github.io/HighFrequencyChecks/tutorial/index.html) 
  
- - Kobo [Survey Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) with [`{KoboCruncher}`](https://edouard-legoupil.github.io/kobocruncher)
+ - Kobo [Survey Data Exploration](https://edouard-legoupil.github.io/kobocruncher/tutorial/00-Intro.html#1) 
  
- - Apply [Indicator calculations for RMS](https://edouard-legoupil.github.io/IndicatorCalc/tutorial/index.html) with [`{IndicatorCalc}`](https://unhcr-americas.github.io/IndicatorCalc)
+ - Apply [Indicator calculations for RMS](https://edouard-legoupil.github.io/IndicatorCalc/tutorial/index.html)

@@ -15,9 +15,9 @@ output:
 
  * Why creating packages?
  
- * how to transition from functions to packages, 
+ * How to transition from functions to packages, 
  
- * why documentation is crucial
+ * Why documentation is crucial
  
  * Most current issues to fix package check
 
@@ -26,38 +26,27 @@ output:
 
 ## Why Create Packages?
 
-Code Organization
+__Code Organization__
 
-  * Packages help you organize your code.
-  * Group related functions and data into a single unit.
+  * Packages are a collection of functions, data, and documentation that group related functions and data into a single unit.
+  
+  * They help you organize your code.   
+  
 
-Code Reusability
+__Code Reusability__
 
+  * A package can be easily shared and used across different projects.
+  
   * Share your work with others or your future self.
+  
   * Functions and datasets are easily accessible.
 
-Collaboration
+__Collaboration__
 
   * Share your packages with the R community.
+  
   * Contribute to the R ecosystem.
 
- 
----
-
-## From a collection of Function to a Package 
-
- 
-  * Create a directory with a package structure.
-  * Place your functions and data in the package.
-  * Add package documentation.
-  *  Use `devtools` to build and install the package.
-
----
-
-## Key Differences
-
-  * Packages are a collection of functions, data, and documentation.
-  * A package can be easily shared and used across different projects.
 
 ---
 
@@ -68,50 +57,140 @@ Collaboration
 MyPackage/
 |-- R/
 |   |-- my_function.R
+|-- data/
+|   |-- data_made_available_with_the_package.Rda
+|-- data-raw/
+|   |-- data_used_for_package_development.csv
+|-- inst/
+|   |-- file_to_be_access_by_the_package.R
 |
 |-- man/
 |   |-- my_function.Rd
+|-- docs/
+|   |-- index.html
 |
 |-- DESCRIPTION
 |-- NAMESPACE
 |-- README.md
+|-- NEWS.md
 ```
 
+ 
+---
+
+##  Steps to Create a Package with {fusen}
+
+
+.pull-left[  
+
+Install the Fusen package
+
+```
+install.packages("fusen")
+
+```
+
+and benefit from a predefined project structure to speed-up package development
+
+]
+.pull-right[
+.img75[![](img/fusen_rstudio_project.png)] 
+]
+
+
+---
+
+##  Use a single markdown file to build your package
+
+
+.pull-left[  
+
+The {fusen} Rmarkdown template encourages users to fill their documentation and tests at the same time of writing their functions code. 
+
+ {fusen} simplifies and reduces the number of steps towards a full R package.
+ 
+After that, your {pkgdown} documentation website is one command away to be shared with all your users.
+
+]
+.pull-right[
+.img75[![](img/fusen_inflate_functions.png)] 
+]
+
+
+---
+
+##  Add a function in your package 
+
+ 
+
+
+.pull-left[  
+![](img/fusen_rstudio_addin.png) 
+
+]
+.pull-right[
+![](img/fusen_rstudio_function.png) 
+]
+
   
----
-
-##  Steps to Create a Package
-
-  * Use devtools or usethis to create a package structure.
-  * Write your functions and add them to the R directory.
-  * Document your functions using roxygen2.
-  * Build the package using devtools::document() and devtools::install().
-  * Your package is now ready for use and sharing. 
+ 
 
 ---
 
-## Documentation Is Essential
-Why Document Packages?
+##  Documentation Is Essential
 
-  * Documentation provides information on how to use a package.
-  * Helps users understand the purpose and usage of functions.
-  * Makes your package user-friendly.
-  * Avoid polluting the global namespace with internal functions.
-  * Use a proper namespace to manage exported functions.
+Documentation provides information on how to use a package.
+README.md provides the main pitch for your package
 
-R Documentation
+Each functions comes with its documentation and an example
 
-  * Write comprehensive and clear documentation with roxygen2.
-  * Add details about functions, data, and examples.
-  * Use pkgdown to create a user-friendly package website.
-  * Create informative vignettes to explain package usage and to help users understand your package.
+Vignettes are either like tutorial to quickstart your users or technical documentation explaining how to orchestrate the functions
+
+Companion website to be generated with `pkgdown::build_site()`
+
+Create a _pkgdown.yml file and Use [unhcrtemplate](https://github.com/unhcr-dataviz/unhcrtemplate) to apply unhcr brand on your website documentation
+
+``` 
+template:
+  package: unhcrtemplate
+  bootstrap: 5
+```
+
+ 
 
 
 ---
 
-## Test & Unit Testing
-  * Implement thorough unit tests using testthat.
-  * Ensure tests cover the majority of package functionality.
+## Add demo data 
+
+
+.pull-left[  
+
+
+For users to understand your package and for your to test each functions within your package, you need to provide a demo data set
+  
+
+Including a demo dataset in your R package not only enriches user experience but also contributes to the overall accessibility and reliability of your package.
+
+There are different ways to do it...
+  
+]
+.pull-right[ 
+``` 
+
+MyPackage/
+|-- data/
+|   |-- data_made_available_with_the_package.Rda
+|-- data-raw/
+|   |-- data_used_for_package_development.csv
+|-- inst/
+|   |-- file_to_be_access_by_the_package.R
+```
+]
+
+
+  
+
 
 ---
 
@@ -146,29 +225,32 @@ Release Candidate (RC):
 
 ---
 
-## Package Checks
+## Package Dev 
+
+
+.pull-left[  
+Checks
 
   * Regularly perform package checks using devtools::check().
-  * Address any warnings, errors, and notes.
-  * Use R CMD check to test your package thoroughly.
-  * Address any issues identified by this tool.
-
- 
+  * Address any warnings, errors, and notes.  
+  * Use R CMD check to test your package thoroughly.  
+  * Address any issues identified by this tool.  
+  * Profile your code with profvis.  
+  * Identify bottlenecks and optimize them.  
 
 Bug Fixes and Updates
 
-  * Regularly fix reported bugs and update the package.
-  * Keep it compatible with new R releases and dependencies.
+  * Regularly fix reported bugs and update the package.  
+  * Keep it compatible with new R releases and dependencies.  
 
-Performance Optimization
-
-  * Profile your code with profvis.
-  * Identify bottlenecks and optimize them.
-
+]
+.pull-right[
 Robustness
 
-  * Make your package robust against different inputs.
-  * Handle errors and exceptions gracefully. 
+  * Make your package robust against different inputs.  
+  * Handle errors and exceptions gracefully.   
+  * Implement thorough unit tests using testthat.  
+  * Ensure tests cover the majority of package functionality.  
 
 Testing on Different Platforms
  
@@ -177,13 +259,7 @@ Testing on Different Platforms
   * Automatically run tests on code changes.
   * Ensure your package works on multiple platforms.
   * Test compatibility with different R versions.
-
----
-
-## Security
-
-  * Address security concerns, especially for data access or web interactions.
-  * Sanitize inputs and validate user input.
+]
 
 ---
 
@@ -202,7 +278,9 @@ Testing on Different Platforms
 ## Conclusion
 
   * Creating packages in R is essential for code organization and sharing.
+  
   * Transition from standalone functions to packages for better code management.
+  
   * Proper documentation is crucial for effective collaboration and code sharing.
 
 ---

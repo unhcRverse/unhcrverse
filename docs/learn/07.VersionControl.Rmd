@@ -1,5 +1,5 @@
 ---
-title: "Work as a Team --- under Version Control"
+title: "Work as a Team ---> under Version Control"
 subtitle: "Learn how to leverage Github in your work"
 date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
@@ -16,30 +16,51 @@ output:
 # Learning objectives
 
 
+.pull-left[ 
+
+
+Work as a team!
+
+  * Understand why you need to use Git
 
   * Understand Git workflow
   
   * See git good practices
   
-  * use github as a portfolio to ease work discovery
+  * Use github as a portfolio to ease work discovery
   
 
   
+]
+.pull-right[
+![](img/github.jpg) 
+]
 
 
 
 ---
 
-## Git Version control    
+## Integrate Git within Rstudio   
 
 .pull-left[ 
+
 Create an account on Github - https://github.com/join?  
+
 install Github desktop https://desktop.github.com/ 
+
+Connect Rstudio & Github: https://happygitwithr.com/rstudio-git-github.html 
+
 
 ]
 .pull-right[
-.img75[![](img/git.jpg)] 
+.img50[![](img/gitR.png)] 
 ]
+
+Find the path of git executable: Change your --WINDOWSUSERNAME-- below
+
+```
+C:\Users\--WINDOWSUSERNAME--\AppData\Local\GitHubDesktop\app-3.3.5\resources\app\git\cmd
+```
   
  
 ---
@@ -51,12 +72,16 @@ install Github desktop https://desktop.github.com/
 
 ---
 
-## Git - what
+## Git - What
 
 .pull-left[ 
+
 Free: you don't need to pay to use any functionality
+
 Open source: Anyone can modify or contribute to the Git code
+
 Distributed: run Git on your local machine... all machines maintain a copy of the action history (commits) and can be synchronized at any time.
+
 Version Control: save changes made to one (or several) file(s) over time. makes it easy to go back to previous versions (time travel) and coordinate several people working on the same file/project
 
 
@@ -68,19 +93,17 @@ Version Control: save changes made to one (or several) file(s) over time. makes 
 
 ---
 
-## Git - when 
+## Git - When 
 
 
 .pull-left[ 
 
 Have you changed a code and now it doesn't run/compile anymore?
 
-go back to the previous version with one (or two) commands on the terminal
-
 Do you want to avoid the previous situation altogether?
-use "branches" to make and test the changes before deploying  the new code to production.
+
 Do you want to guarantee the integrity of the code in production?
-use pull requests reviewed by at least another team member
+
 Do you want to keep a history of the contributions each member made to the project and its evolution? 
 
 
@@ -89,130 +112,123 @@ Do you want to keep a history of the contributions each member made to the proje
 .img75[![](img/code_meme.jpg)] 
 ]
 
+???
+
+go back to the previous version with one (or two) commands on the terminal
+
+use "branches" to make and test the changes before deploying  the new code to production.
+
+use pull request
 
 ---
 
-## Git - why
+## Git - Why
 
-Collaboration 
-Agility 
-Application integrity 
-Privacy
 
 .pull-left[ 
+
+> If you want to go fast, go alone; if you want to go far, go together
+
+ * Collaboration 
+
+ * Agility 
+
+ * Application integrity 
+
+ * Privacy
+ 
+ * Work Recognition
+
 ]
 .pull-right[
-.img75[![](img/github.jpg)] 
+.img75[![](img/git.jpg)] 
 ]
 
 ---
 
-## Git - dos  
+## Git - Good practises
 
-Commit often
+.pull-left[ 
 
-Make your checkpoints
+#### Do 
 
-Do not commit incomplete code
-
-Break the task into several small sub-tasks
-
-Commit only related work
-
-Write descriptive/meaningful commit messages
-
-Limit your subject to 50 character
-
-The commit message must complete the sentence "This commit ..." 
-
-Use the body of the message to explain “what” and “why”, not “how”
-
-Test your code before pushing
-
-Use branches
-
-Update the master code with pull requests
-
-
-
----
-
-## Git - Don’ts
-
-Don’t git push straight to master.
-
-Create branches!
-
-Do not commit files that can be regenerated (e.g. binary, graphs)
-
-Do not commit configuration files (e.g. “.vscode/”, access tokens)
-
-Do not change a repository's public history
-
-Avoid rewriting the master’s history.
-
-  
+ * Make your checkpoints: Commit often
  
-???
-You only need to set this configuration once in your computer
-Use the email of your Github account
+ * Test your code before pushing: Do not commit incomplete code
+
+ * Break the task into several small sub-tasks: Commit only related work
+
+ * Use branches: Update the master code with pull requests
+
+ * Write descriptive/meaningful commit messages: Commit only related work. Limit your subject to 50 character. The commit message must complete the sentence "This commit ...". Use the body of the message to explain “what” and “why”, not “how”
+
+
+]
+.pull-right[ 
+
+#### Don’ts
+
+ * Don’t git push straight to master.
+
+ * Do not commit files that can be regenerated (e.g. binary, graphs)
+
+ * Do not commit configuration files (e.g. “.vscode/”, access tokens)
+
+ * Do not change a repository's public history
+
+ * Avoid rewriting the master’s history.
+
+]
+
 
 
 ---
 
-## Git - Check the results
+## Git -  Account Settings
 
-Git config
 ```
 usethis::use_git_config(user.name = “User Name”,
 		                       user.email = “email@email.com”)
 usethis::git_sitrep()
 ```
 
-
-
-
-
+???
+You only need to set this configuration once in your computer
+Use the email of your Github account
 
 ---
 
-## Git - Opens a browser window to the GitHub form to generate a PAT
+## Git - Personal Access Token (PAT)
 
-You can change the PAT’s name 
-After you have created the PAT, copy the token 
 
-Create a GitHub personal access token (PAT)
+.pull-left[ 
+
+Opens a browser window to the GitHub form to generate a PAT. You can change the PAT’s name. 
+
 ```
 
 usethis::create_github_token()
 ```
-
-  
+After you have created the PAT, copy the token and register the token in your computer
+]
+.pull-right[ 
 
 The command will open the .Renviron file
-
-Insert the variable GITHUB_PAT and paste the token as it value:
-
-Restart R in RStudio: Ctrl-Shift-F10
-Register the token in your computer
-```{r}
+```
 
 usethis::edit_r_environ()
 ```
 
+Insert the variable GITHUB_PAT and paste the token as it value:
+.img75[![](img/Renv.png)] 
+
+Restart R in RStudio: Ctrl-Shift-F10
+]
 
 
-
-
-
-
- 
 ---
 
-## Git - Clone: Exercise
-
-
-
+## Git Essentials - Clone
 
 .pull-left[ 
 
@@ -220,6 +236,12 @@ Create a repository in GitHub, Name it: “first_repo”, Choose it visibility (
 
 Select Add a README file 
 Click Create repository 
+
+
+.img75[![](img/New_repo.png)] 
+
+
+
 ]
 .pull-right[ 
 Create a new project in RStudio
@@ -236,78 +258,162 @@ Create a new R file
 Add some content and save it 
 ] 
 
+---
+
+## Git Essentials - Clone & Push
+
+
+![](img/Fork_Clone3.png)
 
 ---
 
-## Git -Let’s push the changes to GitHub
+## Git Essentials - Stage - Commit 
 
+.pull-left[  
 
+Let’s push the changes to GitHub
 
-.pull-left[ 
-Go to the Git tab
-Staged the file
-Click Commit
-Add a commit message
-Click Commit
-Click Push
-Refresh the repository website 
+  *  Go to the Git tab
+  
+  *  Staged the file
+  
+  *  Click Commit
+  
+  *  Add a commit message
+  
+  *  Click Commit
+  
+  *  Click Push 
+  
+  *  Refresh the repository website
+  
 ]
 .pull-right[
-.img75[![](img/code_meme.jpg)] 
+.img75[![](img/rstudio_git.png)] 
 ]
+
+
 
 ---
 
-## Git -Branches
+## Git Essentials - Fork  
 
 
-Before changing anything, create a branch:
-Create branch
-usethis::pr_init(branch = “branch_name")
+.img75[![](img/Fork_Clone4.png)]  
 
-After that, update and add new files to the repository. 
-Do not forget to commit your changes with descriptive and meaningful messages
 
---- 
+---
 
-## Git - Create pull request (PR)
+## Git Essentials - Fork  
 
-pr_push()
 
-Once you're ready to submit, run pr_push() to push your local branch to GitHub:
-Source: usethis
+![](img/Fork_Clone1.png)
+
+---
+
+## Git Essentials - Pull Request (PR)
+
+
+![](img/Fork_Clone2.png)
+
+
+---
+
+## Submit  Pull Request (PR)
+
+__Good practice:__ use pull requests reviewed by at least another team member
+
 Opens a browser window to the GitHub Pull Request page
+
 Click “Create pull request”
+
 Add a message explaining the pull request content and click “Create pull request”
+
 Now the repository owner will evaluate your PR and if everything is alright, he/she will merge the PR to the master repo 
 
-After the PR have been merged to the master repo, run pr_finish() to delete the local branch:
-Delete the local branch
-pr_finish()
-
+After the PR have been merged to the master repo, delete the local branch
 
 ---
-class: left, top
 
-# Good luck in your R journey!
+## GitHub Issue Submission
+
+.pull-left[  
+
+2 main type of  Issues:
+ 1. Bug Tracking: Centralized platform for tracking and addressing software bugs.
+ 2. Enhancement Requests: Provides a structured way to propose and discuss new features or improvements.
+
  
-
-.pull-left[
-
-__DIMA Americas__: <br>
-
-Check our github @ <a href="http://github.com/unhcr-americas"><i class="fa fa-github fa-fw"></i>&nbsp;unhcr-americas</a>  and learn about __UnhcRverse packages__<br>
-
-Slides created with [**remark.js**](http://remarkjs.com/) and the R package [**xaringan**](https://github.com/yihui/xaringan). Slides notes for this presentation can be displayed by pressing keyboard shortcut `p` - Navigation help with keyboard shortcut `h`
-
-
 ]
-
 .pull-right[
 
-<img src="img/giphy.gif" width="310px"/>
+Benefits of Submitting Issues:
+
+ *  __Clear Communication__: Offers a clear channel for communication between users and developers.
+ *  __Documentation__: Serves as documentation for identified problems or desired enhancements.
+ *  __Community Involvement__: Encourages community involvement by allowing users to contribute to issue discussions.
 
 ]
+---
+
+## How to Submit an Effective GitHub Issue:
+
+ *  __Detailed Title__: Use a concise and descriptive title that summarizes the issue.
+ 
+ *  __Reproducible Steps__: Clearly outline the steps to reproduce the issue, making it easier for developers to understand and address.
+ 
+ *  __Expected vs. Actual Behavior__: Clearly state what behavior you expected and what behavior you observed.
+ 
+ *  __Environment Information__: Provide details about your operating system, software version, and any relevant configurations.
+ 
+ *  __Attachments__: Include screenshots, logs, or other relevant files to provide additional context.
+
+---
+
+## Git for Discovery
+ 
+ 
+.pull-left[  
+
+Set up and organisation account for your operation
+
+HQ: 
+ * [UNHCR Population Statistics](https://github.com/populationstatistics/)
+ * [UNHCR Dataviz](https://github.com/unhcr-dataviz/)
+
+Region:
+
+ * [DIMA Americas](http://github.com/unhcr-americas) 
+ 
+ * [response4venezuelans](github.com/response4venezuelans) 
+
+Country:
+
+ * [Costa Rica](https://github.com/UNHCR-CostaRica/) 
+  
+]
+.pull-right[
+
+
+Other Org
+
+ * [World Bank](https://github.com/orgs/worldbank/repositories?q=&type=all&language=r&sort=)
+
+ * [WFP VAM](https://github.com/WFP-VAM/RAMResourcesScripts)
+ 
+ * [REACH IMPACT](https://github.com/impact-initiatives)
+ 
+ * [DHS](https://github.com/DHSProgram/)
+
+> Before any project you have in mind, start with a [search in github](https://github.com/search?q=unhcr+language%3AR&type=repositories&l=R) in order to avoid building from scratch!!!
+
+
+]
+
+ 
+
+
+
 
 ---
 class: inverse, center, middle
@@ -324,13 +430,13 @@ class: inverse, center, middle
 
 ---
 
-# Ressources
+## Ressources
 
  - [Creating GitHub Portfolios](https://wd3.myworkday.com/unhcr/learning/course/16fc80c3079810011fc3d41e32520000?type=9882927d138b100019b928e75843018d)
  
  - [GitHub Actions for CI/CD](https://wd3.myworkday.com/unhcr/learning/course/db0ba7c05d98100035cf8c5c92240001?type=9882927d138b100019b928e75843018d)
 
---- 
+---
 
 ## Excercise
 
