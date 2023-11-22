@@ -144,11 +144,15 @@ README.md provides the main pitch for your package
 
 Each functions comes with its documentation and an example
 
-Vignettes are either like tutorial to quickstart your users or technical documentation explaining how to orchestrate the functions
+Vignettes are either like tutorial to quick-start your users or technical documentation explaining how to orchestrate the functions
 
-Companion website to be generated with `pkgdown::build_site()`
+Companion website to be generated with `pkgdown::build_site()`  and apply unhcr brand on your website documentation
 
-Create a _pkgdown.yml file and Use [unhcrtemplate](https://github.com/unhcr-dataviz/unhcrtemplate) to apply unhcr brand on your website documentation
+```
+remotes::install_github("unhcr-dataviz/unhcrtemplate")
+```
+
+Create a _pkgdown.yml file and Use [unhcrtemplate](https://github.com/unhcr-dataviz/unhcrtemplate)
 
 ``` 
 template:
@@ -274,6 +278,12 @@ Testing on Different Platforms
   * __Peer Review__: Consider having your package peer-reviewed by other R developers.
 
 ---
+
+## UNHCRverse
+
+https://unhcrverse.r-universe.dev/builds / https://github.com/unhcRverse/unhcRverse.r-universe.dev
+![](img/unhcrverse.png) 
+
 
 ## Conclusion
 

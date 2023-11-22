@@ -287,17 +287,34 @@ pak::pkg_install("edouard-legoupil/graveler")
 
 ---
 
+## Define your project
+
+.pull-left[  
+
+ package and directory name are better to be the same
+ 
+ package name should not include special characters
+
+]
+.pull-right[
+ 
+
+![](img/wizard.png) 
+]
+
+---
+
 ## Follow the guide
 
 .pull-left[  
 
 once the project is created open the file: 
 ```
-dev/01_dev.png
+dev/01_dev.R
 ```
 
-
-and follow the instructions
+The first step is to get the back office through Fusen
+ 
 
 ]
 .pull-right[
@@ -305,6 +322,23 @@ and follow the instructions
 ![](img/01_dev.png) 
 
 ]
+  
+  
+---
+
+## Follow the guide
+
+.pull-left[  
+
+The second stage is 
+
+]
+.pull-right[
+
+![](img/01_dev.png) 
+
+]
+    
   
 ---
 
