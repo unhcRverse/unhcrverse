@@ -46,11 +46,11 @@ Work as a team!
 
 Create an account on Github - https://github.com/join?  
 
-install Github desktop https://desktop.github.com/  on your computer
+install Github desktop https://desktop.github.com/  on your computer, open it and authenticate yourself. Then close the software.
 
 Then from Rstudio TOOL> Global Options > GIT>SVN
 
-and configure the path to your git executable in your computer
+and configure the path to your git.exe executable in your computer, apply and restart
 
 ]
 .pull-right[
@@ -249,7 +249,7 @@ Create a new project in RStudio
 
 File > New Project > Version Control > Git
  
-Repository URL: Paste the GitHub repository URL
+Repository URL: Paste the GitHub repository URL (it ends with a ".git")
 
 Project directory name: is auto filled with the repository name, after you paste the URL
 
