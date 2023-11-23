@@ -46,10 +46,11 @@ Work as a team!
 
 Create an account on Github - https://github.com/join?  
 
-install Github desktop https://desktop.github.com/ 
+install Github desktop https://desktop.github.com/  on your computer
 
-Connect Rstudio & Github: https://happygitwithr.com/rstudio-git-github.html 
+Then from Rstudio TOOL> Global Options > GIT>SVN
 
+and configure the path to your git executable in your computer
 
 ]
 .pull-right[
@@ -61,7 +62,7 @@ Find the path of git executable: Change your --WINDOWSUSERNAME-- below
 ```
 C:\Users\--WINDOWSUSERNAME--\AppData\Local\GitHubDesktop\app-3.3.5\resources\app\git\cmd
 ```
-  
+More details on how to Connect Rstudio & Github: https://happygitwithr.com/rstudio-git-github.html   
  
 ---
 
@@ -354,6 +355,7 @@ Benefits of Submitting Issues:
  *  __Community Involvement__: Encourages community involvement by allowing users to contribute to issue discussions.
 
 ]
+
 ---
 
 ## How to Submit an Effective GitHub Issue:
