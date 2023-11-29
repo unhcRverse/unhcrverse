@@ -309,6 +309,29 @@ When enough investment can be made, __Graphical User Interface__ (GUI) can be de
 ???
 https://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/
 
+
+---
+
+## Credibility: Following best practices
+
+.pull-left[
+
+Reproducible Research Repository from World Bank
+
+https://reproducibility.worldbank.org/ 
+
+> Publishing reproducibility packages allow all consumers of research to fully scrutinize the data and methodological choices underlying research results. Sharing data and code also democratizes development research by allowing others to replicate, build on, and extend research findings. Together, scrutiny and sharing improve the credibility, transparency and ultimately the impact of World Bank research. 
+
+]
+.pull-right[
+![](img/repro_WB.png)
+]
+
+
+???
+ 
+
+
 ---
 
 ## An R-Community geared towards learning 
@@ -487,11 +510,12 @@ class: inverse, center, middle
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
  
 
-[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D)
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D) 
+->  [next sesssion: 02.Tidyverse](02.Tidyverse.html)
 
 ---
 
-## Let install R & Rstudio...
+## Let's take the time to install R & Rstudio...
 
 
  

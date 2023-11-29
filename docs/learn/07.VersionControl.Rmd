@@ -276,11 +276,24 @@ Let’s push the changes to GitHub
 
   *  Go to the Git tab
   
-  *  Staged the file
+  *  Staged the file 
   
-  *  Click Commit
+  *  Add a commit message 
   
-  *  Add a commit message
+]
+.pull-right[
+![](img/version-control.png)
+]
+
+---
+
+## Git Essentials - Stage - Commit 
+
+.pull-left[  
+
+Let’s push the changes to GitHub
+
+ 
   
   *  Click Commit
   
@@ -292,6 +305,8 @@ Let’s push the changes to GitHub
 .pull-right[
 .img75[![](img/rstudio_git.png)] 
 ]
+
+
 
 
 

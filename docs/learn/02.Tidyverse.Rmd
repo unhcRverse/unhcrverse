@@ -173,73 +173,74 @@ class: inverse, center, middle
 
 ---
 
-## Integrated Development Interface (IDE)
+## An Integrated Development Interface (IDE)
 
 .pull-left[
-  Environment
-  History
-  Files
-  Plots
-  Packages
-  Help
-  Source
-  Console/Terminal
+
+__Rstudio__ is an integrated development environment for R that allows users to interact more easily with R by integrating different aspects of scripting, from code completion to debugging. It act as a single interface to access: 
+
+ *  Console/Terminal
+ *  Files
+ *  Packages
+ *  Plots
+ *  Environment
+ *  History
+ *  Help
+ *  Source
 ]
 .pull-right[
 ![ ](img/rstudio.png)  
 ]
 
+You can download RStudio from [Posit Website](https://posit.co/products/open-source/rstudio/) and review the [cheatsheets](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html.
+
+
+
 ---
 
-## Rstudio - Source
+## Rstudio - Source & Console
 
 .pull-left[
+
 Where you write your R code or document content
+
 If you are writing a R Markdown document, you can render it in this area 
+
 To run a R code, you can use the shortcut Crtl + Enter
-]
-.pull-right[
-![ ](img/rstudio.png)  
-]
 
----
+The console (or Terminal) is where you can check the execution of commands and where the code is evaluated
 
-## Rstudio – Console/Terminal
+Environment/History Where you can see the objects in your working space 
 
-.pull-left[
-Where you can check the execution of commands and where the code is evaluated
-Can perform quick calculations (that you do not need to save)
-]
-.pull-right[
-![ ](img/rstudio.png)  
-]
-
-
----
-
-## Rstudio - Environment/History
-
-.pull-left[
-Where you can see the objects in your working space 
 You can also view your command history (History tab) 
+
 ]
-.pull-right[
-![ ](img/rstudio.png)  
+.pull-right[ 
+.img75[![](img/source-editor-rstudio-ide.png)]
+
 ]
+
 
 ---
 
-## Rstudio – Files/Plots/Packages/Help
+## Rstudio - Files/Plots/Packages/Help
 
 .pull-left[
+
+Files/Plots/Packages/Help
+
 You can see the file directories
+
 View plots
+
 View which R packages are installed. You can also update the packages
+   
 ]
-.pull-right[
-![ ](img/rstudio.png)  
+.pull-right[ 
+.img75[![](img/tab-panes.png)]
+
 ]
-R help
+
 
 
 ---
@@ -251,30 +252,29 @@ class: inverse, center, middle
 
 ### Install the {tidyverse}, a collection of opinionated packages!
 
-Got to your [locally installed Rstudio](https://www.rstudio.com/products/rstudio/download/#download) or [sign-up for a free Rstudio Cloud account](https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0)
+The __{tidyverse}__ provides a coherent system of packages for data manipulation, exploration, and visualization that share a common design philosophy, based on a __grammar of verbs__
 
 .pull-left[
-
+Got to your [locally installed Rstudio](https://www.rstudio.com/products/rstudio/download/#download) or [sign-up for a free Rstudio Cloud account](https://login.rstudio.cloud/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0)
 First create a new project within R studio and then make sure we have the [tidyverse](https://www.tidyverse.org/packages/)  
 
 ```{r, comment='#', evaluate = FALSE} 
-# Tidyverse
-if (!require("tidyverse")) 
-  install.packages("tidyverse", 
-                   dependencies = TRUE)
-if (!require("here")) 
-  install.packages("here")
+# The following will install with one single 
+# command all the packages from the tidyverse
+# it will take time but only needs to be 
+# done once
+
+install.packages("tidyverse", 
+                 dependencies = TRUE)
+
 ```
 ]
 
  
 .pull-right[
-```{r, echo = FALSE}
-library(tidyverse)
-```
 
 
-![tidyverse](img/forcats.png)  
+.img75[![](img/forcats.png)] 
 
 
 ]
@@ -286,12 +286,20 @@ The tidyverse is an opinionated collection of R packages designed for data scien
 
 ---
 
-## Reproducible Analysis Pipeline
+## Reproducible Analysis Pipeline - make your code legible...
 
 
 .pull-left[ 
 
-Each steps in your data analysis can be piped using the tidyverse approach
+In R, __pipes__ are used to chain together a sequence of operations on a data frame. Pipes are particularly useful and encouraged when working with the __{tidyverse}__ packages, which is a collection of R packages designed for data science. 
+
+The pipe operator __|>__ is used to connect multiple functions together in a single line of code.
+
+ *  Use __|>__ to emphasize a sequence of actions, rather than the object that the actions are being performed on.
+ 
+ *  Avoid using the pipe when you need to manipulate more than one object at a time. Reserve pipes for a sequence of steps applied to one primary object.
+ 
+
  
  
  ]
@@ -300,21 +308,33 @@ Each steps in your data analysis can be piped using the tidyverse approach
 ![](img/pipe.png)
 ]
 
+???
+In adition
+
+
+ *  Use whitespace to make your code more readable.  __|>__  should always have a space before it, and should usually be followed by a new line. After the first step, each line should be indented by two spaces.
+ 
+ *  If the arguments to a function don’t all fit on one line, put each argument on its own line and indent.
+ 
+ *  Use variable names and assignment on separate lines to make your code more readable.
+
 ---
 
 ## The {refugees} Data Package
 
 A package can be made of both functions and data. 
 
-{refugees} is easy-to-use interface to the datasets served normally through the API, which cover forcibly displaced populations, including refugees, asylum-seekers and internally displaced people, stateless people, and others over a span of more than 70 years. This package provides data from three major sources:
+__{refugees}__ works as an easy-to-use interface to the datasets served normally through the API, which cover forcibly displaced populations, including refugees, asylum-seekers and internally displaced people, stateless people, and others over a span of more than 70 years. 
 
 .pull-left[
 
-Data from UNHCR’s annual statistical activities dating back to 1951.
+It provides data from three major data sources:
+
+ *  UNHCR’s annual statistical activities dating back to 1951.
  
-Data from the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate. 
+ *  United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate. 
  
-Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.
+ *  Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.
  
  
 
@@ -322,15 +342,16 @@ Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced
 
 .pull-right[
 
-```{r, echo = TRUE}
 
-## 2 options to install
+```{r eval=FALSE}
+
+## 2 options to install the package 
 
 # From CRAN
-# install.packages("refugees")
+install.packages("refugees")
 
 # From Github
-# pak::pkg_install("PopulationStatistics/refugees")
+pak::pkg_install("PopulationStatistics/refugees")
 
 
 ## Once installed, load the package!
@@ -341,7 +362,7 @@ library(refugees)
 
 ---
 
-## 8 sub datasets in the package - update every 6 months
+## 8 sub datasets updated every 6 months
 
  1. `population`: Data on forcibly displaced and stateless persons by year, including refugees, asylum-seekers, internally displaced people (IDPs) and stateless people. Detailed definitions of the different population groups can be found on the methodology page of the Refugee Data Finder.
  
@@ -351,7 +372,7 @@ library(refugees)
  
  4. `asylum_decisions`: Data on asylum decisions, including recognitions, rejections, and administrative closures.
  
- 5.`demographics`: Demographic and sub-national data, where available, including disaggregation by age and sex.
+ 5. `demographics`: Demographic and sub-national data, where available, including disaggregation by age and sex.
 
  6. `solutions`: Data on durable solutions for refugees and IDPs.
   
@@ -361,39 +382,56 @@ library(refugees)
 
 ---
 
-## Data Manipulation
+## Data Manipulation: filter, group, summarise, slice...
 
-filter, group_by, summarise, slice 
+The [grammar of data manipulation](https://rstudio.github.io/cheatsheets/html/data-transformation.html) is a set of verbs that help you solve the most common data manipulation challenges in R. 
 
+The dplyr package provides a consistent set of verbs that include __mutate()__, __select()__, __filter()__, __summarise()__, __slice()__ and __arrange()__.
 
 ```{r, echo = TRUE}
 library(refugees)
 library(dplyr)
 
-## Now prepare top 10 countries of origin for refugee and other in needs of international protection in 2022
+## Prepare top 10 countries of origin for 
+# refugee and other in needs of international protection in 2022
 ref_coo_10 <- refugees::population |>
   dplyr::filter(year == 2022) |>
+  ### First we define the variable to group by
   dplyr::group_by(coo_name) |>
-  dplyr::summarise(refugees = sum(refugees, na.rm = TRUE) + sum(oip, na.rm = TRUE) ) |>
+  ## and now summarise using sum - 
+  # watch-out na.rm used to ensure NA are not considered in the sum
+  ## If not, if you have NA , then the sum will be NA
+  dplyr::summarise(refugees = sum(refugees, na.rm = TRUE) +
+                     sum(oip, na.rm = TRUE) ) |>
+  ## and now get the top 10
   dplyr::slice_max(order_by = refugees, n = 10)
 ```
 
 
 Now prepare top 10 countries of asylum for asylum seekers in 2021!
 
+???
+Each can be used to add new variables, pick variables based on their names, pick cases based on their values, reduce multiple values down to a single summary, and change the ordering of the rows, respectively
+
+
 ---
 
-## Data Manipulation
+## Data Manipulation: Join
 
-left_join 
 
+.left-column[
+![](img/join_diagram.png) 
+ ]
+.right-column[
 ```{r, echo = TRUE}
+
 fd_last_ten_years <- refugees::population |>
   dplyr::filter(year >= 2013 & year <= 2022) |>
   dplyr::summarise(refugees = sum(refugees, na.rm = TRUE),
             asylum_seekers = sum(asylum_seekers, na.rm = TRUE), 
             oip = sum(oip, na.rm = TRUE),
-                        .by = year) |>  ## by defin the key to use for summarise
+            ## by defin the key to use for summarise
+                        .by = year) |>  
   ## and now starting the lef_join - using year
   dplyr::left_join(refugees::idmc |> 
               filter(year >= 2013 & year <= 2022) |>
@@ -407,27 +445,61 @@ fd_last_ten_years <- refugees::population |>
             by=c("year"))  
 ```
 
+]
+ 
+
+
 ---
 
-## Data Manipulation
+## Data Reshaping: Pivot
 
- pivot_longer
- 
- Creating a pivot table - from 
+
+.pull-left[ 
+
+ `pivot_longer()` and `pivot_wider()` are two functions in the tidyr package of R that are used to reshape data frames from wide to long or long to wide
+
 
 ```{r, echo = TRUE}
 
 library(tidyr)
 ## Piping from previous steps
 fd_last_ten_years <- fd_last_ten_years |>
+  
   tidyr::pivot_longer(cols = -year, 
                names_to = "population_type", 
-               values_to = "total") |> 
+               values_to = "total")  
+
+```
+ 
+ 
+ ]
+.pull-right[ 
+
+![](img/pivot.png)
+]
+
+
+???
+
+
+https://rstudio.github.io/cheatsheets/tidyr.pdf
+
+
+---
+
+## Data Manipulation: mutate, recode, arrange, rename, relevel
+
+
+```{r, echo = TRUE}
+
+library(tidyr)
+## Piping from previous steps
+fd_last_ten_years <- fd_last_ten_years |> 
   ## Creating new or overwriting variables with mutate 
   dplyr::mutate(
     ## with factor we enforce a specific order to be used 
-    population_type = factor(population_type,
-                  levels=c("idmc", "refugees", "unrwa", "oip", "asylum_seekers")), 
+    population_type = forcats::fct_relevel(population_type,
+                  "idmc", "refugees", "unrwa", "oip", "asylum_seekers"), 
     ## Now we map this to labels
     pop_type  = dplyr::recode(population_type,
              refugees="Refugees under UNHCR’s mandate",
@@ -440,35 +512,6 @@ fd_last_ten_years <- fd_last_ten_years |>
   # Renaming existing variables
   dplyr::rename( pop_num = total ) 
 
-```
-
----
-
-## Data Manipulation
-
-sum with na.rm
-
-```{r, echo = TRUE}
-demo_2022 <- refugees::demographics |> 
-  filter(year == 2022 & 
-         pop_type %in% c("REF", "ASY", "IDP", "OIP",
-                         "RDP", "RET", "STA", "OOC")) |>
-  summarise("male 0-17" = sum(m_0_4, na.rm = TRUE) + 
-                          sum(m_5_11, na.rm = TRUE) + 
-                          sum(m_12_17, na.rm = TRUE),
-            "male 18-59"= sum(m_18_59, na.rm = TRUE), 
-            "male 60+"=sum(m_60, na.rm=TRUE), 
-            "female 0-17" = sum(f_0_4, na.rm = TRUE) + 
-                            sum(f_5_11, na.rm = TRUE) + 
-                            sum(f_12_17, na.rm = TRUE),
-            "female 18-59"= sum(f_18_59, na.rm = TRUE), 
-            "female 60+"=sum(f_60, na.rm=TRUE)) |>
-  pivot_longer(cols=everything(), 
-               names_sep = " ", 
-               names_to = c(".value", "ages")) |>
-  mutate(male_p = round(male/(sum(female) + sum(male)), 2 ),   
-         female_p = round(female/(sum(female) + sum(male)), 2 )) 
-  
 ```
 
 
@@ -1565,44 +1608,8 @@ ggplot(data = fd_last_ten_years,
 
 ## A better legend!
 
-.pull-left[
+.left-column[
 
-remove the legend and use colored subtitle
-
-```{r, eval=FALSE}
-ggplot(data = fd_last_ten_years,
-       aes( x =  factor(year),  y = pop_num,
-           fill = pop_type)) +  
-  geom_col( width = .7 ) + 
-  unhcrthemes::scale_fill_unhcr_d(
-             palette = "pal_unhcr_poc" ,
-             nmax = 9, order = c(4, 1:3, 9, 8)  ) +
-  scale_y_continuous(
-      expand = expansion(mult = c(0, 0)),
-      labels = scales::label_number(scale_cut = scales::cut_short_scale()),
-      breaks = scales::pretty_breaks(n = 5)) +
-  labs(title = "People forced to flee worldwide | 2013-2022",
-       subtitle =  paste0(  #<<
-        "By: <span style='color:",  #<<
-        unhcr_pal(n = 9, "pal_unhcr_poc")[4], #<<
-        "'>IDPs</span>, <span style='color:", #<<
-        unhcr_pal(n = 9, "pal_unhcr_poc")[1], #<<
-        "'>Refugees under UNHCR's mandate</span>, <span style='color:", #<<
-        unhcr_pal(n = 9, "pal_unhcr_poc")[2], #<<
-        "'>Refugees under UNWRA's mandate</span>,<br><span style='color:", #<<
-        unhcr_pal(n = 9, "pal_unhcr_poc")[9], #<<
-"'>Other people in need of international protection</span> and <span style='color:",#<<
-        unhcr_pal(n = 9, "pal_unhcr_poc")[3], #<<
-        "'>Asylum-seekers</span>."), #<<
-     caption = "Source: Refugee Data Finder<br>© UNHCR, The UN Refugee Agency") +
-  theme_unhcr( grid = "Y", axis = "X", 
-              axis_title = FALSE,
-               legend = FALSE) #<<
-```
-
-]
-
-.pull-right[
 
 ```{r, echo=FALSE, fig.height=6}
 ggplot(data = fd_last_ten_years,
@@ -1635,6 +1642,33 @@ ggplot(data = fd_last_ten_years,
                legend = FALSE) #<< 
 ```
 
+
+
+] 
+.right-column[
+remove the legend and use colored subtitle
+
+```{r, eval=FALSE}
+
+  labs(title = "People forced to flee worldwide | 2013-2022",
+       subtitle =  paste0(  #<<
+        "By: <span style='color:",  #<<
+        unhcr_pal(n = 9, "pal_unhcr_poc")[4], #<<
+        "'>IDPs</span>, <span style='color:", #<<
+        unhcr_pal(n = 9, "pal_unhcr_poc")[1], #<<
+        "'>Refugees under UNHCR's mandate</span>, <span style='color:", #<<
+        unhcr_pal(n = 9, "pal_unhcr_poc")[2], #<<
+        "'>Refugees under UNWRA's mandate</span>,<br><span style='color:", #<<
+        unhcr_pal(n = 9, "pal_unhcr_poc")[9], #<<
+"'>Other people in need of international protection</span> and <span style='color:",#<<
+        unhcr_pal(n = 9, "pal_unhcr_poc")[3], #<<
+        "'>Asylum-seekers</span>."), #<<
+     caption = "Source: Refugee Data Finder<br>© UNHCR, The UN Refugee Agency") +
+  theme_unhcr( grid = "Y", axis = "X", 
+              axis_title = FALSE,
+               legend = FALSE) #<<
+```
+
 ]
 
 
@@ -1647,7 +1681,8 @@ class: inverse, center, middle
 ### Questions?
 
 
-[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D)
+[post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
+->  [next sesssion: 03.Functions](03.Functions.html)
 
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 
@@ -1665,10 +1700,12 @@ class: inverse, center, middle
 
 - [Creating Maps with R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefd839751a0006?type=9882927d138b100019b928e75843018d)
 
-
 - [Ggplot main doc](https://ggplot2.tidyverse.org/index.html)
+
 - [The ggplot flipbook](https://evamaerey.github.io/ggplot_flipbook/ggplot_flipbook_xaringan.html#1) by Gina Reynolds
+
 - [A ggplot2 tutorial for beautiful plotting in R](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/) and [ggplot Wizardry Hands-On](https://z3tt.github.io/OutlierConf2021/) by Cedric Scherer
+
 - Ggplot workshop [Part1](https://www.youtube.com/watch?v=h29g21z0a68)/[Part2](https://www.youtube.com/watch?v=0m4yywqNPVY) by Thomas Lin Pedersen (one of the main maintainer of ggplot)
 
  
