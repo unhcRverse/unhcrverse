@@ -71,7 +71,7 @@ See Video - https://www.youtube.com/watch?v=hpMc6TgT34I
  
 ---
 
-# Essential Concept: Objects & Data elements
+# Essential Concept: Objects & Data elements in base R
 
 -  `Vectors` are a core data structure in R, and are created with `c()`. Elements in a vector must be of the same type.
 
@@ -124,15 +124,11 @@ Reference link on [Manipulating data](http://www.cookbook-r.com/Manipulating_dat
 
 ---
 
-# Load a Data Frame
+# Load a Data Frame from a csv file and inspect it
 
 ``` {r eval=FALSE}
-
-data(CASchools)
-mydata <- CASchools
-
 # load a data set from csv and assign it to an object called 'mydata'
-#mydata <- read.csv("unhcr_mass_comm_db_merged_20140612.csv") 
+mydata <- read.csv("unhcr_mass_comm_db_merged_20140612.csv") 
 
 # first few rows of the dataset
 head(mydata)
@@ -143,8 +139,8 @@ tail(mydata)
 # variable names
 colnames(mydata)
 
-# pop-up view of entire data set (uncomment to run)
-# View(mydata)
+# pop-up view of entire data set  
+View(mydata)
 
 ```
 
@@ -729,7 +725,7 @@ display_unhcr_all()
 
     - Two recommended **diverging color palette**
     
-3. Available on [github](https://github.com/unhcr-dataviz/unhcrthemes/), dedicated [documentation page](https://unhcr-dataviz/.github.io/unhcrthemes/index.html) and throughout [examples of the data visualization platform](https://dataviz.unhcr.org/tools/r/).
+3. Available on [CRAN](https://cran.r-project.org/web/packages/unhcrthemes/index.html) & [github](https://github.com/unhcr-dataviz/unhcrthemes/), dedicated [documentation page](https://unhcr-dataviz/.github.io/unhcrthemes/index.html) and throughout [examples of the data visualization platform](https://dataviz.unhcr.org/tools/r/).
 
 ]
 
@@ -1571,7 +1567,7 @@ ggplot(data = fd_last_ten_years,
   theme_unhcr( grid = "Y", axis = "X", 
               axis_title = FALSE, 
               legend_text_size = 9) + #<<
-    guides(fill = guide_legend(ncol = 3)) #<<
+    guides(fill = guide_legend(ncol = 2)) #<<
 ```
 
 ]
@@ -1596,7 +1592,7 @@ ggplot(data = fd_last_ten_years,
   theme_unhcr( grid = "Y", axis = "X", 
               axis_title = FALSE, 
               legend_text_size = 9) + #<<
-    guides(fill = guide_legend(ncol = 3)) #<<
+    guides(fill = guide_legend(ncol = 2)) #<<
 ```
 
 ]
