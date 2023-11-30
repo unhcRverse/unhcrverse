@@ -476,4 +476,8 @@ class: inverse, center, middle
  - [Hadley - R packages](https://r-pkgs.org/)
  
  - [Fusen](https://thinkr-open.github.io/fusen/index.html)
+ 
+ - [Preparing your package for a CRAN submission](https://github.com/ThinkR-open/prepare-for-cran)
+ 
+ - The non fusen way... [How to write your own R package and publish it on CRAN](https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/r-package/)
 

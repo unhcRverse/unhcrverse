@@ -1,6 +1,6 @@
 ---
 title: "From a Script to a Function"
-subtitle: "Illustration with {unhcrplot}"
+subtitle: "Illustration with plotting funtion"
 date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
   unhcrdown::html_slides:
@@ -596,6 +596,6 @@ class: inverse, center, middle
  
 ---
 
-# Excercise
+# Exercise
 
 Use any chart your previously created and turn it into a function with parameters
