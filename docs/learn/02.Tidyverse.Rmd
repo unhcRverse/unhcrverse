@@ -409,6 +409,51 @@ Now prepare top 10 countries of asylum for asylum seekers in 2021!
 ???
 Each can be used to add new variables, pick variables based on their names, pick cases based on their values, reduce multiple values down to a single summary, and change the ordering of the rows, respectively
 
+---
+
+## Data Manipulation: base R versus the tidyverse way...
+
+Let’s say we have a data frame called `df` with two columns: `x` and `y`. We want to filter the rows where x is greater than 5 and then calculate the `mean` of y for those rows.
+
+.pull-left[ 
+
+__base R way__ 
+
+```{r, eval=FALSE}
+
+# Filter the rows where x > 5
+df2 <- df[df$x > 5, ]
+
+# Calculate the mean of y for those rows
+mean(df2$y)
+
+
+```
+ 
+ 
+ ]
+.pull-right[ 
+__tidyverse way__ 
+
+```{r, eval=FALSE}
+
+library(tidyverse)
+
+df |>
+  filter(x > 5) |>
+  summarize(mean(y))
+
+
+```
+
+As you can see, the tidyverse code is more concise and easier to read.
+
+It uses the __|>__ pipe operator to chain together the `filter()` and `summarize()` functions, which makes the code more readable and easier to understand. 
+
+The `summarize()` function is used to calculate the mean of y for the filtered rows.
+
+]
+
 
 ---
 
@@ -1443,6 +1488,36 @@ ggplot(data = fd_last_ten_years,
 
 ---
 
+## Selecting the pallette
+
+.pull-left[
+
+We select the palette: "pal_unhcr_poc"
+
+```{r, fig.height=3}
+display_unhcr_pal(9, "pal_unhcr_poc")
+ 
+```
+]
+
+.pull-right[
+
+Now check the factor level for our population type to map them correctly
+
+```{r }
+levels(as.factor(fd_last_ten_years$pop_type))
+ 
+```
+So we have 5 levels to map to map to the same color order meaning
+
+> c(4, 1:3, 9, 8)
+
+]
+
+
+
+---
+
 ## Mapping the pallette
 
 .pull-left[
@@ -1685,6 +1760,7 @@ class: inverse, center, middle
 
 ## Resources  
 
+Workday Training
  - [R Essential Training: Wrangling and Visualizing Data](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefc58c829f0006?type=9882927d138b100019b928e75843018d)
 
  - [learn R tidyverse](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa6ae8c4f30003?type=9882927d138b100019b928e75843018d)
@@ -1695,6 +1771,8 @@ class: inverse, center, middle
 
 - [Creating Maps with R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cefd839751a0006?type=9882927d138b100019b928e75843018d)
 
+Documentation
+
 - [Ggplot main doc](https://ggplot2.tidyverse.org/index.html)
 
 - [The ggplot flipbook](https://evamaerey.github.io/ggplot_flipbook/ggplot_flipbook_xaringan.html#1) by Gina Reynolds
@@ -1702,6 +1780,8 @@ class: inverse, center, middle
 - [A ggplot2 tutorial for beautiful plotting in R](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/) and [ggplot Wizardry Hands-On](https://z3tt.github.io/OutlierConf2021/) by Cedric Scherer
 
 - Ggplot workshop [Part1](https://www.youtube.com/watch?v=h29g21z0a68)/[Part2](https://www.youtube.com/watch?v=0m4yywqNPVY) by Thomas Lin Pedersen (one of the main maintainer of ggplot)
+
+- [Using R for data journalism](https://learn.r-journalism.com/en/)
 
  
 ---
