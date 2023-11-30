@@ -358,6 +358,8 @@ Unit testing is a software testing technique that involves testing individual un
 
 Unit testing are created for each function by {fusen} using a dedicated package called [`{testthat}`](https://testthat.r-lib.org/)
 
+You can use [AI/Copilot](https://copilot.microsoft.com/) to build your unit testing!!!
+
 __tests/__: contains test files for the package.
 
 
