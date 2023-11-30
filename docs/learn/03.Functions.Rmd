@@ -61,10 +61,10 @@ An Example of a __Script__
 # Data example
 data <- c(1, 2, 3, 4, 5)
 
-## Apply mean to data
+# Apply mean to data
 mean_value <- mean(data)
 
-## Display the result
+# Display the result
 print(mean_value)
 ```
 
@@ -86,10 +86,10 @@ calculate_mean <- function(data) {
 # Data example
 data <- c(1, 2, 3, 4, 5)
 
-## Apply mean to data
+# Apply mean to data
 mean_value <- calculate_mean(data)
 
-## Display the result
+# Display the result
 print(mean_value)
  
 ```
@@ -144,7 +144,7 @@ Let's see the steps in details:
 
 # Custom function to calculate the median of a numeric vector
 calculate_median <- function(data) {
-  ##  1. Takes an input: here data...
+  #  1. Takes an input: here data...
   
   median_value <- median(data)
   #  2. Apply a transformation: here apply another function called median

@@ -219,26 +219,26 @@ grViz("
 
     # Connect nodes with edges and labels
     X -> a [label = 'Start', fontsize= 130, penwidth = 15] 
-    a -> 1 [label = 'Yes', fontsize= 130, penwidth = 15]  ## PowerBI
-    a -> b [label = 'No', fontsize= 130, penwidth = 15]  ## Continue
+    a -> 1 [label = 'Yes', fontsize= 130, penwidth = 15]  # PowerBI
+    a -> b [label = 'No', fontsize= 130, penwidth = 15]  # Continue
     
-    ## Basic stat
+    # Basic stat
     b -> c [label = 'Yes', fontsize= 130, penwidth = 15] 
     b -> d  [label = 'No', fontsize= 130, penwidth = 15]
     
-    ## Polished visuals
+    # Polished visuals
     c -> 2 [label = 'Yes', fontsize= 130, penwidth = 15]
     c -> e [label = 'No', fontsize= 130, penwidth = 15]
     
-    ## Machine learning
+    # Machine learning
     d -> e [label = 'Yes', fontsize= 130, penwidth = 15]
     d -> 2 [label = 'No', fontsize= 130, penwidth = 15]
     
-    ## Quick processing
+    # Quick processing
     e -> 3 [label = 'Yes', fontsize= 130, penwidth = 15]
     e -> f [label = 'No', fontsize= 130, penwidth = 15]
     
-    ## Interactivity
+    # Interactivity
     f -> 4 [label = 'Yes', fontsize= 130, penwidth = 15]
     f -> 2 [label = 'No', fontsize= 130, penwidth = 15]
   }

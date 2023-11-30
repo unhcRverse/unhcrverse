@@ -345,7 +345,7 @@ It provides data from three major data sources:
 
 ```{r eval=FALSE}
 
-## 2 options to install the package 
+# 2 options to install the package 
 
 # From CRAN
 install.packages("refugees")
@@ -354,7 +354,7 @@ install.packages("refugees")
 pak::pkg_install("PopulationStatistics/refugees")
 
 
-## Once installed, load the package!
+# Once installed, load the package!
 library(refugees)
 
 ```
@@ -392,18 +392,18 @@ The dplyr package provides a consistent set of verbs that include __mutate()__, 
 library(refugees)
 library(dplyr)
 
-## Prepare top 10 countries of origin for 
+# Prepare top 10 countries of origin for 
 # refugee and other in needs of international protection in 2022
 ref_coo_10 <- refugees::population |>
   dplyr::filter(year == 2022) |>
-  ### First we define the variable to group by
+  # First we define the variable to group by
   dplyr::group_by(coo_name) |>
-  ## and now summarise using sum - 
+  # and now summarise using sum - 
   # watch-out na.rm used to ensure NA are not considered in the sum
-  ## If not, if you have NA , then the sum will be NA
+  # If not, if you have NA , then the sum will be NA
   dplyr::summarise(refugees = sum(refugees, na.rm = TRUE) +
                      sum(oip, na.rm = TRUE) ) |>
-  ## and now get the top 10
+  # and now get the top 10
   dplyr::slice_max(order_by = refugees, n = 10)
 ```
 
@@ -430,9 +430,9 @@ fd_last_ten_years <- refugees::population |>
   dplyr::summarise(refugees = sum(refugees, na.rm = TRUE),
             asylum_seekers = sum(asylum_seekers, na.rm = TRUE), 
             oip = sum(oip, na.rm = TRUE),
-            ## by defin the key to use for summarise
+            # by define the key to use for summarise
                         .by = year) |>  
-  ## and now starting the lef_join - using year
+  # and now starting the lef_join - using year
   dplyr::left_join(refugees::idmc |> 
               filter(year >= 2013 & year <= 2022) |>
               summarise(idmc = sum(total, na.rm = TRUE),
@@ -462,7 +462,7 @@ fd_last_ten_years <- refugees::population |>
 ```{r, echo = TRUE}
 
 library(tidyr)
-## Piping from previous steps
+# Piping from previous steps
 fd_last_ten_years <- fd_last_ten_years |>
   
   tidyr::pivot_longer(cols = -year, 
@@ -493,21 +493,21 @@ https://rstudio.github.io/cheatsheets/tidyr.pdf
 ```{r, echo = TRUE}
 
 library(tidyr)
-## Piping from previous steps
+# Piping from previous steps
 fd_last_ten_years <- fd_last_ten_years |> 
-  ## Creating new or overwriting variables with mutate 
+  # Creating new or overwriting variables with mutate 
   dplyr::mutate(
-    ## with factor we enforce a specific order to be used 
+    # with factor we enforce a specific order to be used 
     population_type = forcats::fct_relevel(population_type,
                   "idmc", "refugees", "unrwa", "oip", "asylum_seekers"), 
-    ## Now we map this to labels
+    # Now we map this to labels
     pop_type  = dplyr::recode(population_type,
              refugees="Refugees under UNHCR’s mandate",
              asylum_seekers="Asylum-seekers",
              oip="Other people in need of international protection",
              idmc="Internally displaced persons",
              unrwa="Palestine refugees under UNRWA’s mandate")) |>
-  ## Sorting with arrange
+  # Sorting with arrange
   dplyr::arrange(year, population_type)  |>
   # Renaming existing variables
   dplyr::rename( pop_num = total ) 
@@ -644,8 +644,7 @@ bar_df <- refugees::population |>
   slice_max(order_by = refugees, n = 10) |>
   mutate(coo_name = str_wrap(coo_name, 25))
 
-#Plot:
-
+#Plot 
 # Set title and subtitle
 title_bar <- "Refugees and other people in need of international protection"
 subtitle_bar <- "By country of origin at the end of 2022"
@@ -767,12 +766,12 @@ Replicate a chart example from the [Global Trends 2022](https://www.unhcr.org/gl
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num, fill = pop_type) ) +
-    ## geometry
+    # geometry
     geom_col( width = .7,
             position = position_stack(reverse = TRUE)  ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -838,7 +837,7 @@ knitr::kable(head(fd_last_ten_years  ),
 ggplot(data = fd_last_ten_years) #<<
 
 
-## this can also be written alternatively
+# this can also be written alternatively
 # using a pipe operator  |>
 
 fd_last_ten_years |>#<<
@@ -869,7 +868,7 @@ But nothing happens here because we haven't mapped the raw data to anything. SO 
 ```{r, eval=FALSE}
 ggplot(data = fd_last_ten_years,
        
-       ## adding aesthetic to map the variables we will use...
+       # adding aesthetic to map the variables we will use...
        aes( x = year,  y = pop_num))  #<<
 ```
 
@@ -1038,11 +1037,11 @@ Before playing with `unhcthemes` let's add labels on the chart.
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col(    ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -1061,11 +1060,11 @@ fd_last_ten_years |>
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col(   ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -1090,11 +1089,11 @@ Note that you should get the lato font installed on your system
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col(   ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -1113,11 +1112,11 @@ fd_last_ten_years |>
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col(    ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -1143,11 +1142,11 @@ We remove also axis tile to increase what Edward Tufte called the [__data-ink ra
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col( width = .7  ) + #<<
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
@@ -1167,11 +1166,11 @@ fd_last_ten_years |>
 fd_last_ten_years |>
 # Plot
   ggplot(  
-    ## Define aesthetics..
+    # Define aesthetics..
     aes(  x = as.factor(year),  y = pop_num) ) +
-    ## geometry
+    # geometry
     geom_col( width = .7   ) +
-    ## Scales
+    # Scales
     scale_y_continuous(
       expand = expansion(mult = c(0, 0)),
       labels = scales::label_number(scale_cut = scales::cut_short_scale()),
