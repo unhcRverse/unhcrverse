@@ -195,25 +195,7 @@ output:
 This is a text section.
 ```
 
----
-
-## Intermingled prose (narratives) and code
-
-There are two types of code in an Rmd document: code chunks and inline R code. Below is a quick example from the [Rmarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/r-code.html):
-
-```` 
-```{r}`r ''`
-x <- 5  # radius of a circle
-```
-
-For a circle with the radius `r knitr::inline_expr('x')`,
-its area is `r knitr::inline_expr('pi * x^2')`.
-````
-
-A code chunk usually starts with ```` ```{}```` and ends with ```` ``` ````. You can write any number of lines of code in it. Inline R code is embedded in the narratives of the document using the syntax `` `r ` ``. In the above example, we defined a variable `x` in a code chunk, which is the radius of a circle, and calculated its area in the next paragraph.
-
-You can customize the behavior and output of code chunks through chunk options (provided inside the curly brackets `{}`). 
-
+ 
 
 ---
 
@@ -237,10 +219,10 @@ As soon as all steps (i.e. **DATA + TIDYING + MODELING + VISUALS + NARRATIVE**) 
 
 ???
 
- instead of **hundreds of mouse clicks**
+instead of **hundreds of mouse clicks**
 See also http://muschellij2.github.io/summerR_2015/modules/module12.html
 
-
+ 
  
 
 ---
@@ -277,10 +259,33 @@ pak::pkg_install("unhcr-dataviz/unhcrdown")
 
 ![unhcrdown templates](https://raw.githubusercontent.com/vidonne/unhcrdown/master/man/figures/new_template.png)
 ]
+ 
 
 ---
 
-## Reproducible pipelines with R markdown  
+## Intermingled prose (narratives) and code
+
+There are two types of code in an Rmd document: code chunks and inline R code. Below is a quick example from the [Rmarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/r-code.html):
+
+````md 
+```{r}`r ''`
+x <- 5  # radius of a circle
+```
+
+For a circle with the radius `r knitr::inline_expr('x')`,
+its area is `r knitr::inline_expr('pi * x^2')`.
+````
+
+A code chunk usually starts with ```` ```{}```` and ends with ```` ``` ````. You can write any number of lines of code in it. Inline R code is embedded in the narratives of the document using the syntax `` `r ` ``. In the above example, we defined a variable `x` in a code chunk, which is the radius of a circle, and calculated its area in the next paragraph.
+
+You can customize the behavior and output of code chunks through chunk options (provided inside the curly brackets `{}`). 
+
+ 
+ 
+
+---
+
+## Tools and packages for DataViz, Cartography & Infographics..
 
 ```{r, echo = FALSE, out.width = "70%"}
 knitr::include_graphics("img/tools_change_new.svg")
@@ -288,7 +293,7 @@ knitr::include_graphics("img/tools_change_new.svg")
 
 ---
 
-## Reproducible pipelines with R markdown  
+## From a series to a systems... 
 
 ```{r, echo = FALSE, out.width = "100%"}
 knitr::include_graphics("img/reproducible_flow_tools.svg")
@@ -296,7 +301,7 @@ knitr::include_graphics("img/reproducible_flow_tools.svg")
 
 ---
 
-## Reproducible pipelines with R markdown  
+## ...to a unified and simpler approach!
 
 ```{r, echo = FALSE, out.width = "100%"}
 knitr::include_graphics("img/reproducible_flow_r.svg")
