@@ -345,8 +345,11 @@ plot_top10_by_country_and_year <- function( year,  #<<
 #' @return a ggplot2 with UNHCR brand
 #' 
 #' @import unhcrthemes
+#' @import ggplot2
 #' @import refugees
-#' @import tidyverse
+#' @import dplyr
+#' @importFrom stringr str_wrap
+#' @importFrom stats reorder
 #'
 #' @examples
 #' plot_top10_by_country_and_year( year = 2022, 
@@ -356,6 +359,22 @@ plot_top10_by_country_and_year <- function( year,  #<<
 }
   
 ```
+
+
+---
+
+## Common issues to fix: Import the right library / Function
+
+```{r}
+#' @import unhcrthemes
+#' @import ggplot2
+#' @import refugees
+#' @import dplyr
+#' @importFrom stringr str_wrap
+#' @importFrom stats reorder
+```
+
+
 
 ---
 
@@ -390,18 +409,20 @@ plot_top10_by_country_and_year(
 #' @return a ggplot2 with UNHCR brand
 #' 
 #' @import unhcrthemes
+#' @import ggplot2
 #' @import refugees
-#' @import tidyverse
+#' @import dplyr
+#' @importFrom stringr str_wrap
 #'
 #' @examples
 #' plot_top10_by_country_and_year( year = 2022, 
 #'                                 countryname = "Peru")
-plot_top10_by_country_and_year <- function( year,  #<<
-                                            countryname) { #<<
+plot_top10_by_country_and_year <- function( year,   
+                                            countryname) {  
 
 plot <- refugees::population |>
-  filter(year == year & #<<
-           coa_name == countryname) |> #<<
+  filter(year == year &  
+           coa_name == countryname) |>  
   summarise( refugees = sum(refugees, na.rm = TRUE) + 
                sum(oip, na.rm = TRUE),
     .by = coo_name ) |>
@@ -414,8 +435,8 @@ plot <- refugees::population |>
     breaks = seq(0, 7e6, by = 1e6),
     labels = scales::label_number(scale_cut = scales::cut_short_scale())) +
   labs(
-    title = paste0("Refugees and other people in need of international protection in ",countryname), #<<
-    subtitle =  paste0("By country of origin at the end of ", year), #<<
+    title = paste0("Refugees and other people in need of international protection in ",countryname),  
+    subtitle =  paste0("By country of origin at the end of ", year),  
      caption = "Source: Refugee Data Finder<br>© UNHCR, The UN Refugee Agency",
     x = "Number of people"
   ) +
@@ -461,8 +482,10 @@ plot_top10_by_country_and_year(
 #' @return a ggplot2 with UNHCR brand
 #' 
 #' @import unhcrthemes
+#' @import ggplot2
 #' @import refugees
-#' @import tidyverse
+#' @import dplyr
+#' @importFrom stringr str_wrap
 #'
 #' @examples
 #' plot_top10_by_country_and_year( year = 2022, 
@@ -573,7 +596,9 @@ class: inverse, center, middle
 
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_2_tidyverse.md&title=%5Blearn%5D) 
-->  [next you can start putting your function in a package](10.Package_Knowledge.html)
+
+
+-> Next you can [learn to work as team under version control](07.VersionControl.html) or  [start putting your function in a package](10.Package_Knowledge.html)
 
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 
@@ -582,17 +607,22 @@ class: inverse, center, middle
 
 # Reference
 
- - [Build Advanced Charts in R](https://wd3.myworkday.com/unhcr/learning/course/efee8410b2b410017044140f1aeb0001?type=9882927d138b100019b928e75843018d)
+Workday Training: 
+
+ *   [Build Advanced Charts in R](https://wd3.myworkday.com/unhcr/learning/course/efee8410b2b410017044140f1aeb0001?type=9882927d138b100019b928e75843018d)
  
- - [Data Wrangling in R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf76ead31590002?type=9882927d138b100019b928e75843018d)
 
- - [Code Clinic: R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfbd7b02bd90006?type=9882927d138b100019b928e75843018d)
+ *   [Data Wrangling in R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf76ead31590002?type=9882927d138b100019b928e75843018d)
 
- - [Coding Exercises: R Data Science](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf7768256ed0000?type=9882927d138b100019b928e75843018d)
+ *   [Code Clinic: R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfbd7b02bd90006?type=9882927d138b100019b928e75843018d)
 
- - [R for Data Science](https://r4ds.had.co.nz/), 
+ *   [Coding Exercises: R Data Science](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf7768256ed0000?type=9882927d138b100019b928e75843018d)
 
- - [Advanced R Programming](https://adv-r.hadley.nz/)
+Documentation
+
+ *   [R for Data Science](https://r4ds.had.co.nz/), 
+
+ *   [Advanced R Programming](https://adv-r.hadley.nz/)
  
 ---
 

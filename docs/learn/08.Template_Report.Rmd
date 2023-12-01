@@ -1,5 +1,5 @@
 ---
-title: "Report Template"
+title: "Use Report Template"
 subtitle: "Introduction of {unhcdown} package"
 date: <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 output: 
@@ -38,22 +38,27 @@ output:
 
 ---
 
-## Research workflow 
+## Research workflow (1/3)
+
+
+
+.pull-left[  
 
 1. Prepare data (**EXCEL**)
 
 
 ***
+]
+.pull-right[
 
 ![](img/excel.png)
-
-
-
-
+]
 
 ---
 
-## Research workflow 
+## Research workflow (2/3)
+
+.pull-left[  
 
 1. Prepare data (**EXCEL**)
 
@@ -61,17 +66,18 @@ output:
 
 
 ***
+]
+.pull-right[
 
 ![](img/rstudio.png)
-
-
-
-
-
+]
 
 ---
 
-## Research workflow 
+## Research workflow (3/3)
+
+
+.pull-left[  
 
 1. Prepare data (**EXCEL**)
 
@@ -81,14 +87,11 @@ output:
 
 
 ***
+]
+.pull-right[
 
 ![](img/word.png)
-
-
-
-
-
-
+]
 
 ---
 
@@ -105,14 +108,22 @@ output:
 
 ## Problems of a broken workflow  
 
-- How did you do this? What analysis is behind this figure? Did you account for ...?
-
-- What dataset was used (e.g. final vs preliminary dataset)?
-
-- Oops, there is an error in the data. Can you repeat the analysis? And update figures/tables in Word!
 
 > A scientific article is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.
-<small>Claerbout & Karrenbach 1992</small>
+
+> <small>Claerbout & Karrenbach 1992</small>
+
+- How did you do this? 
+
+- What analysis is __behind this figure__? 
+
+- Did you account for ...?
+
+- What dataset was used (e.g. __final vs preliminary__ dataset)?
+
+- Oops, there is an error in the data. Can you __repeat the analysis__? <smallAnd update figures/tables in Word!</small>
+
+
 
 
 
@@ -130,18 +141,22 @@ output:
 
 ![](img/integrated_workflow.png)
 
-
+???
 knitr - pandoc - Rstudio
 
 ---
 
 ## Rmarkdown documents 
 
-* Fully reproducible (trace all results inc. tables and plots)
+* Fully reproducible: trace all your analysis results including:
+    + narrative interpretations,
+    + tables, 
+    + plots and 
+    + maps!
 
 * Dynamic (regenerate with 1 click)
 
-* Suitable for
+* One single file to generate multiple format output:
     + documents (Word, PDF, etc)
     + presentations
     + books
@@ -164,7 +179,7 @@ knitr - pandoc - Rstudio
 Let's Have a look at the [cheatsheet](https://rmarkdown.rstudio.com/lesson-15.html).
 
 
---- 
+---
 
 ## Basic Structure
 
@@ -180,7 +195,26 @@ output:
 This is a text section.
 ```
 
- 
+---
+
+## Intermingled prose (narratives) and code
+
+There are two types of code in an Rmd document: code chunks and inline R code. Below is a quick example from the [Rmarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/r-code.html):
+
+```` 
+```{r}`r ''`
+x <- 5  # radius of a circle
+```
+
+For a circle with the radius `r knitr::inline_expr('x')`,
+its area is `r knitr::inline_expr('pi * x^2')`.
+````
+
+A code chunk usually starts with ```` ```{}```` and ends with ```` ``` ````. You can write any number of lines of code in it. Inline R code is embedded in the narratives of the document using the syntax `` `r ` ``. In the above example, we defined a variable `x` in a code chunk, which is the radius of a circle, and calculated its area in the next paragraph.
+
+You can customize the behavior and output of code chunks through chunk options (provided inside the curly brackets `{}`). 
+
+
 ---
 
 ## Enable a fully auditable workflow
@@ -202,14 +236,20 @@ As soon as all steps (i.e. **DATA + TIDYING + MODELING + VISUALS + NARRATIVE**) 
 > As your analysis can be reviewed, you become "covered"... 
 
 ???
+
  instead of **hundreds of mouse clicks**
 See also http://muschellij2.github.io/summerR_2015/modules/module12.html
+
+
  
+
 ---
 
-## unhcrdown
+## UNHCR branded report: {unhcrdown}
 
-[unhcrdown](https://github.com/vidonne/unhcrdown) provides a set of templates following UNHCR Brand recommendations. The goal of this package is to ease and speed up the creation of reports, presentation and website while promoting the UNHCR visual identity.
+[`{unhcrdown}`](https://github.com/vidonne/unhcrdown) provides a set of templates following UNHCR Brand recommendations. 
+
+The goal of this package is to ease and speed up the creation of reports, presentation and website while promoting the UNHCR visual identity.
 
 .pull-left[
 
@@ -219,6 +259,15 @@ See also http://muschellij2.github.io/summerR_2015/modules/module12.html
 2. HTML to PDF paged reports
 3. Microsoft PowerPoint presentation
 4. HTML slides
+
+```{r eval=FALSE}
+# If pak is not yet installed, 
+# uncomment the following line:
+# install.packages("pak")
+
+pak::pkg_install("unhcr-dataviz/unhcrdown")
+```
+
 
 ]
 
@@ -254,14 +303,68 @@ knitr::include_graphics("img/reproducible_flow_r.svg")
 ```
 
 
- 
 ---
 
-##  Notebook for Data Insights  
+# Combine Rmarkdown with version control (Git) 
+
+&nbsp;
+
+![](img/git_versioning.png)
+
+
+???
+R. Fitzjohn (https://github.com/richfitz/reproducibility-2014)
+
+
+---
+
+
+## An efficient, fully reproducible workflow based on Rmarkdown and Git 
+
+![](img/git_collaboration.png)
+
+[K. Ram 2013](http://www.scfbm.org/content/8/1/7)
+
+
+
+
+---
+
+## Doing Reproducible Research 
+
 
 .pull-left[
 
-> Insight: The capacity to gain an accurate and deep understanding of someone or something
+1. Everything with a script: **avoid manual data manipulation**.
+
+2. Everything **within one directory** (Rstudio projects).
+    ![](img/projects.png)
+
+
+]
+
+.pull-right[
+
+3. Use **relative paths**: "data/dataset.csv" rather than "C:/Users/..."
+
+4. Use Rmarkdown to produce reports combining code and results.
+
+5. Record exact versions of software used.
+    - sessionInfo()
+    - checkpoint
+    - packrat
+    - etc
+
+]
+
+ 
+---
+
+##  Notebook: what for? Generate Data Insights  
+
+.pull-left[
+
+> __Insight__: The capacity to gain an accurate and deep understanding of someone or something
 
 Not all charts will emulate need for interpretation - the data analyst need to gemerate the one that can create __debates__.
 
@@ -271,7 +374,7 @@ Insights arive when a multifunctional team is able to explain __unexpected patte
 
 ]
 .pull-right[
-.img[![Eat the cake](img/story.png)] 
+.img[![](img/story.png)] 
 ]
 
 ???
@@ -282,7 +385,8 @@ Check the analysis repo: http://analysis.unhcr.org
 
 ---
 
-##   Notebook to communicate with data: Microsite 
+##  Notebook: what for? Generate Data Stories 
+
 .pull-left[
 <span style='font-size:30px;'>From __assumptions to evidence__ based statement</span>
 
@@ -296,7 +400,7 @@ Leverage Art Data Storytelling to:
 
 ]
 .pull-right[
-.img75[![Eat the cake](img/read.png)] 
+.img75[![](img/read.png)] 
 ]
 
 ???
@@ -305,17 +409,39 @@ See https://github.com/unhcr-americas/ageingonthemove/blob/main/README.md
 https://distill.pub/2020/communicating-with-interactive-articles/#applications-tab 
 Research Dissemination
 Conducting novel research requires deep understanding and expertise in a specific area. Once achieved, researchers continue contributing new knowledge for future researchers to use and build upon. Over time, this consistent addition of new knowledge can build up, contributing to what some have called research debt. Not everyone is an expert in every field, and it can be easy to lose perspective and forget the bigger picture. Yet research should be understood by many. Interactive articles can be used to distill the latest progress in various research fields and make their methods and results accessible and understandable to a broader audience.
-Opportunities
 
-    Engage and excite broader audience with latest research progress
-    Remove research debt, onboard new researchers
-    Make faster and clearer research progress 
 
-Challenges
 
-    No clear incentive structure for researchers
-    Little funding for bespoke research dissemination and communication
-    Not seen as a legitimate research contribution (e.g., to the field, or one's career) 
+---
+
+## Use microsite
+
+A microsite is a single web-page or a small cluster of web pages that exist separate from the organization main website and is used for specific campaign. To this regard a microsite can have its own domain or unique URL and a different and distinctive branding. Microsite can typically be built to highlight content from joint study and research process, following a data collection exercise.
+
+Well designed microsite allows to reduce cognitive load, i.e. the amount of working memory resources used to process a piece of information. The better designed is a message the more chances, people will retain it. In order to do that: 
+
+ * Highlight the main __call to action__ in the  microsite subtitle 
+ 
+ * Start with the main __recommendations__ to ensure the readers does not need to wait 10 minutes of reading to find out what the report message is... if not, drop out risk are high.... 
+ 
+ * Aim to be __minimalistic__: The [ideal length of an article](https://torquemag.io/2018/04/optimal-content-length/) should be between 1500 and 2500 characters, taking an average 7 minutes to read. 
+
+ * Have a 2 or 3 main __top level chapters__ max - avoid presenting content in too many chapter to minimize the cognitive cost for reader to absorb the content.  
+
+ * Minimize __overwhelming effects__ by avoiding putting [too many numbers](https://www.unhcr.org/innovation/wp-content/uploads/2018/02/InnovationYearInReview2017_web.pdf#page=21) to avoid [psychic numbing](https://www.arithmeticofcompassion.org/psychic-numbing)
+ 
+???
+
+https://github.com/unhcr-americas/ageingonthemove/edit/main/README.md 
+
+
+
+ * [Desperate journeys](https://www.unhcr.org/desperatejourneys/)
+ * [Families on the run](https://familiesontherun.org/)
+ * [Her Turn](https://www.unhcr.org/herturn/)
+ * [Stepping Up](https://www.unhcr.org/steppingup/)
+ * [Home Visit Report](https://unhcr-jordan.github.io/home-visit-report)
+
 
 
 ---
@@ -340,14 +466,18 @@ class: inverse, center, middle
 
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
 
+
+-> Next you can [learn to automatise your reports](09.Automate_generation.html)
+
 ---
 
-# Ressources
+# Resources
 
 
 .pull-left[
 
-- [Creating Reports and Presentations with R Markdown and RStudio](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa22015cc00003?type=9882927d138b100019b928e75843018d)
+
+Workday Training: [Creating Reports and Presentations with R Markdown and RStudio](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa22015cc00003?type=9882927d138b100019b928e75843018d)
 
 - [Rmarkdown by RStudio](http://rmarkdown.rstudio.com/)
 

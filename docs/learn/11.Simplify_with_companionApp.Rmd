@@ -41,7 +41,7 @@ When __Staff turn-over__ – everything needs to be recreated again ("author loc
 
 ## Field Capacity 
 
-Most field data experts (level 1) will never become scripts users, they need simple (or _simplified_) __point & click__ interfaces!
+Most field data experts (_level 1_) will never become scripts users for a series of good reasons (time, interest, coding ability). What they need in order to benefit from automation are simple (or _simplified_) __"point & click" / "no code"__ interfaces!
 
 ```{r eval=TRUE, echo=FALSE}
  
@@ -70,9 +70,9 @@ expert <- data.frame(
       Guestimated_proportion = c(
         ">80%",
         "<10%",
-        "±6%",
+        "±5%",
         "±3%",
-        "±1%" 
+        "±2%" 
       )
     ) 
 kableExtra::kbl(expert, format = 'html') |> 
@@ -604,39 +604,84 @@ This is what you should see
 
 ## Edit the home module
 
-Open  `R/`
+Open  `R/mod_home.R`, edit it as needed, in case the viewer is running, stop it first and then relaunch it with `golem::run_dev()` 
+
+![](img/edit_mod_home.png) 
 
   
 ---
 
-## Follow the guide: Let's add a module with to have an UI for our function
+## Follow the guide: Adding a module 
 
-Running the function `level_up(name = "my_first_module")` will add a new module - called "my_first_module" (rename it as you wish- trying to use a meaningful name) - to your dashboard 
+The function `level_up(name = "my_plotting_module")` will add a new module - called her `"my_plotting_module"` (rename it as you wish- trying to use a meaningful name) - to your dashboard. See the [module file here](https://github.com/Edouard-Legoupil/GravelerDemo/blob/master/R/mod_my_plotting_module.R)
+
+
+.pull-left[  
+Part of the module for __UI__
+
+![](img/my_plotting_module1.png) 
+
+]
+.pull-right[
+Part of the module for __Server__
+
+![](img/my_plotting_module2.png) 
+]
+???
+
+Do not forget to __stop your viewer__, in order to be able to run the next command! 
 
 You place your UI and server code in the mod file, that reflect away repeatable data manipulation or plotting functions created through your {fusen} notebook.
 
 In general, this helps keep your module code short and tidy, and allows you to put documentation for your functions just like a package.
 
-`level_up()` might create your module, but you still need to tell your dashboard to include and run this module. To do so, there are three lines at the bottom you copy and paste into their appropriate files: `body.R`, `app_server.R`, and `sidebar.R` (un-commented, of course).
-
-The body and sidebar lines need to be separated with commas if you have multiple modules, but the app_server will be individual lines.
 
 ---
 
-## Plug in the function
+## Follow the guide: Connect your module
 
+`level_up()` might create your module, but you still need to tell your dashboard to include and run this module. To do so, there are three lines at the bottom you copy and paste into their appropriate files: `body.R`, `sidebar.R` and `app_server.R`  (un-commented, of course). The body and sidebar lines need to be separated with commas if you have multiple modules, but the app_server will be individual lines.
+
+
+![](img/mod_copy.png) 
+
+---
+
+## Connect multiple modules together
 
 Once that is done, your modules should appear on the left. All that is left to do is to insert your actual dashboard elements.
 
 Typically communication between modules will be required if you want to use filters across modules.
 
-This imply to set a specific object reactivalues (called per default AppReactiveValue) that will be consumed by all your modules.
-
+This imply to set a specific `reactivalues()` object (called per default `AppReactiveValue`). It will be used a fuction parameters for all modules server functions.
 
 ---
 
 ## Follow the guide: Generate your application manifest
 
+
+`rsconnect::writeManifest()` is a function in R that generates a `manifest.json` file. 
+
+This file contains a list of all files in the app along with their dependencies. 
+
+Before creating the manifest, push all your files to github and re-install your package from there so the manifest can correctly reference all source for the package
+ 
+```{r eval=FALSE}
+install.packages("pak")
+## Change GITHUBACCOUNT & PACKAGENAME to fit your project
+pak::pkg_install("GITHUBACCOUNT/PACKAGENAME")
+```
+
+
+
+then run:
+
+
+```{r}
+rsconnect::writeManifest()
+```
+
+and commit the `manifest.json` to github
 
 ---
 
@@ -657,27 +702,56 @@ It will gather your dependencies, ensure the server has them installed, and then
 
 ## Publish via Github
 
-As a general approach, it is a good practice to keep a copy of your dashboard in github.
 
->  Be cautious with password and token - do not upload this in github. Password and token should rather be called as environement variables and set up separately after deployement in rstudio Connect
+.pull-left[  
 
-While more involved then simply clicking a button, git backed content will ensure your published works will align with your team’s codebase and allow others to collaborate easier. Earlier, we made a `manifest.json` file at the end of the `01_dev.R` file. This creates an “image” that RStudio looks for and reproduces from github directly.
+As a general approach, it is a good practice to keep a copy of your dashboard in github. __git backed content__ will ensure your published works will align with your team’s codebase and allow others to collaborate easier.
+
+Earlier, we made a `manifest.json` file at the end of the `01_dev.R` file. This creates an “image” that RStudio looks for and reproduces from github directly.
 
 To publish for the first time, you push your code to whichever repo and branch on github, then in RStudio Connect you click its blue, publish button. You then navigate to the repo and branch you just pushed to, find the manifest file. Just like before, it will gather your dependencies from the manifest, ensure the server has them installed, and then your dashboard will be viewable on RStudio Connect.
 
---- 
+]
+.pull-right[ 
+
+![](img/deploy_git.png) 
+]
+
+
+
+
+---
+
+## Et voila: https://rstudio.unhcr.org/gravelerDemo/
+
+Now you can define who shall access your app and git a deployment name
+
+
+![](img/deploy_posit.png) 
+
+
+---
 
 ## Good practices when publishing
 
-Beware of token and password - see above on the usage of environment variable
+.pull-left[  
+>  Be cautious with __password__ and __token__ - do not upload this in github. Password and token should rather be called as environement variables and set up separately after deployement in rstudio Connect
 
 Favor publication from github as much as possible. Build and publish your package documentation on github with pkgdown::build_site()
 
 Share publication access rights with colleagues so that there’s a back up plan to update the app if needed
 
-Once the application is published on the Posti Connect server, document the name of the github repo for your app within Rstudio Connect metadata and use a specific URL before disseminating the app
+Once the application is published on the Posit Connect server, document the name of the github repo for your app within Rstudio Connect metadata and use a specific URL before disseminating the app
 
-Do not hesitate to reach out to me for peer review! :)
+Do not hesitate to reach out for peer review! :)
+
+]
+.pull-right[ 
+
+![](img/environment_var.png) 
+]
+
+
   
 ---
 
@@ -713,15 +787,19 @@ class: inverse, center, middle
 
 ---
 
-## Ressources
+# Reference
 
- [Building Data Apps with R and Shiny: Essential Training](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf435c99f680004?type=9882927d138b100019b928e75843018d)
+Workday Training: 
+
+ *  [Building Data Apps with R and Shiny: Essential Training](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cf435c99f680004?type=9882927d138b100019b928e75843018d)
  
- [Creating Interactive Presentations with Shiny and R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195ced25308e8e0005?type=9882927d138b100019b928e75843018d)
+ *  [Creating Interactive Presentations with Shiny and R](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195ced25308e8e0005?type=9882927d138b100019b928e75843018d)
  
- [R: Interactive Visualizations with htmlwidgets](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa6c1cdad00001?type=9882927d138b100019b928e75843018d)
+ *  [R: Interactive Visualizations with htmlwidgets](https://wd3.myworkday.com/unhcr/learning/course/046437bef6c810195cfa6c1cdad00001?type=9882927d138b100019b928e75843018d)
+
+Documentation
  
- [getstarted/shiny-basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+ *  [getstarted/shiny-basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
  
- [production-grade-r-shiny-with-golem-prototyping](https://towardsdatascience.com/production-grade-r-shiny-with-golem-prototyping-51b03f37c2a9)
+ *  [Production-grade-r-shiny-with-golem-prototyping](https://towardsdatascience.com/production-grade-r-shiny-with-golem-prototyping-51b03f37c2a9)
 

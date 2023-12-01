@@ -297,12 +297,8 @@ Bug Fixes and Updates
   * Regularly fix reported bugs and update the package.  
   * Keep it compatible with new R releases and dependencies.  
 
-Manage environment variable within package  
 
-```{r eval=FALSE}
-# remotes::install_github("thinkr-open/checkhelper")
-checkhelper::print_globals()  
-```
+
 ]
 .pull-right[
 
@@ -313,6 +309,131 @@ The objective is to get a __triple-0__ !
 
 ]
  
+---
+
+## Common issues to fix: font  not found
+
+The package is not able to use UNHCR standard font __Lato__
+
+
+.pull-left[  
+ 
+```{r eval=FALSE}
+Warning in grid.Call(C_textBounds, 
+      as.graphicsAnnot(x$label), x$x, x$y,  :
+  font family 'Lato' not found in 
+  PostScript font database
+```
+
+Let's add the required font within your package / put them in a folder [`inst/font'](https://github.com/Edouard-Legoupil/graveler/tree/main/inst/extdata/inst/fonts)
+
+Then create a file [`R/load_font.R`](https://github.com/Edouard-Legoupil/GravelerDemo/blob/master/R/load_font.R) to load the font from your package when your package is loaded.
+
+]
+.pull-right[
+ 
+ 
+![](img/font_reg.png) 
+
+
+]
+ 
+
+
+
+
+
+
+---
+
+## Common issues to fix: NOTE Missing Import
+
+
+
+.pull-left[  
+
+```{r eval=FALSE}
+❯ Consider adding
+    importFrom("stats", "reorder")
+  to your NAMESPACE file.
+```
+]
+.pull-right[
+
+Revise all the function used in your function and make sure they are correctly referenced within the function documentation
+
+```{r}
+
+#' @importFrom stats reorder
+```
+
+]
+
+
+
+
+
+---
+
+## Common issues to fix: NOTE visible binding for global variable
+
+
+```{r eval=FALSE}
+❯ checking R code for possible problems ... NOTE
+  plot_top10_by_country_and_year: no visible binding for global variable
+    ‘coa_name’
+```
+
+Manage environment variable within package  with `{checkhelper}`
+
+```{r eval=FALSE}
+# remotes::install_github("thinkr-open/checkhelper")
+checkhelper::print_globals() 
+
+## save the output in globals.R
+globalVariables(unique(c(
+  # plot_top10_by_country_and_year: 
+  "coa_name", "coo_name", "oip", "refugees" 
+)))
+```
+
+---
+
+## Common issues to fix: WARNING: ASCII
+
+
+.pull-left[  
+
+```{r eval=FALSE}
+❯ checking R files for non-ASCII characters 
+   ... WARNING
+  Found the following file with 
+  non-ASCII characters:
+    
+    plot_top10_by_country_and_year.R
+  Portable packages must use only ASCII
+  characters in their R code,
+  except perhaps in comments.
+  
+  Use \uxxxx escapes for other characters.
+```
+
+
+```{r eval=FALSE}
+ "Source: Refugee Data Finder
+  <br>\u00a9 UNHCR, The UN Refugee Agency"  #<<
+```
+]
+.pull-right[
+
+![](img/prefixer.png) 
+
+]
+
+
+
+
+
 
 ---
 
@@ -446,6 +567,7 @@ __Production__
 https://unhcrverse.r-universe.dev/builds. You can submit a pull request to https://github.com/unhcRverse/unhcRverse.r-universe.dev to add your package.
 
 ![](img/unhcrverse.png) 
+
 ---
 
 

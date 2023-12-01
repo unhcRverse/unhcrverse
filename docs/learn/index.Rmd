@@ -26,17 +26,6 @@ knitr::opts_chunk$set(echo = TRUE,
  
 
  
-##  R for Surveys
-
-[The Survey Toolbox](04.SurveyToolbox.html)
-
- - Kobo Data Collection Management with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
- 
- - Kobo Survey Data Exploration with [`{KoboCruncher}`](https://edouard-legoupil.github.io/kobocruncher)
- 
- - Apply Indicator calculations for RMS] with [`{IndicatorCalc}`](https://unhcr-americas.github.io/IndicatorCalc/tutorial/index.html)
- 
- 
 ##   R for Reporting
  
  - "Work as a Team": Collaboration through [Version Control](07.VersionControl.html) on Github. 
@@ -56,4 +45,15 @@ knitr::opts_chunk$set(echo = TRUE,
  - Building [Severity Composite Index](12.Composite_Indicator.html): an overview of [`{A2SIT}`](https://rstudio.unhcr.org/SeverityIndex/)
  
   
+ 
+ 
+##  R for Surveys
+
+[The Survey Toolbox](04.SurveyToolbox.html)
+
+ - Kobo Data Collection Management with [`{HighFrequencyChecks}`](https://edouard-legoupil.github.io/HighFrequencyChecks) 
+ 
+ - Kobo Survey Data Exploration with [`{KoboCruncher}`](https://edouard-legoupil.github.io/kobocruncher)
+ 
+ - Apply Indicator calculations for RMS] with [`{IndicatorCalc}`](https://unhcr-americas.github.io/IndicatorCalc/tutorial/index.html)
  

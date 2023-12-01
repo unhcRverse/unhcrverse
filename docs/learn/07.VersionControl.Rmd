@@ -389,8 +389,16 @@ Benefits of Submitting Issues:
 
 ---
 
-## use Gthub as a webserver
+## Setting / Github as a webserver
 
+.pull-left[  
+
+![](img/githubwebsite1.png)
+  
+]
+.pull-right[
+![](img/githubwebsite.png)
+]
 
 
 ---
@@ -452,6 +460,9 @@ class: inverse, center, middle
 
 
 <a href="index.html"><i class="fa fa-indent  fa-fw fa-2x"></i></a>
+
+
+-> Next you can [learn to use Report Template](08.Template_Report.html)
 
 ---
 

@@ -316,11 +316,12 @@ https://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repeti
 
 .pull-left[
 
-Reproducible Research Repository from World Bank
+> Reproducibility is the first requirement for __replicability__
 
+Reproducible Research Repository from World Bank. 
 https://reproducibility.worldbank.org/ 
 
-> Publishing reproducibility packages allow all consumers of research to fully scrutinize the data and methodological choices underlying research results. Sharing data and code also democratizes development research by allowing others to replicate, build on, and extend research findings. Together, scrutiny and sharing improve the credibility, transparency and ultimately the impact of World Bank research. 
+"Publishing reproducibility packages allow all consumers of research to fully scrutinize the data and methodological choices underlying research results. Sharing data and code also democratizes development research by allowing others to replicate, build on, and extend research findings. Together, scrutiny and sharing improve the __credibility__, transparency and ultimately the impact of World Bank research. "
 
 ]
 .pull-right[
@@ -329,7 +330,17 @@ https://reproducibility.worldbank.org/
 
 
 ???
- 
+Opportunities
+
+    Engage and excite broader audience with latest research progress
+    Remove research debt, onboard new researchers
+    Make faster and clearer research progress 
+
+Challenges
+
+    No clear incentive structure for researchers
+    Little funding for bespoke research dissemination and communication
+    Not seen as a legitimate research contribution (e.g., to the field, or one's career)  
 
 
 ---
@@ -512,6 +523,21 @@ class: inverse, center, middle
 
 [post Feedback here](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D) 
 ->  [next sesssion: 02.Tidyverse](02.Tidyverse.html)
+
+
+---
+ 
+
+# Reference
+
+[World Bank DIME](https://dimewiki.worldbank.org/Reproducible_Research)
+
+[Reproducible Analytical Pipelines(RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+
+[Oxford](https://researchdata.ox.ac.uk/reproducible-research-resources-from-around-the-web)
+
+[Open Science Mooc](https://opensciencemooc.eu/modules/reproducible-research-and-data-analysis/)
+
 
 ---
 
