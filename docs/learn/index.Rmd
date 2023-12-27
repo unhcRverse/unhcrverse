@@ -1,6 +1,6 @@
 ---
 title: "UnhcrRverse"
-subtitle: "An intro to UNHCR R Packages [Universe](https://unhcrverse.r-universe.dev/builds)"
+subtitle: "An introduction to R for UNHCR colleagues."
 output:
   unhcrdown::html_page:
     toc: true
@@ -16,38 +16,55 @@ knitr::opts_chunk$set(echo = TRUE,
                       dpi = 300)
 ```
 
-##  Basics of R
+Welcome to this comprehensive self-study material designed to cater to various learner profiles in at first understanding, then using and last mastering R statistical language. Each presentation is designed as a micro-learning session: feel free to ask any [question in the issue tracking system](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D). 
 
- - An introduction to [Analysis Reproducibility](01.Reproducibility)
+As UNHCR staff, note that the content shared here is designed as an induction and not as an official certification that will then appear in your personal professional profile. For certification, please refer to the corresponding workday training. Workday Training are referenced, when relevant, in the last slide of each presentation.
 
- - Data [Manipulation and Visualization](02.Tidyverse.html) using [`{refugees}`](https://populationstatistics.github.io/refugees/) & [`{unchrthemes}`](https://unhcr-dataviz.github.io/unhcrthemes/)
- 
- - From [Scripts to Functions](03.Functions.html): An illustration with [`{unhcrplot}`](https://edouard-legoupil.github.io/unhcrdatapackage/), access data through API with [`{robotoolbox}`](https://dickoa.gitlab.io/robotoolbox/), [`{rhdx}`](http://dickoa.gitlab.io/rhdx/), [`{riddle}`](https://edouard-legoupil.github.io/riddle/), [`{popdata}`](https://edouard-legoupil.github.io/popdata/), [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
+## <span style='font-size:20px; color:grey;'>Level 1: </span>Foundation - R for Reproducibility
+
+At the foundational 1st level, participants will gain a solid understanding of what R is and why to it. Without entering into "scripts", you will understand what you can gain to use apps created with R or to nudge your team to work through R scripts, functions and packages.
+
+> An introduction to [Analysis Reproducibility](01.Reproducibility)
+
+## <span style='font-size:20px; color:grey;'>Level 2: </span>Using R scripts - Data Manipulation & Visualisation
+
+Moving on to the 2nd level, learners should acquire skills in data manipulation and visualization within R scripts, empowering them to uncover insights from diverse datasets.
+
+> Data [Manipulation and Visualization](02.Tidyverse.html) using [`{refugees}`](https://populationstatistics.github.io/refugees/) & [`{unchrthemes}`](https://unhcr-dataviz.github.io/unhcrthemes/)
+
+
+## <span style='font-size:20px; color:grey;'>Level 3: </span>R for Productivity - Functions & Reports
+
+Progressing to the __3rd level__, participants will delve into the first stage of automation, learning the effective use of functions, enhancing their ability to streamline and automate data analysis tasks, leveraging the power of R Markdown for creating dynamic reports, facilitating clear and reproducible communication of analytical findings
+
+> From [Scripts to Functions](03.Functions.html): An illustration with [`{unhcrplot}`](https://edouard-legoupil.github.io/unhcrdatapackage/), access data through API with [`{robotoolbox}`](https://dickoa.gitlab.io/robotoolbox/), [`{rhdx}`](http://dickoa.gitlab.io/rhdx/), [`{riddle}`](https://edouard-legoupil.github.io/riddle/), [`{popdata}`](https://edouard-legoupil.github.io/popdata/), [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
  
 
+> "Work as a Team": Collaboration through [Version Control](07.VersionControl.html) on Github. 
  
-##   R for Reporting
+> Build data pipeline with [Report Template](08.Template_Report.html) with [`{unhcrdown}`](https://unhcr-dataviz.github.io/unhcrdown/) to set up reproducible analysis pipeline
  
- - "Work as a Team": Collaboration through [Version Control](07.VersionControl.html) on Github. 
- 
- - Build wth [Report Template](08.Template_Report.html) with [`{unhcrdown}`](https://unhcr-dataviz.github.io/unhcrdown/) to set up reproducible analysis pipeline
- 
- - [Analysis Automation Tips](09.Automate_generation.html)  with [Posit Connect](http://rstudio.unhcr.org): An example with [weekly report](https://github.com/unhcr-americas/weekly-report) 
- 
- 
- 
-##  R for Processes 
- 
- - [Package your knowledge](10.Package_Knowledge.html): Development, Documentation & Testing with [`{fusen}`](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal}](https://edouard-legoupil.github.io/unhcrdataportal/)
- 
- - Create [Shiny Companion App](11.Simplify_with_companionApp.html) with [`{Graveler}`](https://edouard-legoupil.github.io/graveler/) 
- 
+> [Analysis Automation Tips](09.Automate_generation.html)  with [Posit Connect](http://rstudio.unhcr.org): An example with [weekly report](https://github.com/unhcr-americas/weekly-report) 
+
+
+## <span style='font-size:20px; color:grey;'>Level 4: </span>R for Knowledge Management - Develop Packages
+
+The 4th level focuses on creating R packages, fostering a deeper understanding of code organization and sharing solutions across the R community.  
+
+> [Package your knowledge](10.Package_Knowledge.html): Development, Documentation & Testing with [`{fusen}`](https://thinkr-open.github.io/fusen), illustrated with [{unhcrdataportal}](https://edouard-legoupil.github.io/unhcrdataportal/)
+
+
+## <span style='font-size:20px; color:grey;'>Level 5: </span>R for Process Dissemination - Develop Companion App
+
+Finally, at the advanced 5th level, participants will embark on the journey of creating compnion app to deliver the power of R to less technical users
+
+>  Create [Shiny Companion App](11.Simplify_with_companionApp.html) with [`{Graveler}`](https://edouard-legoupil.github.io/graveler/) 
+
+## <span style='font-size:20px; color:grey;'>Use Case 1: </span>R for Composite Indicators
+
  - Building [Severity Composite Index](12.Composite_Indicator.html): an overview of [`{A2SIT}`](https://rstudio.unhcr.org/SeverityIndex/)
  
-  
- 
- 
-##  R for Surveys
+## <span style='font-size:20px; color:grey;'>Use Case 2: </span>R for Household Surveys 
 
 [The Survey Toolbox](04.SurveyToolbox.html)
 

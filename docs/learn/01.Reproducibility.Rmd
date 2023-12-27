@@ -15,13 +15,11 @@ output:
 
 # Learning objectives
 
+- Understand what is "analysis reproducibility" and you can gain from it. 
 
+- Know what are the main technical requirements for an analysis piece to be reproducible... 
 
-- Understand what you can gain from analysis reproducibility. 
-
-- Know what the main technical requirements are to set up for their analysis to be reproducible. 
-
-- Have a demonstration of a practical way to make a cake using household survey data: crunching, analysis & interpretation & data stories! 
+- Get an idea of how to implement this concept in your work!
 
 
 
@@ -84,7 +82,7 @@ The best way to start and learn is to have a concrete project! If you have one a
 ---
 
 
-## Data Science is like cooking
+## Data Science is like... Cooking!
 
 .pull-left[
 
@@ -125,13 +123,13 @@ You can’t become a great cook overnight.
 
 ---
 
-## Information Anxiety  & Analysis paralysis
+## Information Anxiety...  Analysis paralysis...
 
-<span style='font-size:30px;'> _When people do not want to eat the cake..._ </span>
+<span style='font-size:30px;'> _When people do not eat the cake..._ </span>
 
 .pull-left[
 
-Potential source of reluctance...
+Potential sources of reluctance...
 
  *  I do not know how to eat it: I see all those elements on it without being able to understand why they were added there and how this works...
  
@@ -139,7 +137,9 @@ Potential source of reluctance...
  
  *  This is not the cake I need! It looks too heavy & too big: I will not be able to digest it... 
  
- *  I am not hungry and do not even know what cake I want... 
+ *  I do not even know what cake I want... 
+ 
+__In data science, the equivalent of food safety measures are required....__ 
 
 ]
 .pull-right[
@@ -150,24 +150,416 @@ Potential source of reluctance...
 simple data visualization for decision making or complex patterns interpretation for knowledge building
 
 ---
+
+## The Reproducible Research Manisfesto
+
+.left-column[
+
+![](img/phd031214s.png)
+]
+
+.right-column[ 
+
+Safety measures to implement for data analysis:
+ 
+ 1. For every result, **keep track** of how it was produced
+
+ 2. **Avoid manual data manipulation** steps
+
+ 3. **Archive** the exact versions of all external programs used
+
+ 4. **Version control** all custom scripts
+
+ 5. **Record all intermediate results**, when possible in standardized formats
+
+ 6. For analyses that include randomness, **note underlying random seeds**
+
+ 7. Always **store raw data** behind plots
+
+ 8. Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
+
+ 9.  Connect **textual statements** to underlying results
+
+ 10. Provide **public access** to scripts, runs, and results
+
+]
+
+???
+
+
+More on reproducible analysis [here](https://ropensci.github.io/reproducibility-guide/sections/introduction/)
+
+
+---
+
+##   From _"point-and-click"_ to _"code & script"_
+
 .pull-left[
 
-## Data Products: When What? 
+_"point-and-click"_ refers to user interactions made solely by selecting options directly with a mouse within a graphical interface, without keeping any written records... 
 
-<span style='font-size:30px;'> Dashboard are relevant for displaying KPIs! (_like when you drive your car..._)</span>
+A __script__ is a set of written code instructions that automates a series of orchestrated tasks.
 
-> Key Performance Indicators (KPIs) are indicators specificlly designed to show progress toward an intended result, i.e a predefined __target__
+Using the right combination of packages, all necessary data analysis steps can be recorded into scripts.
 
-> Create an analytical basis for __decision making__, aka Business Intelligence 
+ * Data management (_clean, recode, merge, reshape_)
 
-> Help focus attention of Snr Management on what matters most - a good dashbaord needs to be __concise__ 
+ * Data analysis (_test, regression, multivariate analysis, etc..._)
+ 
+ * Data visualization (_plot, map, graph..._)
+
+ * Writing up results (_report and presentation generation_)
+ 
+
+ 
+]
+
+.pull-right[ 
+
+![](img/analysis.png)
+
+
+]
+
+
+---
+
+## __So what working language to use to write scripts?__
+
+
+<span style='font-size:30px;'> R, the _lingua franca_ for Statistical Analysis </span>
+
+
+
+.pull-left[
+
+R is a programming language and a software environment for statistical computing and graphics. The first version of R has been released in 1997!
+
+The capabilities of R are extended through user-created packages, which allow specialized statistical techniques, graphical devices, import/export capabilities, reporting tools. 
+
+Engineers tend to use Python over R, but R remains the preferred language of statisticians who needs latest techniques & Algorithm.
+
+R can also be compared to proprietary statistical software such as Stata or SPSS but has the advantage of being totally free to install & use. 
+]
+
+.pull-right[ 
+
+![](img/language.png)
+ 
+
+]
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Why we need to work in a reproducible way? 
+
+### Quality, Ethics, Productivity, Credibility & Learning
+
+---
+
+## Quality
+
+
+.pull-left[
+
+![](img/exhausted.png) 
+]
+
+.pull-right[ 
+
+
+__IF__ When managing numerous analysis and continuously changing dataset:
+ * Data are manipulated through "point-and-click" user interfaces!
+ * Data are exported / imported from a software to another (Excel, GIS, Word...) using different formats!
+ * All results (figures, tables) are manually copied/pasted to the final publishing system...
+
+> It consumes time and open space for errors...
+
+
+A scripted approach enables per design quality review by Peers. If an error is identified, it can quickly be fixed without re-doing everything...
+
+]
+
+
+
+
+---
+
+## Ethics: Science is '_show me_' - not '_trust me_'  
+.pull-left[
+
+<span style='font-size:30px;'>Reproducibility allows for __peer review__</span>
+ 
+ Peer Review allows for __transparency__
+ 
+ Transparency allows for __scrutinity__
+
+ Scrutinity allows for __accountability__
+ 
+ > _It's okay to make mistakes, as long as one can detect them and that we can learn from them..._ 
+
+]
+.pull-right[
+.img60[![Eat the cake](img/ethics.jpeg)] 
+]
+
+???
+Ethical principles into algorithmic design - would apply as well when designing household vulnerability scoring formula to inform humanitarian targeting - https://www.hum-dseg.org/sites/default/files/2020-10/Framework%20for%20the%20ethical%20use.pdf
+
+---
+
+## Productivity: getting things done quickly and safely!  
+
+.pull-left[
+
+<span style='font-size:30px;'>Automation through functions & scripts can help skipping __repetitive tasks__</span>
+
+> Tasks that involve recurrent __data manipulation__ are undertaken by teams...
+> .. but not everyone in the team needs to be a __geek/coder__! 
+
+When enough investment can be made, __Graphical User Interface__ (GUI) can be developed for specific functions to ease the learning curve of new users while they are still in the process of building up their personal R skills.
+
+]
+.pull-right[
+.img130[![Automate](img/alternate-view-of-automation.png)] 
+]
+???
+https://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/
+
+
+---
+
+## Credibility: Following best practices
+
+.pull-left[
+
+> Reproducibility is the first requirement for __replicability__
+
+Reproducible Research Repository from World Bank. 
+https://reproducibility.worldbank.org/ 
+
+"Publishing reproducibility packages allow all consumers of research to fully scrutinize the data and methodological choices underlying research results. Sharing data and code also democratizes development research by allowing others to replicate, build on, and extend research findings. Together, scrutiny and sharing improve the __credibility__, transparency and ultimately the impact of World Bank research. "
+
+]
+.pull-right[
+![](img/definitions.jpg)
+]
+
+
+???
+Opportunities
+
+    Engage and excite broader audience with latest research progress
+    Remove research debt, onboard new researchers
+    Make faster and clearer research progress 
+
+Challenges
+
+    No clear incentive structure for researchers
+    Little funding for bespoke research dissemination and communication
+    Not seen as a legitimate research contribution (e.g., to the field, or one's career)  
+
+---
+
+## Learning with a community! 
+
+.pull-left[
+
+Eat the cake first! (then play with and change ingredients...)
+
+<span style='font-size:40px;'>In other words, Identify a published reproducible project similar to what you would like to do, then __reverse engineer it__ and finally rebuild it with your own data!</span>
+
+]
+.pull-right[
+
+Which approach is the most appealing exercise among the 2 proposed aside?!! (a) or (b)
+
+.img[![Eat the cake](img/learn.png)] 
+]
+???
+https://speakerdeck.com/player/078592d490ae459790af7e77695fafcf?title=false&skipResize=true
+
+
+
+---
+
+class: center, middle, inverse
+
+# Conditions for reproducibility. 
+
+### Sourcing data,  documenting analysis & packaging output
+
+
+
+ 
+---
+
+
+
+## Sourcing data
+
+.pull-left[
+Data Wrangling takes usually more than 80% of any data project time...
+
+Imagine if you need to rewind your analysis...
+
+Correct at any steps in the process and re-run all..
+
+]
+.pull-right[
+.img[![Eat the cake](img/data-science-wrangle.png)] 
+]
+
+
+---
+
+## Documenting analysis
+
+.img[![Eat the cake](img/tips.jpg)] 
+
+
+---
+
+## Packaging functions  
+
+.pull-left[
+
+Gradual automation
+
+ * level 1: write a command
+ * level 2: organize multiple command together in re-usable function
+ * Level 3: organize multiple functions together in a package
+ * Level 4: includes test data, Documentation & Unit testing, aka code review</span> 
+ * Level 5: <span style='font-size:30px;'>Graphical User Interface (GUI) with Shiny</span> 
+]
+.pull-right[
+.img75[![Eat the cake](img/package.png)] 
+]
+
+
+
+---
+
+class: center, middle, inverse
+
+# How to get started?
+
+### Define your product, build your first project, Review documentation, Participate in the community
+
+
+---
+.pull-left[
+
+## Data Products: Not always a _dashboard_...
+
+<span style='font-size:20px; color:grey;'> When you drive your car, you dashboard provides decision-focused information (_Key Performance Indicators - KPIs_), to support decisions (_refill the tank, decelerate..._) based on pre-existing knowledge (_the driver has already a license..._))</span>
+
+>  When you need to build knowledge (rather than to support directly decision), then opt for a __notebook__ approach
+
+A __notebook__ in the context of data analysis is a dynamic digital document that combines code, visualizations, and explanatory text in a user-friendly interface. It serves as an interactive platform to analyze and share insights from data, fostering collaboration and enhancing the transparency of analytical workflows.
+
 ]
 .pull-right[ 
 
 
+```{r  echo=FALSE, out.width='100%',  message=FALSE, warning=FALSE}
+library(ggplot2)
+library(ggtext) 
+
+ggplot(NULL, aes()) +
+  # fix the scale so it's always a square
+  coord_fixed() +
+  # set the scale to one greater than 0-10 in each direction
+  # this gives us some breating room and space to add some arrows
+  scale_x_continuous(expand = c(0, 0), limits = c(-1, 11),
+                     breaks = c(2,8), labels=c("2" = "", "8" = "")) +
+  scale_y_continuous(expand = c(0, 0), limits = c(-1,11),
+                     breaks = c(2,8), labels=c("2" = "", "8" = "")) +
+  # labels
+  labs(title = '"*It is not enough to do your best; you must know what to do, and then do your best.*"<br>  W. Edwards Deming',
+       x = "How you do it? Control if you are doing things right<br> Use a <span style='color:black;'>**Business Intelligence Dashboard**</span> to measure Key Performance Indicators",
+       y = "What you do? Evaluate if you are doing the right things<br> Use <span style='color:black;'>**Data Science Notebook**</span> to build Knowledge") +
+  # create the quadrants
+  geom_segment(aes(x = 10, y = 0, xend = 10, yend = 10)) +
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 10)) +
+  geom_segment(aes(x = 0, y = 0, xend = 10, yend = 0)) +
+  geom_segment(aes(x = 0, y = 5, xend = 10, yend = 5)) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 10)) +
+  geom_segment(aes(x = 0, y = 10, xend = 10, yend = 10)) +
+  # quadrant labels
+ 
+  annotate(geom='richtext', x = 2.5, y = 2.5, alpha = 0.35,
+           size = 15,
+           #hjust = 1, vjust = 1,
+           # remove label background and outline
+           fill = NA, label.color = NA,
+           # remove label padding, since we have removed the label outline
+           label.padding = grid::unit(rep(0, 4), "pt") , 
+           label = "<span style='color:#EF4A60;'>Wrong</span><br> Things<br> <span style='color:#EF4A60;'>Wrong</span>") +
+  annotate(geom='richtext', x = 2.5, y = 7.5, alpha = 0.35,
+           size = 15,
+          # hjust = 1, vjust = 1,
+           # remove label background and outline
+           fill = NA, label.color = NA,
+           # remove label padding, since we have removed the label outline
+           label.padding = grid::unit(rep(0, 4), "pt") , 
+           label = "<span style='color:#0072BC;'>Right</span><br> Things<br> <span style='color:#EF4A60;'>Wrong</span>") +
+  annotate(geom='richtext', x = 7.5, y = 2.5, alpha = 0.35,
+           size = 15,
+          # hjust = 1, vjust = 1,
+           # remove label background and outline
+           fill = NA, label.color = NA,
+           # remove label padding, since we have removed the label outline
+           label.padding = grid::unit(rep(0, 4), "pt") , 
+           label = "<span style='color:#EF4A60;'>Wrong</span><br> Things<br> <span style='color:#0072BC;'>Right</span>") +
+  annotate(geom='richtext', x = 7.5, y = 7.5, alpha = 0.35,
+           size = 15,
+          # hjust = 1, vjust = 1,
+           # remove label background and outline
+           fill = NA, label.color = NA,
+           # remove label padding, since we have removed the label outline
+           label.padding = grid::unit(rep(0, 4), "pt") , 
+           label = "<span style='color:#0072BC;'>Right</span><br> Things<br><span style='color:#0072BC;'>Right</span>") +
+  # arrows are cut in half which conveniently matches the gartner one
+  annotate("segment", x = 0, xend = 10, y = -1, yend = -1,colour = "grey",
+           size=2, alpha=1, arrow=arrow(type = "closed", angle = 15)) +
+  annotate("segment", x = -1, xend = -1, y = 0, yend = 10, colour = "grey",
+           size=2, alpha=1, arrow=arrow(type = "closed", angle = 15)) +
+  unhcrthemes::theme_unhcr() +
+  theme(                              
+    plot.background = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(), 
+    panel.background = element_blank(),
+    
+    axis.title.x = element_textbox_simple(
+      #orientation = "left-rotated",
+      width = grid::unit(5.5, "in"),
+      size = 15,
+      hjust = 0 ),
+    axis.title.y = element_textbox_simple(
+      orientation = "left-rotated",
+      width = grid::unit(5.5, "in"),
+      size = 15,
+      hjust = 0 ),
+    
+    plot.title = element_textbox_simple(
+      size = 14, lineheight = 1, padding = margin(0, 0, 5, 0)
+    ),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.y = element_text(angle = 90)
+  )
+```
 
 
-```{r echo=FALSE, out.width='100%',  message=FALSE, warning=FALSE}
+```{r , eval = FALSE, echo=FALSE, out.width='100%',  message=FALSE, warning=FALSE}
 #install.packages('DiagrammeR')
 # /* https://mermaid-js.github.io/mermaid/#/flowchart */
 # https://mermaid-js.github.io/mermaid-live-editor/edit
@@ -252,150 +644,12 @@ grViz("
 
 
 ???
- 
----
-
-class: center, middle, inverse
-
-# Why we need to work in a reproducible way? 
-
-### Ethics, Productivity, Learning
+https://towardsdatascience.com/dashboards-are-dead-b9f12eeb2ad2 
 
 
 ---
 
-## Ethics: Science is '_show me_' - not '_trust me_'  
-.pull-left[
-
-<span style='font-size:30px;'>Reproducibility allows for __peer review__</span>
- 
-
- 
- 
- Peer Review allows for __transparency__
- 
- Transparency allows for __scrutinity__
- 
- 
- Scrutinity allows for __accountability__
- 
- > _It's okay to make mistakes, as long as one can detect them and that we can learn from them..._ 
-
-]
-.pull-right[
-.img60[![Eat the cake](img/ethics.jpeg)] 
-]
-
-???
-Ethical principles into algorithmic design - would apply as well when designing household vulnerability scoring formula to inform humanitarian targeting - https://www.hum-dseg.org/sites/default/files/2020-10/Framework%20for%20the%20ethical%20use.pdf
-
----
-
-## Productivity: getting things done quickly and safely!  
-
-.pull-left[
-
-<span style='font-size:30px;'>Automation through functions & scripts can help skipping __repetitive tasks__</span>
-
-> Tasks that involve recurrent __data manipulation__ are undertaken by teams...
-> .. but not everyone in the team needs to be a __geek/coder__! 
-
-When enough investment can be made, __Graphical User Interface__ (GUI) can be developed for specific functions to ease the learning curve of new users while they are still in the process of building up their personal R skills.
-
-]
-.pull-right[
-.img130[![Automate](img/alternate-view-of-automation.png)] 
-]
-???
-https://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/
-
-
----
-
-## Credibility: Following best practices
-
-.pull-left[
-
-> Reproducibility is the first requirement for __replicability__
-
-Reproducible Research Repository from World Bank. 
-https://reproducibility.worldbank.org/ 
-
-"Publishing reproducibility packages allow all consumers of research to fully scrutinize the data and methodological choices underlying research results. Sharing data and code also democratizes development research by allowing others to replicate, build on, and extend research findings. Together, scrutiny and sharing improve the __credibility__, transparency and ultimately the impact of World Bank research. "
-
-]
-.pull-right[
-![](img/repro_WB.png)
-]
-
-
-???
-Opportunities
-
-    Engage and excite broader audience with latest research progress
-    Remove research debt, onboard new researchers
-    Make faster and clearer research progress 
-
-Challenges
-
-    No clear incentive structure for researchers
-    Little funding for bespoke research dissemination and communication
-    Not seen as a legitimate research contribution (e.g., to the field, or one's career)  
-
-
----
-
-## An R-Community geared towards learning 
-
-.pull-left[
-
-Which approach is the most appealing exercise among the 2 proposed aside?!! 
-
-<span style='font-size:40px;'>Start from an end-product and __reverse engineer it__!</span>
-
-Eat the cake first!  (then play with and change ingredients...)
-]
-.pull-right[
-.img[![Eat the cake](img/learn.png)] 
-]
-???
-https://speakerdeck.com/player/078592d490ae459790af7e77695fafcf?title=false&skipResize=true
-
----
-
-class: center, middle, inverse
-
-# Conditions for reproducibility. 
-
-### Sourcing data,  documenting analysis, & packaging output
-
----
-
-## Preparing data
-
-.pull-left[
-Data Wrangling takes usually more than 80% of any data project time...
-
-Imagine if you need to rewind your analysis...
-
-Correct at any steps in the process and re-run all..
-
-]
-.pull-right[
-.img[![Eat the cake](img/data-science-wrangle.png)] 
-]
-
-
----
-
-## Documenting analysis
-
-.img[![Eat the cake](img/tips.jpg)] 
-
-
----
-
-### Search, Test, Try...
+### Get and initial project.. then Search, Test, Try...
 
 .pull-left[
 
@@ -418,24 +672,6 @@ Join forum like [Inter-Agency R skype group](https://join.skype.com/qYBKC5q3wKp4
 ]
 
 
----
-
-## Packaging functions  
-
-.pull-left[
-
-Gradual automation
-
- * level 1: write a command
- * level 2: organize multiple command together in re-usable function
- * Level 3: organize multiple functions together in a package
- * Level 4: includes test data, Documentation & Unit testing, aka code review</span> 
- * Level 5: <span style='font-size:30px;'>Graphical User Interface (GUI) with Shiny</span> 
-]
-.pull-right[
-.img75[![Eat the cake](img/package.png)] 
-]
-
 
 ---
 
@@ -444,9 +680,9 @@ Gradual automation
 
 <span style='font-size:50px;'>You are not alone</span>
 
-> More than 450 users from multiple organisation in the [humanitarian-useR-group](https://humanitarian-user-group.github.io/)
+> More than 580 users from multiple organisation in the [humanitarian-useR-group](https://humanitarian-user-group.github.io/) [skype forum](https://join.skype.com/qYBKC5q3wKp4)
 
-> Around already ≈20 R champions within UNHCR  vs more than 420 PowerBI Pro users
+> Already many R champions within UNHCR  
 
 > Try to start by using existing UNHCR packages and start from a project you can reproduce
 
@@ -455,61 +691,10 @@ Gradual automation
 .img[![Eat the cake](img/Group.png)] 
 ]
 
----
-
-## The Reproducible Research Manisfesto
-
- 1. For every result, **keep track** of how it was produced
-
- 2. **Avoid manual data manipulation** steps
-
- 3. **Archive** the exact versions of all external programs used
-
- 4. **Version control** all custom scripts
-
- 5. **Record all intermediate results**, when possible in standardized formats
-
- 6. For analyses that include randomness, **note underlying random seeds**
-
- 7. Always **store raw data** behind plots
-
- 8. Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
-
- 9.  Connect **textual statements** to underlying results
-
- 10. Provide **public access** to scripts, runs, and results
-
----
-
-##   From "click" to "script"
-
-.pull-left[
-
-Using the right combination of packages, you can integrate all necessary data analysis steps into **scripts**:
 
 
- * Data management (clean, recode, merge, reshape)
 
- * Data analysis (test, regression, multivariate analysis, etc...)
- 
- * Data visualisation (plot, map, graph...)
 
- * Writing up results (report and presentation generation)
-]
-
-.pull-right[ 
-
-![](img/analysis.png)
-
-More on reproducible analysis [here](https://ropensci.github.io/reproducibility-guide/sections/introduction/)
-
-]
-
----
-
-## Save time and minimize space for errors...
-
-![](img/exhausted.png)
 
 ---
 class: inverse, center, middle

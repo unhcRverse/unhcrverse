@@ -437,6 +437,8 @@ Other Org
  * [REACH IMPACT](https://github.com/impact-initiatives)
  
  * [DHS](https://github.com/DHSProgram/)
+ 
+ * [DFID](https://github.com/DFID/dfid-results-estimates)
 
 > Before any project you have in mind, start with a [search in github](https://github.com/search?q=unhcr+language%3AR&type=repositories&l=R) in order to avoid building from scratch!!!
 
