@@ -77,7 +77,8 @@ An Example of a __Function__
 
 ```{r}
 
-# Smae: calculate the mean of a numeric vector
+# Same: calculate the mean of a numeric vector
+# Here we put an existing function  mean into a function
 calculate_mean <- function(data) {
   mean_value <- mean(data)
   return(mean_value)
@@ -110,7 +111,7 @@ A function is a block of code that performs a specific task and can be called fr
 
 A script is executed as a series of commands, while a function is executed when it is called by other parts of the code: in other words, functions __encapsulate__ code into reusable units.
 
-Parameters allow customization of function behavior, this means you can get your function to __scale up__ to different context, which makes your 
+Parameters allow customization of function behavior, this means you can get your function to __scale up__ to different context, which makes your code adaptable and re-usable.
 
 
 ]
@@ -453,12 +454,12 @@ plot_top10_by_country_and_year( year = 2022,
 
 ---
 
-## Now I can share my function!
+## I can share my function!
 
 
 .pull-left[
 
-It becomes now easy to re-use my function in another operation....
+Now, it is a lot easier to re-use my function for another operation....
 
 ```{r eval=FALSE}
  
@@ -547,10 +548,11 @@ Advanced Features
   
 ---
 
-## How to access data - beside uisng data embedded in a package like {refugees}
+## How to access data - beside using data embedded in a package like {refugees}
 
+A functions can manage the conversion from raw data to a visual output. But how can I get data into my function? 
 
-Through file import
+Through file import:
 
 
  * from Excel file - [`readxl`](https://readxl.tidyverse.org/)
@@ -560,7 +562,7 @@ Through file import
  * from File generated with other statistical software using  [`haven`](https://haven.tidyverse.org/)
 
 
-Through API
+Through API:
 
  * [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
  
@@ -626,6 +628,6 @@ Documentation
  
 ---
 
-# Exercise
+# Exercise 
 
 Use any chart your previously created and turn it into a function with parameters

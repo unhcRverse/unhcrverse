@@ -88,7 +88,7 @@ kableExtra::kbl(expert, format = 'html') |>
 
 ## Why Shiny?
 
-Shiny is __Graphical User Interface Framework__ designed to interact with back-office functions written in R Statistical Computing Language. It allows you to turn your R code into interactive web apps without the need for web development skills. 
+Shiny is __Graphical User Interface Framework__ designed to interact with back-office functions written in R Statistical Computing Language (and now also [python](https://shiny.posit.co/py/)). It allows you to turn your R/Python code into interactive web apps without the need for web development skills. 
 
 Allow for sophisticated data interactions(beyond simple visualization or content filtering...) for __end-users without advanced technical knowledge__ (no need to install Rstudio!) 
 
@@ -423,6 +423,8 @@ As any development team grows larger, it is important to standardize code to avo
 
 
 .pull-left[  
+
+Setting up a simple Shiny app is easy enough, but setting up a Shiny app that is scalable and still runs smoothly and fast is a completely different ballgame:
 
 __Scope Creep__: too wide or to restricted or not clear..
 

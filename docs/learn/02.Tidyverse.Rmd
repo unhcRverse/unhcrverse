@@ -33,13 +33,17 @@ library(unhcrthemes)
 
 # Learning objectives
 
+This slide deck assumes some initial prior basic R knowledge, that can be obtained through numbers of excellent R introductions online for self-studying. 
+
+Every learner has its own learning preference & pace: If you like manual and prefer to start with theory, see [R-intro](https://cran.r-project.org/doc/manuals/R-intro.pdf). If you are more into presentation, see the ones shared in the  [Resource](https://unhcrverse.github.io/unhcrverse/learn/02.Tidyverse.html#54) slide. You may also start below directly and then complement with theory at your own pace...
+
+In this slide deck, we get you in some illustrations of R __specifically applied to UNHCR Context__: 
+
 - An intro to Rstudio Development Interface
 
 - Basic of the grammar of data manipulation with [**`dplyr`**](https://dplyr.tidyverse.org/) & [**`tidyr`**](https://tidyr.tidyverse.org/) using [**`{refugees}`**](https://www.unhcr.org/refugee-statistics/insights/explainers/refugees-r-package.html) package
 
-- Basic of the grammar of graphics with [**`ggplot2`**](https://ggplot2.tidyverse.org/index.html)
-
-- Get branded visuals with [**`{unhcrthemes}`**](https://unhcr-dataviz.github.io/unhcrthemes/) package
+- Basic of the grammar of graphics with [**`ggplot2`**](https://ggplot2.tidyverse.org/index.html) and get your first UNHCR-branded chart with [**`{unhcrthemes}`**](https://unhcr-dataviz.github.io/unhcrthemes/) package
 
 
 
@@ -188,7 +192,7 @@ __Rstudio__ is an integrated development environment for R that allows users to 
 ![ ](img/rstudio.png)  
 ]
 
-You can download RStudio from [Posit Website](https://posit.co/products/open-source/rstudio/) and review the [cheatsheets](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html.
+You can download RStudio from [Posit Website](https://posit.co/products/open-source/rstudio/) and review the [cheatsheets](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html).
 
 
 
@@ -886,14 +890,16 @@ fd_last_ten_years |>#<<
 
 ```
 
+Does not display __yet__ any data!! i.e. gray box! 
+Without data, you don't have a plot!
 ]
 
 .pull-right[
 
-```{r, echo=FALSE, fig.height=6}
+
+```{r, echo=FALSE, eval=TRUE}
 ggplot(data = fd_last_ten_years)
 ```
-
 ]
 
 ???
@@ -912,6 +918,8 @@ ggplot(data = fd_last_ten_years,
        # adding aesthetic to map the variables we will use...
        aes( x = year,  y = pop_num))  #<<
 ```
+
+This will bring us the begining of a chart!! 
 
 ]
 
@@ -1787,7 +1795,7 @@ Documentation
  
 ---
 
-# Excercise
+# Exercise 
 
 *  Check the last #tidytuesday submission on Refugee: https://twitter.com/search?q=%20%23TidyTuesday%20refugees&src=typed_query
 

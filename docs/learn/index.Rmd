@@ -16,9 +16,9 @@ knitr::opts_chunk$set(echo = TRUE,
                       dpi = 300)
 ```
 
-Welcome to this comprehensive self-study material designed to cater to various learner profiles in at first understanding, then using and last mastering R statistical language. Each presentation is designed as a micro-learning session: feel free to ask any [question in the issue tracking system](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&projects=&template=comment_prex_1_reproducibility.md&title=%5Blearn%5D). 
+Welcome to this comprehensive self-study material designed to cater to various learner profiles in at first understanding, then using and last mastering R statistical language. Each presentation is designed as a micro-learning session: feel free to ask any [question in the issue tracking system](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&title=%5Blearn%5D). 
 
-As UNHCR staff, note that the content shared here is designed as an induction and not as an official certification that will then appear in your personal professional profile. For certification, please refer to the corresponding workday training. Workday Training are referenced, when relevant, in the last slide of each presentation.
+As UNHCR staff, note that the content shared here is designed as an introduction and not as an official certification that could be registered in your personal professional profile. For certification, please refer to the corresponding workday training. Workday Training are referenced, when relevant, in the last slide of each presentation.
 
 ## <span style='font-size:20px; color:grey;'>Level 1: </span>Foundation - R for Reproducibility
 

@@ -15,7 +15,7 @@ output:
 
 # Learning objectives
 
-- Understand what is "analysis reproducibility" and you can gain from it. 
+- Understand what is "__analysis reproducibility__" and what/how you can gain from it. 
 
 - Know what are the main technical requirements for an analysis piece to be reproducible... 
 
@@ -88,7 +88,7 @@ The best way to start and learn is to have a concrete project! If you have one a
 
 When a chef is starting out with a new dish...
 
- - Hypothesis Tasting  -- Setting the right questions
+ - Hypothesis Tasting = Setting the right questions
  
  - Ingredients = source the Data
  
@@ -139,7 +139,7 @@ Potential sources of reluctance...
  
  *  I do not even know what cake I want... 
  
-__In data science, the equivalent of food safety measures are required....__ 
+__In data science, the equivalent of "food safety measures" are also required....__ 
 
 ]
 .pull-right[
@@ -151,7 +151,7 @@ simple data visualization for decision making or complex patterns interpretation
 
 ---
 
-## The Reproducible Research Manisfesto
+## The Reproducible Research Manisfesto 
 
 .left-column[
 
@@ -160,27 +160,25 @@ simple data visualization for decision making or complex patterns interpretation
 
 .right-column[ 
 
-Safety measures to implement for data analysis:
- 
- 1. For every result, **keep track** of how it was produced
+For every result, **keep track** of how it was produced
 
- 2. **Avoid manual data manipulation** steps
+**Avoid manual data manipulation** steps
 
- 3. **Archive** the exact versions of all external programs used
+**Archive** the exact versions of all external programs used
 
- 4. **Version control** all custom scripts
+**Version control** all custom scripts and  write extensive and easily understandable comments in the code
 
- 5. **Record all intermediate results**, when possible in standardized formats
+**Record all intermediate results**, when possible in standardized formats
 
- 6. For analyses that include randomness, **note underlying random seeds**
+For analyses that include randomness, **note underlying random seeds**
 
- 7. Always **store raw data** behind plots
+Always **store raw data** behind plots
 
- 8. Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
+Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
 
- 9.  Connect **textual statements** to underlying results
+Connect **textual statements** to underlying results
 
- 10. Provide **public access** to scripts, runs, and results
+Unless you can justify not to do so, provide **public access** to scripts, runs, and results
 
 ]
 
@@ -198,9 +196,7 @@ More on reproducible analysis [here](https://ropensci.github.io/reproducibility-
 
 _"point-and-click"_ refers to user interactions made solely by selecting options directly with a mouse within a graphical interface, without keeping any written records... 
 
-A __script__ is a set of written code instructions that automates a series of orchestrated tasks.
-
-Using the right combination of packages, all necessary data analysis steps can be recorded into scripts.
+A __script__ is a set of written code instructions that automates a series of orchestrated tasks. A __function__ is a script that has been factorized to work with a specific input. A __package__ is collection of functions. Using the right combination of packages, all necessary data analysis steps can be recorded into scripts.
 
  * Data management (_clean, recode, merge, reshape_)
 
@@ -233,11 +229,11 @@ Using the right combination of packages, all necessary data analysis steps can b
 
 .pull-left[
 
-R is a programming language and a software environment for statistical computing and graphics. The first version of R has been released in 1997!
+R is a programming language and a software environment for statistical computing and graphics. The initial version of R has been released in 1997 and the V.1 in 2000!
 
 The capabilities of R are extended through user-created packages, which allow specialized statistical techniques, graphical devices, import/export capabilities, reporting tools. 
 
-Engineers tend to use Python over R, but R remains the preferred language of statisticians who needs latest techniques & Algorithm.
+Engineers tend to use Python over R, but R often remains the preferred language of statisticians who needs latest techniques & Algorithm integrated in a report publication workflow.
 
 R can also be compared to proprietary statistical software such as Stata or SPSS but has the advantage of being totally free to install & use. 
 ]
@@ -280,8 +276,7 @@ __IF__ When managing numerous analysis and continuously changing dataset:
 
 > It consumes time and open space for errors...
 
-
-A scripted approach enables per design quality review by Peers. If an error is identified, it can quickly be fixed without re-doing everything...
+A scripted approach enables, per design, quality peer review. It is easier to find errors in a script than in a click procedure because it allows to check every step of the analysis. If an error is identified, it can quickly be fixed without recreating everything...
 
 ]
 
@@ -295,7 +290,7 @@ A scripted approach enables per design quality review by Peers. If an error is i
 
 <span style='font-size:30px;'>Reproducibility allows for __peer review__</span>
  
- Peer Review allows for __transparency__
+ Peer review allows for __transparency__
  
  Transparency allows for __scrutinity__
 
@@ -309,6 +304,9 @@ A scripted approach enables per design quality review by Peers. If an error is i
 ]
 
 ???
+
+ 
+     
 Ethical principles into algorithmic design - would apply as well when designing household vulnerability scoring formula to inform humanitarian targeting - https://www.hum-dseg.org/sites/default/files/2020-10/Framework%20for%20the%20ethical%20use.pdf
 
 ---
@@ -322,7 +320,9 @@ Ethical principles into algorithmic design - would apply as well when designing 
 > Tasks that involve recurrent __data manipulation__ are undertaken by teams...
 > .. but not everyone in the team needs to be a __geek/coder__! 
 
-When enough investment can be made, __Graphical User Interface__ (GUI) can be developed for specific functions to ease the learning curve of new users while they are still in the process of building up their personal R skills.
+When enough investment can be made, __Graphical User Interface__ (GUI) can be developed on the top of specific functions. 
+
+This breeds the best of two approaches: Enforcing reproducibility first while still easing the learning curve of new users while they are still in the process of building up their personal skills.
 
 ]
 .pull-right[
@@ -377,7 +377,8 @@ Eat the cake first! (then play with and change ingredients...)
 ]
 .pull-right[
 
-Which approach is the most appealing exercise among the 2 proposed aside?!! (a) or (b)
+Which approach is the most appealing exercise among the 2 proposed aside?
+(a) start with a script or (b) show the final product and then try to reproduce it...
 
 .img[![Eat the cake](img/learn.png)] 
 ]
@@ -404,7 +405,10 @@ class: center, middle, inverse
 ## Sourcing data
 
 .pull-left[
-Data Wrangling takes usually more than 80% of any data project time...
+
+Data wrangling is the process of cleaning and transforming raw data into a __usable format for analysis__.
+
+Data Wrangling takes usually more than __80%__ of any data project time...
 
 Imagine if you need to rewind your analysis...
 
@@ -429,15 +433,20 @@ Correct at any steps in the process and re-run all..
 
 .pull-left[
 
-Gradual automation
+A package is the most organized way to build and share reproducible analysis.
 
- * level 1: write a command
- * level 2: organize multiple command together in re-usable function
- * Level 3: organize multiple functions together in a package
- * Level 4: includes test data, Documentation & Unit testing, aka code review</span> 
- * Level 5: <span style='font-size:30px;'>Graphical User Interface (GUI) with Shiny</span> 
+A package is usually the result of gradual automation in development
+
+ * [step 1](https://unhcrverse.github.io/unhcrverse/learn/02.Tidyverse.html): write a command
+ * [step 2](https://unhcrverse.github.io/unhcrverse/learn/03.Functions.html): organize multiple command together as re-usable function
+ * [step 3](https://unhcrverse.github.io/unhcrverse/learn/10.Package_Knowledge.html): organize multiple functions together in a package,  includes test data, Documentation & Unit testing
+ * [step 4](https://unhcrverse.github.io/unhcrverse/learn/11.Simplify_with_companionApp.html): add a Graphical User Interface (GUI) with Shiny 
+ 
 ]
 .pull-right[
+
+A package is a folder with a predefined structure: 
+
 .img75[![Eat the cake](img/package.png)] 
 ]
 
@@ -447,7 +456,7 @@ Gradual automation
 
 class: center, middle, inverse
 
-# How to get started?
+# How to get started in your learning curve?
 
 ### Define your product, build your first project, Review documentation, Participate in the community
 
@@ -457,7 +466,7 @@ class: center, middle, inverse
 
 ## Data Products: Not always a _dashboard_...
 
-<span style='font-size:20px; color:grey;'> When you drive your car, you dashboard provides decision-focused information (_Key Performance Indicators - KPIs_), to support decisions (_refill the tank, decelerate..._) based on pre-existing knowledge (_the driver has already a license..._))</span>
+<span style='font-size:20px; color:grey;'> When you drive your car, you dashboard provides decision-focused information (_aka Key Performance Indicators - KPIs_), to support decisions (_refill the tank, decelerate..._) based on pre-existing knowledge (_the driver has already a license..._)</span>
 
 >  When you need to build knowledge (rather than to support directly decision), then opt for a __notebook__ approach
 
@@ -669,6 +678,8 @@ Follow blogs like general [Rbloggers](https://www.r-bloggers.com/), [Tidyverse b
 
 Join forum like [Inter-Agency R skype group](https://join.skype.com/qYBKC5q3wKp4) or Internal UNHCR Ms Discussion group (ask to join!).
 
+Learn though Question-answers to [AI](https://copilot.microsoft.com/)
+
 ]
 
 
@@ -728,5 +739,9 @@ class: inverse, center, middle
 
 ## Let's take the time to install R & Rstudio...
 
+
+ [Install R](https://cran.r-project.org/mirrors.html)
+ 
+ [Install Rstudio](https://posit.co/download/rstudio-desktop/)
 
  

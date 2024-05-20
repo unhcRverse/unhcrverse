@@ -47,6 +47,16 @@ __Collaboration__
   
   * Contribute to the R ecosystem.
 
+---
+
+## Package on CRAN - Ideal but not compulsory!
+
+[CRAN (The Comprehensive R Archive Network)](https://cran.r-project.org/web//packages//submission_checklist.html) offer a place to publish packages. it comes with a process of checking and verifying that an R package meets the necessary standards and guidelines.
+
+The package should address a relevant and current need within the R user community. If there are similar packages available, the new package should offer improvements, additional features, or a different approach.
+
+Not all R packages are submitted and available in CRAN. While CRAN publication, guarantees reliability and functionality for users, getting a package there, especially if it includes a complex pipeline might be lengthy and complicated, especially at development stage and/or when a package is developed for use within a single specific organization..
+
 
 
 ---
