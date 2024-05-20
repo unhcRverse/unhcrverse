@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 Welcome to this comprehensive self-study material designed to cater to various learner profiles in at first understanding, then using and last mastering R statistical language. Each presentation is designed as a micro-learning session: feel free to ask any [question in the issue tracking system](https://github.com/unhcRverse/unhcrverse/issues/new?assignees=&labels=enhancement&title=%5Blearn%5D). 
 
-As UNHCR staff, note that the content shared here is designed as an introduction and not as an official certification that could be registered in your personal professional profile. For certification, please refer to the corresponding workday training. Workday Training are referenced, when relevant, in the last slide of each presentation.
+As UNHCR staff, note that the content shared here is designed as an introduction and not as an official certification that could be registered in your personal professional profile. For certification, please refer to the corresponding workday training. Workday Training are referenced, when relevant, in the last __resource slide__ of each presentation.
 
 ## <span style='font-size:20px; color:grey;'>Level 1: </span>Foundation - R for Reproducibility
 
@@ -35,7 +35,7 @@ Moving on to the 2nd level, learners should acquire skills in data manipulation 
 
 ## <span style='font-size:20px; color:grey;'>Level 3: </span>R for Productivity - Functions & Reports
 
-Progressing to the __3rd level__, participants will delve into the first stage of automation, learning the effective use of functions, enhancing their ability to streamline and automate data analysis tasks, leveraging the power of R Markdown for creating dynamic reports, facilitating clear and reproducible communication of analytical findings
+Progressing to the 3rd level, participants will delve into the first stage of automation, learning the effective use of functions, enhancing their ability to streamline and automate data analysis tasks, leveraging the power of R Markdown for creating dynamic reports, facilitating clear and reproducible communication of analytical findings
 
 > From [Scripts to Functions](03.Functions.html): An illustration with [`{unhcrplot}`](https://edouard-legoupil.github.io/unhcrdatapackage/), access data through API with [`{robotoolbox}`](https://dickoa.gitlab.io/robotoolbox/), [`{rhdx}`](http://dickoa.gitlab.io/rhdx/), [`{riddle}`](https://edouard-legoupil.github.io/riddle/), [`{popdata}`](https://edouard-legoupil.github.io/popdata/), [`{activityinfo-R}`](https://www.activityinfo.org/support/docs/R/)
  
